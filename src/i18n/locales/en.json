@@ -1,0 +1,1244 @@
+{
+  "appTitle": "JUMO GmbH & Co. KG",
+  "projectManagement": "JUMO GmbH & Co. KG",
+  "menu": {
+    "companyInfo": "General Company Information",
+    "financialPerformance": "Financial Performance",
+    "hrOrganization": "Human Resources and Organization",
+    "operationalEfficiency": "Operational Efficiency",
+    "marketingSales": "Marketing & Sales",
+    "rdInnovation": "R&D and Innovation",
+    "supplyChain": "Supply Chain and Logistics",
+    "macroEnvironment": "Macro Environment and Sector",
+    "strategicSynthesis": "Strategic Synthesis",
+    "aiSolutions": "AI Use Cases and Potential Solutions",
+    "recommendations": "Recommendations"
+  },
+  "pages": {
+    "companyInfo": {
+      "title": "General Company Information",
+      "welcome": "General information and details about the company."
+    },
+    "financialPerformance": {
+      "title": "Financial Performance",
+      "welcome": "Financial performance analysis of the company."
+    },
+    "hrOrganization": {
+      "title": "Human Resources and Organization",
+      "welcome": "Human resources structure and organizational analysis."
+    },
+    "operationalEfficiency": {
+      "title": "Operational Efficiency",
+      "welcome": "Operational processes and efficiency analysis."
+    },
+    "marketingSales": {
+      "title": "Marketing & Sales",
+      "welcome": "Marketing strategies and sales analysis."
+    },
+    "rdInnovation": {
+      "title": "R&D and Innovation",
+      "welcome": "Research and development and innovation activities."
+    },
+    "supplyChain": {
+      "title": "Supply Chain and Logistics",
+      "welcome": "Supply chain management and logistics analysis."
+    },
+    "macroEnvironment": {
+      "title": "Macro Environment and Sector",
+      "welcome": "Macro economic environment and sector analysis."
+    },
+    "strategicSynthesis": {
+      "title": "Strategic Synthesis",
+      "welcome": "Strategic analysis and synthesis."
+    },
+    "aiSolutions": {
+      "title": "AI Use Cases and Potential Solutions",
+      "welcome": "Artificial intelligence solutions and application areas."
+    },
+    "recommendations": {
+      "title": "Recommendations",
+      "welcome": "Recommendations based on analysis results."
+    }
+  },
+  "language": {
+    "select": "Select Language",
+    "english": "English",
+    "german": "German",
+    "turkish": "Turkish"
+  },
+  "companyInfo": {
+    "basicInfoTitle": "Basic Information",
+    "productsTitle": "Products and Services",
+    "managementTitle": "Management Team",
+    "competitorsTitle": "Main Competitors",
+    "operatingCompany": "Operating Company",
+    "parentCompany": "Parent Company (Holding)",
+    "company": "Company",
+    "registrationNo": "Trade Register No",
+    "structure": "Structure",
+    "founded": "Founded",
+    "years": "years",
+    "sector": "Sector",
+    "sectorValue": "Industrial measurement, control and automation technologies",
+    "employees": "Employees",
+    "globalPresence": "Global Presence",
+    "globalPresenceValue": "5 branches, 25 subsidiaries, 50+ agencies",
+    "website": "Website",
+    "products": {
+      "temperature": "Temperature sensors and transmitters",
+      "processControl": "Process control devices",
+      "automation": "Automation systems (JUMO mTRON)",
+      "recording": "Recording devices and data collection systems"
+    },
+    "management": {
+      "shareholder": "Shareholder",
+      "charisiadis": "Sales, R&D, Production",
+      "hr": "Human Resources",
+      "itFinance": "IT & Finance"
+    }
+  },
+  "financial": {
+    "healthScore": "Financial Health Score",
+    "healthScoreDescription": "Company is financially safe but profitability is low",
+    "totalAssets": "Total Assets",
+    "equity": "Equity",
+    "revenue": "Revenue",
+    "ebitda": "EBITDA",
+    "netProfit": "Net Profit",
+    "cash": "Cash",
+    "altmanZScore": "Altman Z-Score",
+    "safeZone": "Safe Zone",
+    "altmanInterpretation": "Z'' > 2.6 → Safe | 1.1-2.6 → Gray Zone | <1.1 → Danger",
+    "score": "Score",
+    "dupontAnalysis": "DuPont Analysis",
+    "profitMargin": "Profit Margin",
+    "assetTurnover": "Asset Turnover",
+    "financialLeverage": "Financial Leverage",
+    "keyRatios": "Key Financial Ratios",
+    "category": "Category",
+    "ratio": "Ratio",
+    "value": "Value",
+    "benchmark": "Benchmark",
+    "status": "Status",
+    "good": "Good",
+    "bad": "Bad",
+    "liquidity": "Liquidity",
+    "efficiency": "Efficiency",
+    "leverage": "Leverage",
+    "currentRatio": "Current Ratio",
+    "cashRatio": "Cash Ratio",
+    "inventoryTurnover": "Inventory Turnover",
+    "debtToEquity": "Debt/Equity",
+    "debtToEBITDA": "Debt/EBITDA",
+    "healthBreakdown": "Health Score Breakdown",
+    "healthMetrics": {
+      "liquidity": "Liquidity",
+      "profitability": "Profitability",
+      "efficiency": "Efficiency",
+      "leverage": "Leverage",
+      "cashFlow": "Cash Flow"
+    },
+    "strengths": {
+      "title": "Strengths",
+      "liquidity": "Excellent liquidity - 81.7 M€ cash",
+      "lowDebt": "Low debt burden - Debt/Equity = 1.0",
+      "altmanScore": "Financial stability - Altman Z-Score 2.9",
+      "equityBase": "Strong equity base - 190 M€"
+    },
+    "weaknesses": {
+      "title": "Weaknesses",
+      "lowProfitability": "Very low profitability - Net profit margin ~1.6%",
+      "inventoryManagement": "Inefficient inventory management - Turnover 2.52x",
+      "personnelCost": "High personnel cost - 46% of revenue",
+      "cashFlowGeneration": "Low cash flow generation - FCF margin 1.88%"
+    },
+    "urgentActions": {
+      "title": "Points Requiring Urgent Correction",
+      "inventoryOptimization": "Inventory optimization - 123.5 M€ stock too high",
+      "personnelEfficiency": "Personnel efficiency - Revenue per employee 123k€ → target 150k€+",
+      "operationalMargin": "Operational margin improvement - EBIT margin <1%"
+    },
+    "sources": "Sources",
+    "officialWebsite": "Official Website"
+  },
+  "hr": {
+    "performanceScore": "HR Performance Score",
+    "performanceScoreValue": "Moderate Level",
+    "scoreDescription": "Company shows strong retention but needs productivity improvement",
+    "totalEmployees": "Total Employees",
+    "apprentices": "Apprentices",
+    "turnoverRate": "Turnover Rate",
+    "avgTenure": "Avg. Tenure",
+    "revenuePerEmployee": "Revenue per Employee",
+    "personnelCostRatio": "Personnel Cost Ratio",
+    "years": "years",
+    "criticalFindings": "Critical Findings",
+    "negativeELTV": "Negative ELTV - Employee lifetime value -519,000€",
+    "highPersonnelCost": "High personnel cost - 46% of revenue",
+    "scoreBreakdown": "Score Breakdown",
+    "score": "Score",
+    "scoreCategories": {
+      "loyalty": "Loyalty",
+      "development": "Development",
+      "efficiency": "Efficiency",
+      "futureReadiness": "Future Readiness",
+      "orgHealth": "Organizational Health"
+    },
+    "findings": {
+      "negativeELTV": "Negative ELTV - Each employee loses -519,000€ lifetime",
+      "highPersonnelCost": "Very high personnel cost - 46% of revenue",
+      "lowTCI": "Low TCI (0.67) - Inefficient cost structure",
+      "knowledgeLossRisk": "Knowledge loss risk - Aging workforce"
+    },
+    "scoreMetrics": {
+      "recruitment": "Recruitment",
+      "retention": "Retention",
+      "productivity": "Productivity",
+      "training": "Training",
+      "costEfficiency": "Cost Efficiency",
+      "engagement": "Engagement"
+    },
+    "eltvAnalysis": "ELTV (Employee Lifetime Value) Analysis",
+    "eltvResult": "ELTV Result",
+    "eltvDescription": "Currently each employee creates a lifetime loss for the company",
+    "contribution": "Contribution",
+    "cost": "Cost",
+    "cumulative": "Cumulative",
+    "eltvMetrics": {
+      "annualRevenue": "Annual Revenue/Employee",
+      "grossMargin": "Gross Margin",
+      "personnelCost": "Personnel Cost",
+      "avgTenure": "Avg. Tenure",
+      "eltv": "ELTV"
+    },
+    "negativeValue": "Negative value!",
+    "productivityScenarios": "Productivity Scenarios",
+    "profitMargin": "Profit Margin",
+    "scenarios": {
+      "current": "Current",
+      "pessimistic": "Pessimistic",
+      "realistic": "Realistic",
+      "optimistic": "Optimistic",
+      "benchmark": "Benchmark",
+      "optimized": "Optimized",
+      "target": "Target"
+    },
+    "revPerEmployee": "Rev/Employee",
+    "employees": "Employees",
+    "revenue": "Revenue",
+    "apprenticeSystem": "Apprentice System Analysis",
+    "apprenticeROI": "Apprentice System ROI",
+    "apprenticeROIDescription": "Apprentice system currently shows negative return - needs improvement",
+    "apprentice": {
+      "externalCost": "External Hiring Cost",
+      "trainingCost": "Training Cost",
+      "netSaving": "Net Saving"
+    },
+    "apprenticeMetrics": {
+      "totalApprentices": "Total Apprentices",
+      "annualCost": "Annual Cost/Apprentice",
+      "hireProbability": "Hire Probability",
+      "avgRetention": "Avg. Retention",
+      "roi": "ROI"
+    },
+    "negativeROI": "Negative ROI",
+    "strengths": {
+      "title": "Strengths",
+      "lowTurnover": "Low turnover rate - 4% (industry avg. 12%)",
+      "highTenure": "High tenure - 15 years average",
+      "apprenticeSystem": "Structured apprentice program - 93 active apprentices",
+      "awardedTraining": "Awarded training programs",
+      "apprenticeProgram": "Structured apprentice program - 93 apprentices",
+      "longTenure": "Long tenure - 15 years average",
+      "globalWorkforce": "Global workforce distribution - 2,530+ employees across 5 countries"
+    },
+    "weaknesses": {
+      "title": "Weaknesses",
+      "lowProductivity": "Low productivity - 123k€/employee (target 150k€+)",
+      "highCostRatio": "High cost ratio - 46% (target <40%)",
+      "negativeROI": "Negative apprentice ROI - -63.4%",
+      "agingWorkforce": "Aging workforce - Knowledge loss risk",
+      "negativeELTV": "Negative ELTV - -519,000€ (each employee loses money)",
+      "negativeApprenticeCost": "Negative apprentice ROI - -63.4% return on investment"
+    },
+    "strategicPriorities": "Strategic Priorities",
+    "expectedImpact": "Expected Impact",
+    "priorities": {
+      "productivity": "Productivity Improvement",
+      "productivityDesc": "Increase revenue per employee from 123k€ to 150k€+",
+      "talentDevelopment": "Talent Development and Internal Promotion",
+      "fasterFilling": "Faster position filling",
+      "ageStructure": "Age Structure Balancing",
+      "reduceKLR": "Reduce KLR and knowledge transfer",
+      "flexibleWork": "Flexible Work Models",
+      "retentionIncrease": "Retention increase",
+      "costOptimization": "Cost Optimization",
+      "costOptimizationDesc": "Reduce personnel cost from 46% to 40%",
+      "apprenticeROI": "Apprentice ROI Improvement",
+      "apprenticeROIDesc": "Increase apprentice retention and productivity",
+      "automation": "Automation & Digitalization",
+      "automationDesc": "20% cost reduction potential in routine tasks"
+    },
+    "difficulty": {
+      "high": "High",
+      "medium": "Medium",
+      "low": "Low"
+    },
+    "actionPlan": "12-Month Action Plan",
+    "monthlyMetrics": "Monthly Measurable Targets",
+    "current": "Current",
+    "days": "days",
+    "metrics": {
+      "valueAdded": "Value added per employee",
+      "internalDevelopment": "Internal promotion rate",
+      "fillTime": "Position fill time"
+    },
+    "mathematicalTargets": "Mathematical Targets",
+    "targets": {
+      "costRatio": "Personnel cost ratio",
+      "eltv": "ELTV",
+      "revenuePerEmployee": "Revenue per employee"
+    },
+    "months": {
+      "m1_3": "Month 1-3",
+      "m4_6": "Month 4-6",
+      "m7_9": "Month 7-9",
+      "m10_12": "Month 10-12"
+    },
+    "actions": {
+      "diagnostics": "Detailed productivity diagnostics",
+      "pilotAutomation": "Pilot automation projects",
+      "apprenticeReform": "Apprentice program reform",
+      "scaleAutomation": "Scale automation",
+      "performanceSystem": "Performance management system",
+      "continuousImprovement": "Continuous improvement program"
+    },
+    "indices": "Key Indices",
+    "tci": "TCI (Total Cost Index)",
+    "tciValue": "Lower = Better",
+    "tciDescription": "Total cost efficiency - Target <0.5",
+    "klr": "KLR (Personnel Cost Ratio)",
+    "klrValue": "Lower = Better",
+    "klrDescription": "Personnel cost ratio - Target <1.0",
+    "conclusion": "Conclusion",
+    "conclusionStrong": "Strengths",
+    "conclusionStrengthText": "Excellent retention (4% turnover), long tenure (15 years), strong apprentice system",
+    "conclusionWeak": "Improvement Areas",
+    "conclusionWeaknessText": "Productivity increase critical (123k€→150k€+), personnel cost ratio high (46%→40%), ELTV negative (-519k€→positive)",
+    "conclusionText": "JUMO shows strong retention and stability but requires productivity and cost optimization. Urgent action needed to bring ELTV to positive territory - potential improvement 10M€+ annually."
+  },
+  "operational": {
+    "performanceScore": "Operational Performance Score",
+    "performanceScoreValue": "Moderate Level",
+    "scoreDescription": "Company shows production capability but requires efficiency optimization",
+    "dataDisclaimerTitle": "Data Disclaimer",
+    "dataDisclaimer": "Due to the impossibility of obtaining actual operational data, all values presented in this analysis are estimated and assumed based on industry benchmarks and general company information. These figures are intended for illustrative purposes to demonstrate analytical methodology.",
+    "overallScore": "Overall Operational Score",
+    "oeeAnalysis": "OEE (Overall Equipment Effectiveness) Analysis",
+    "oeeScore": "OEE Score",
+    "oeeComponents": "OEE Components",
+    "current": "Current",
+    "benchmark": "Benchmark",
+    "oee": {
+      "availability": "Availability",
+      "performance": "Performance",
+      "quality": "Quality",
+      "currentOEE": "Current OEE",
+      "annualLoss": "Annual Loss",
+      "lossDescription": "Capacity loss due to low availability, performance, and quality issues",
+      "formula": "Formula"
+    },
+    "setupCostAnalysis": "High-Mix, Low-Volume Production - Setup Cost Analysis",
+    "setup": {
+      "setupTime": "Setup Time Cost",
+      "inventoryCost": "Inventory Cost",
+      "financingCost": "Financing Cost",
+      "description": "Product variants",
+      "variations": "variations",
+      "dailySetups": "Daily setups",
+      "timePerSetup": "Time per setup"
+    },
+    "minutes": "minutes",
+    "verticalIntegration": "Vertical Integration Analysis",
+    "scenario": "Scenario",
+    "personnel": "Personnel",
+    "totalCost": "Total Cost",
+    "integration": {
+      "current": "Current (In-house Production)",
+      "outsourcing": "Outsourcing Scenario",
+      "netSavings": "Net Savings Potential",
+      "savingsDescription": "Outsourcing could reduce costs but may increase quality risks"
+    },
+    "inventoryOptimization": "Inventory Optimization (Newsvendor Model)",
+    "inventory": {
+      "current": "Current Stock",
+      "optimal": "Optimal Stock (Q*)",
+      "excess": "Excess Stock",
+      "units": "units",
+      "excessValue": "Total Excess Value",
+      "releasableCash": "Releasable Cash",
+      "newsvendorModel": "Newsvendor Model Formula"
+    },
+    "sensiloROI": "Sensilo Factory (Smart Factory) ROI Analysis",
+    "sensilo": {
+      "investment": "Total Investment",
+      "annualBenefit": "Annual Benefit",
+      "payback": "Payback Period",
+      "wasteRate": "Waste Rate",
+      "productivity": "Productivity",
+      "agvIntegration": "AGV Integration",
+      "darkFactory": "Dark Factory Operations",
+      "training": "Personnel Training",
+      "supplyChain": "Supply Chain Synchronization",
+      "successProbability": "Overall Success Probability",
+      "riskNote": "Success depends on AGV integration, training effectiveness, and supply chain synchronization",
+      "criticalFactors": "Critical Success Factors"
+    },
+    "years": "years",
+    "sixSigma": "Six Sigma Level Analysis",
+    "sigma": {
+      "current": "Current Sigma Level",
+      "industry": "Industry Average",
+      "formula": "Six Sigma Calculation",
+      "needsImprovement": "needs improvement"
+    },
+    "performanceScorecard": "Performance Scorecard",
+    "metric": "Metric",
+    "target": "Target",
+    "gap": "Gap",
+    "priority": {
+      "title": "Priority",
+      "high": "High",
+      "medium": "Medium",
+      "low": "Low",
+      "critical": "Critical"
+    },
+    "metrics": {
+      "inventoryTurnover": "Inventory Turnover",
+      "sigmaLevel": "Sigma Level",
+      "productivity": "Productivity Index",
+      "unitCost": "Unit Cost"
+    },
+    "strategicPriorities": "Strategic Priorities (NPV Ranking)",
+    "impact": "Impact",
+    "difficulty": {
+      "high": "High",
+      "medium": "Medium",
+      "low": "Low"
+    },
+    "priorities": {
+      "inventory": "Inventory Optimization",
+      "immediate": "Immediate cash release",
+      "sensilo": "Sensilo Factory Investment",
+      "oee": "OEE Improvement (70.4% → 85%)",
+      "waste": "Six Sigma & Waste Reduction"
+    },
+    "conclusion": {
+      "title": "Conclusion",
+      "paradox": "The Efficiency Paradox",
+      "paradoxText": "JUMO operates with moderate operational efficiency (62/100) but faces critical contradictions",
+      "keyIssues": "Key Issues",
+      "issue1": "272 M€ tied up in excess inventory (43% overstocking)",
+      "issue2": "17.75 M€ annual loss due to low OEE (70.4% vs 85% target)",
+      "issue3": "High-mix, low-volume production causing 5.72 M€ setup costs",
+      "issue4": "Sensilo Factory offers 52.9% ROI but requires careful execution with 45.9% success probability"
+    }
+  },
+  "marketing": {
+    "dataDisclaimer": "Due to the impossibility of obtaining actual marketing and sales data, all values presented in this analysis are estimated and assumed based on industry benchmarks and general company information. These figures are intended for illustrative purposes to demonstrate analytical methodology.",
+    "overallScore": "Overall Marketing Performance Score",
+    "scoreDescription": "Excellent customer economics but weak operational sales efficiency",
+    "customerEconomics": "Customer Economics (LTV/CAC Analysis)",
+    "ltv": {
+      "title": "LTV (Lifetime Value)",
+      "investment": "Investment",
+      "return": "Return",
+      "description": "Every 2.000€ investment generates 1.71 M€ return - exceptional customer acquisition efficiency",
+      "lifetime": "Customer Lifetime",
+      "churnRate": "Churn Rate",
+      "formula": "LTV Formula (Discounted Cash Flow)",
+      "discountRate": "Discount rate"
+    },
+    "segmentation": {
+      "title": "ABC Customer Segmentation (Pareto Analysis)",
+      "segment": "Segment",
+      "customers": "Customers",
+      "revenue": "Revenue",
+      "margin": "Margin",
+      "profit": "Profit",
+      "focus": "Optimal Focus",
+      "optimization": "Potential Profit from Optimization",
+      "optimizationDesc": "Focusing 60% effort on A customers, 30% on B, and 10% on C can generate additional profit"
+    },
+    "others": "Others",
+    "marketAnalysis": "Market Concentration Analysis",
+    "hhi": {
+      "concentrated": "Concentrated Market",
+      "description": "HHI > 2,500 indicates concentrated market. JUMO is a small player (3%) but strong in niche segments"
+    },
+    "digitalChannels": "Digital Channel Effectiveness",
+    "budget": "Budget Allocation",
+    "optimalBudget": "Optimal Budget Allocation",
+    "channels": {
+      "seo": "SEO & Technical Content",
+      "webinars": "Webinars",
+      "tradeFairs": "Trade Fairs"
+    },
+    "campusROI": "JUMO Campus ROI",
+    "campus": {
+      "costs": "Annual Costs",
+      "revenue": "Total Revenue",
+      "description": "JUMO Campus generates positive ROI",
+      "investment": "Every",
+      "return": "generates"
+    },
+    "salesEfficiency": "Sales Efficiency (Revenue per Employee)",
+    "sales": {
+      "current": "Current Performance",
+      "benchmark": "Benchmark",
+      "gap": "Gap"
+    },
+    "pricingOptimization": "Pricing Optimization Potential",
+    "pricing": {
+      "current": "Current Price",
+      "optimal": "Optimal Price",
+      "potential": "Potential Additional Profit"
+    },
+    "churnPrevention": "Customer Churn Prevention ROI",
+    "churn": {
+      "annualLoss": "Annual Customer Loss",
+      "customers": "customers",
+      "loss": "loss",
+      "preventionCost": "Prevention Investment",
+      "savings": "Potential Savings"
+    },
+    "mei": {
+      "title": "Marketing Effectiveness Index",
+      "inefficient": "Inefficient",
+      "description": "Every 1% budget increase generates only 0.325% performance improvement - marketing investments are not efficient enough",
+      "formula": "MEI Formula",
+      "marketShare": "Market Share Growth",
+      "brandAwareness": "Brand Awareness",
+      "satisfaction": "Customer Satisfaction",
+      "budgetEfficiency": "Budget Efficiency"
+    },
+    "performanceScorecard": "Marketing Performance Scorecard",
+    "status": {
+      "title": "Status",
+      "excellent": "Excellent",
+      "good": "Good",
+      "weak": "Weak",
+      "low": "Low"
+    },
+    "metrics": {
+      "customerLifetime": "Customer Lifetime",
+      "churnRate": "Churn Rate",
+      "salesEfficiency": "Sales Efficiency",
+      "digitalROI": "Digital ROI",
+      "marketShare": "Market Share"
+    },
+    "strategicPriorities": "Strategic Priorities",
+    "impact": "Impact",
+    "timeline": "Timeline",
+    "investmentLevel": "Investment",
+    "months": "months",
+    "priority": {
+      "high": "High",
+      "medium": "Medium",
+      "low": "Low",
+      "critical": "Critical"
+    },
+    "investment": {
+      "high": "High",
+      "medium": "Medium",
+      "low": "Low"
+    },
+    "priorities": {
+      "pricing": "Price Optimization",
+      "churnPrevention": "Churn Prevention Program",
+      "customerFocus": "A-Customer Focus Strategy",
+      "asiaExpansion": "Asia Market Expansion",
+      "digitalOptimization": "Digital Channel Optimization"
+    },
+    "conclusion": {
+      "title": "Conclusion: The Marketing Paradox",
+      "paradox": "The Marketing Paradox",
+      "paradoxText": "JUMO exhibits a fundamental contradiction in its marketing structure",
+      "strengths": "Exceptional Strengths",
+      "strength1": "Excellent customer economics - CAC/LTV = 0.0012 (ideal < 0.33)",
+      "strength2": "Outstanding customer retention - <3% churn vs 10% industry average",
+      "strength3": "Strong customer lifetime - 15+ years vs 8 years benchmark",
+      "weaknesses": "Critical Weaknesses",
+      "weakness1": "Low sales efficiency - 819k€/employee vs 1.2M€ benchmark (-31.7%)",
+      "weakness2": "Suboptimal pricing - Current 90€ vs optimal 107.50€ (+19.4% potential)",
+      "weakness3": "Inefficient marketing spend - MEI = 0.325 (target 0.80)",
+      "solution": "Priority Solution",
+      "solutionText": "Price optimization (potential +24.2 M€ profit) and churn prevention program (ROI 3,747%) should be implemented immediately. Combined potential impact: 100+ M€ annually."
+    }
+  },
+  "rd": {
+    "dataDisclaimerTitle": "Data Disclaimer",
+    "dataDisclaimer": "Due to the impossibility of obtaining actual R&D and innovation data, all values presented in this analysis are estimated and assumed based on industry benchmarks and general company information. These figures are intended for illustrative purposes to demonstrate analytical methodology.",
+    "overallScore": "Overall Innovation Performance Score",
+    "scoreDescription": "High patent quantity but low quality - protection-focused strategy",
+    "years": "years",
+    "units": "units",
+    "patentPortfolio": {
+      "title": "Patent Portfolio Analysis",
+      "totalPatents": "Total Patents",
+      "patentImpact": "Patent Impact Score (PI)",
+      "belowTarget": "Below target (<1.0)",
+      "annualPatents": "Annual New Patents",
+      "impactFormula": "Patent Impact Formula",
+      "impactDescription": "PI = (Citations/Age) × (Family Size/Sector Avg.) - JUMO: 0.857 (below sector average)",
+      "technologyConcentration": "Technology Concentration Index",
+      "ageDistribution": "Patent Age Distribution",
+      "patents": "Patents",
+      "value": "Value",
+      "portfolioValue": "Portfolio Value",
+      "annualDepreciation": "Annual Depreciation",
+      "depreciationDesc": "patent aging cost"
+    },
+    "technologies": {
+      "temperature": "Temperature Sensors",
+      "liquid": "Liquid Analysis",
+      "pressure": "Pressure & Automation"
+    },
+    "rdEfficiency": {
+      "title": "R&D Investment Efficiency",
+      "rdIntensity": "R&D Intensity",
+      "ofRevenue": "of revenue",
+      "annualBudget": "Annual Budget",
+      "innovationReturn": "Innovation Return Rate",
+      "targetReturn": "Target: >100%",
+      "returnFormula": "Return Formula",
+      "newProductRevenue": "New Product Revenue",
+      "rdInvestment": "R&D Investment",
+      "calculation": "Calculation",
+      "taxBenefit": "Tax Benefit",
+      "year": "year",
+      "germanIncentive": "German Forschungszulage",
+      "effectiveCost": "Effective Cost",
+      "afterTax": "after tax"
+    },
+    "personnel": {
+      "title": "R&D Personnel Productivity",
+      "rdPersonnel": "R&D Personnel",
+      "patentsPerEmployee": "Patents per Employee",
+      "sectorBenchmark": "Sector Benchmark",
+      "productivityRatio": "Productivity Ratio",
+      "belowSector": "Below sector",
+      "productivityNote": "R&D personnel productivity is 57% of sector average - needs improvement"
+    },
+    "roadmap": {
+      "title": "Technology Roadmap (TRL Analysis)",
+      "technology": "Technology",
+      "trl": "TRL",
+      "market": "Market Entry",
+      "investment": "Investment",
+      "success": "Success Probability",
+      "potentialRevenue": "Potential Revenue",
+      "years": "years",
+      "year": "year",
+      "portfolioRisk": "Portfolio Risk",
+      "failureProb": "failure probability",
+      "riskNote": "Technology portfolio carries medium-high risk - careful execution required"
+    },
+    "projects": {
+      "autonomous": "Autonomous Sensors",
+      "basicRD": "Basic R&D",
+      "efficiency": "Efficiency Projects"
+    },
+    "university": {
+      "title": "University Collaboration ROI Analysis",
+      "annualCost": "Annual Cost",
+      "annualBenefit": "Annual Benefit",
+      "roi": "ROI",
+      "negativeROI": "Negative ROI",
+      "strategicNote": "University collaboration shows negative net value short-term but strategic long-term investment"
+    },
+    "innovationRadar": {
+      "title": "Innovation Metrics Radar Analysis",
+      "score": "Score",
+      "description": "Comprehensive innovation performance assessment - all dimensions"
+    },
+    "metrics": {
+      "patentImpact": "Patent Impact",
+      "rdIntensity": "R&D Intensity",
+      "innovationReturn": "Innovation Return",
+      "personnelProductivity": "Personnel Productivity",
+      "portfolioRisk": "Portfolio Risk",
+      "universityROI": "University ROI"
+    },
+    "scorecard": {
+      "title": "Innovation Performance Scorecard",
+      "metric": "Metric",
+      "current": "Current",
+      "target": "Target",
+      "gap": "Gap",
+      "status": "Status",
+      "good": "Good",
+      "medium": "Medium",
+      "weak": "Weak",
+      "patentImpact": "Patent Impact Score",
+      "rdIntensity": "R&D Intensity",
+      "innovationReturn": "Innovation Return Rate",
+      "personnelProductivity": "Personnel Productivity",
+      "portfolioRisk": "Portfolio Risk",
+      "universityROI": "University Collaboration ROI"
+    },
+    "portfolio": {
+      "title": "Optimal R&D Portfolio Allocation (Markowitz Model)",
+      "allocation": "Allocation",
+      "expectedReturn": "Expected Return",
+      "risk": "Risk",
+      "portfolioRisk": "Portfolio Risk",
+      "sharpeRatio": "Sharpe Ratio"
+    },
+    "strategicPriorities": "Strategic Priorities (ROI Ranking)",
+    "impact": "Impact",
+    "investment": "Investment",
+    "priority": {
+      "critical": "Critical",
+      "high": "High",
+      "medium": "Medium"
+    },
+    "priorities": {
+      "iolink": "IO-Link Acceleration",
+      "patentQuality": "Improve Patent Quality",
+      "rdEfficiency": "R&D Process Efficiency",
+      "rdEfficiencyDesc": "Return: 84.5% → 100%",
+      "university": "Optimize University Collaboration"
+    },
+    "conclusion": {
+      "title": "Conclusion",
+      "paradox": "The Innovation Paradox",
+      "paradoxText": "JUMO's innovation strategy is 'protection-focused' but not 'breakthrough-creating'",
+      "keyIssues": "Key Issues",
+      "issue1": "Patent Paradox: 600-700 patents but low impact (PI: 0.857) - process patents provide protection but don't bring technology leadership",
+      "issue2": "Limited R&D Efficiency: High intensity (7%) but low return (84.5%) - Every 1€ R&D generates 0.85€ revenue",
+      "issue3": "Risky Future: Technology portfolio carries 43.5% failure risk",
+      "issue4": "Weak Human Resources: R&D personnel 57% as productive as sector average",
+      "recommendation": "Priority Actions",
+      "recommendationText": "IO-Link acceleration (+75 M€ revenue, ROI +400%) should be implemented immediately. Patent quality must be improved (PI: 0.857→1.0). Total potential: 80+ M€ additional revenue annually."
+    }
+  },
+  "supplyChain": {
+    "overallPerformance": "Overall Supply Chain Performance",
+    "scoreDesc": "While efficiency is weak, reliability and delivery performance are excellent.",
+    "stockManagementAnalysis": "Section 1: Cost-Benefit Analysis of Inventory Management",
+    "annualHoldingCost": "Annual Holding Cost",
+    "inventoryValue": "Avg. Inventory Value",
+    "eoqPotential": "EOQ Optimization Potential",
+    "reduction": "Inventory Reduction",
+    "units": "units",
+    "unitComparison": "Current vs EOQ Inventory Level (Million Units)",
+    "current": "Current",
+    "eoq": "EOQ Model",
+    "unitsMillion": "Million Units",
+    "strategicBufferValue": "Strategic Buffer Valuation (Real Options)",
+    "holdingCost": "Holding Cost",
+    "optionValue": "Option Value",
+    "optionValueResult": "Option value of high inventory",
+    "costMultiplier": "Cost Multiplier",
+    "supplierRiskAnalysis": "Section 2: Supplier Risk Management Analysis",
+    "type": "Supplier Type",
+    "share": "Share",
+    "criticality": "Criticality",
+    "totalSCR": "Total SCR Score",
+    "risk": {
+      "chips": "Electronic Chips",
+      "metals": "Precious Metals",
+      "raw": "General Raw Materials",
+      "veryHigh": "Very High",
+      "high": "High",
+      "medium": "Medium",
+      "mediumHigh": "Medium-High Risk"
+    },
+    "dualSourcingSavings": "Dual Sourcing Scenario",
+    "newTotalCost": "New Total Cost",
+    "decrease": "Decrease",
+    "logisticsOptimization": "Section 3: Logistics Network Optimization",
+    "logistics": {
+      "central": "Central (Current)",
+      "distributed": "Distributed (3 Hubs)"
+    },
+    "costMEur": "Cost (M€)",
+    "roi": "ROI",
+    "fasterDelivery": "Market Share Increase via Faster Delivery",
+    "airVsSea": "Air vs Sea Freight Decision",
+    "criticalValue": "Critical Value",
+    "days": "days",
+    "airReasoning": "If delivery time difference exceeds the critical value, air freight is economical.",
+    "resilienceScorecard": "Section 4: Supply Chain Resilience Index",
+    "rciEfficient": "Resilience investment is efficient",
+    "metric": "Metric",
+    "sector": "Sector Avg.",
+    "score": "Score",
+    "weight": "Weight",
+    "metrics": {
+      "turnover": "Inv. Turnover Rate",
+      "delivery": "Delivery Accuracy",
+      "scr": "Supplier SCR",
+      "logisticsCost": "Logistics Cost/Rev",
+      "rci": "Resilience RCI"
+    },
+    "strategicScenarios": "Section 5: Strategic Optimization Scenarios",
+    "scenario": "Scenario",
+    "stockLevel": "Stock Level",
+    "turnover": "Turnover",
+    "cost": "Annual Cost",
+    "netImpact": "Net Impact",
+    "scenarios": {
+      "current": "1. Current (Just-in-Case)",
+      "optimized": "2. Optimized (Hybrid)",
+      "aggressive": "3. Aggressive (Just-in-Time)"
+    },
+    "recommendationMatrix": "Strategic Recommendations Matrix",
+    "rec": {
+      "dualSource": "Dual Sourcing (Electronics)",
+      "stockOpt": "Inventory Optimization",
+      "distributed": "Distributed Warehousing",
+      "logistics": "Logistics Mode Opt."
+    },
+    "difficulty": {
+      "high": "Hard",
+      "medium": "Medium",
+      "low": "Easy"
+    },
+    "source": {
+      "current": "Single Source (Current)",
+      "dual": "Dual Source (Proposed)"
+    },
+    "conclusion": {
+      "title": "Conclusion: Strategic Assessment",
+      "paradox": "The Core Paradox",
+      "paradoxText": "The company accumulates 81.7 M€ in cash but ties up 123.5 M€ in inventory. While financially inefficient, this provides operational assurance.",
+      "recommendation": "Recommendation",
+      "hybridModel": "Implement Hybrid Model (Scenario #2):",
+      "point1": "Reduce inventory by 50% (down to 61.8 M€).",
+      "point2": "Double the turnover rate (3.6x).",
+      "point3": "Generate 15.5 M€ annual profit while maintaining security via 'Dual Sourcing'."
+    }
+  },
+  "macro": {
+    "mriTitle": "Macro Risk Index (MRI)",
+    "mriDesc": "2 out of every 3 macro shocks have the potential to directly impact the company.",
+    "riskLevel": {
+      "high": "HIGH RISK"
+    },
+    "pestelAnalysis": "Section 1: PESTEL Analysis & Risk Distribution",
+    "impactWeight": "Impact Weight",
+    "criticalFinding": "Critical Finding",
+    "pestel": {
+      "economic": "Economic",
+      "technological": "Technological",
+      "legal": "Legal/Regulation",
+      "social": "Social",
+      "environmental": "Environmental",
+      "political": "Political",
+      "findingText": "Biggest risk is Economic (23%), biggest opportunity is Technological (20%)."
+    },
+    "sectorAndCompetition": "Section 2: Sector Attractiveness & Competition",
+    "porterTitle": "Porter's 5 Forces",
+    "competitorMatrix": "Competitive Position Matrix",
+    "axis": {
+      "ops": "Operational Excellence",
+      "tech": "Technological Leadership"
+    },
+    "porter": {
+      "rivalry": "Rivalry",
+      "supplier": "Supplier Power",
+      "buyer": "Buyer Power",
+      "entry": "New Entrants",
+      "substitute": "Substitutes"
+    },
+    "scenarioSensitivity": "Section 3: Scenario Analysis & Sensitivity",
+    "scenarioTitle": "Financial Scenarios (2025)",
+    "revenue": "Revenue (M€)",
+    "profit": "Net Profit (M€)",
+    "expectedRevenue": "Expected Value (EV)",
+    "sensitivityTitle": "Sensitivity Analysis (Net Profit Impact)",
+    "scenario": {
+      "pessimistic": "Pessimistic",
+      "base": "Baseline",
+      "optimistic": "Optimistic"
+    },
+    "sens": {
+      "energy": "Energy Cost",
+      "pfas": "PFAS Cost",
+      "efficiency": "Emp. Efficiency",
+      "iolink": "IO-Link Adap.",
+      "inventory": "Inventory Turnover",
+      "finding": "Inventory optimization has the highest leverage effect on net profit."
+    },
+    "gapAnalysis": "Section 4: Strategic GAP Analysis",
+    "metric": "Metric",
+    "current": "Current",
+    "target": "Target",
+    "gap": "Gap",
+    "priority": "Priority",
+    "gaps": {
+      "marketShare": "Market Share",
+      "margin": "Net Margin",
+      "roe": "ROE",
+      "turnover": "Inv. Turnover",
+      "perCapita": "Rev. Per Capita"
+    },
+    "integratedScore": "Section 5: Integrated Macro-Sector Score",
+    "topsisResults": "TOPSIS Strategy Ranking",
+    "healthScore": "Macro-Sector Health Score",
+    "healthDesc": "MEDIUM-LOW LEVEL",
+    "mainThreat": "Main Threat: High Macro Risk (62.4%)",
+    "mainOpp": "Main Opp: High Sector Appeal (71%)",
+    "topsis": {
+      "A": "A: Operational Efficiency",
+      "B": "B: Growth Oriented",
+      "C": "C: Innovation Oriented"
+    },
+    "score": {
+      "mri": "Macro Risk (MRI)",
+      "scs": "Sector Appeal",
+      "comp": "Comp. Position",
+      "reg": "Reg. Compliance"
+    }
+  },
+  "synthesis": {
+    "strengthsTitle": "Executive Summary: Strengths to Leverage",
+    "strength": {
+      "financial": "Financial Stability",
+      "financialImp": "Resilience to crises and power for strategic investment.",
+      "customer": "Customer Loyalty",
+      "customerImp": "Recurring revenue via technical lock-in.",
+      "operational": "Operational Control",
+      "operationalImp": "Resilience to supply shocks and speed advantage.",
+      "tech": "Tech Competence",
+      "techImp": "Foundation for long-term competitiveness."
+    },
+    "diagnosisTitle": "Diagnosis: Three Core Paradoxes & Critical Weaknesses",
+    "paradox1": {
+      "title": "Paradox 1: \"Cash Rich but Profit Poor\"",
+      "desc": "The company has accumulated 81.7 M€ in cash, but this capital is trapped in inefficient assets."
+    },
+    "paradox2": {
+      "title": "Paradox 2: \"Sacrificing Efficiency for Reliability\"",
+      "desc": "Overemphasis on reliability has distorted the cost structure."
+    },
+    "paradox3": {
+      "title": "Paradox 3: \"Invest in R&D, Compromise on Patent Quality\"",
+      "desc": "Despite resource allocation to innovation, output quality and commercialization remain insufficient."
+    },
+    "margin": "Net Profit Margin",
+    "inventory": "Inventory",
+    "humanCap": "Human Capital",
+    "verticalCost": "Vertical Integration Cost",
+    "oee": "OEE",
+    "actionPlanTitle": "Strategic Priorities & Action Plan",
+    "phase1": {
+      "title": "URGENT: Operational Efficiency Blast (0-12 Months)",
+      "desc": "Rapidly generate Free Cash Flow (FCF) from existing cash and operational resources."
+    },
+    "phase2": {
+      "title": "MID-TERM: Transition to Tech Leadership (12-36 Months)",
+      "desc": "Diversify the growth engine by increasing R&D investment returns.",
+      "p1": "Focus on IO-Link & SPE: Increase market share to 15%.",
+      "p2": "Commercialize JUMO Cloud: Transition from hardware to SaaS.",
+      "p3": "Patent Strategy: Focus on software and system architecture patents."
+    },
+    "phase3": {
+      "title": "LONG-TERM: Geographic & Product Diversification (24-48 Months)",
+      "desc": "Reduce dependency on German macro risks (energy, labor crisis).",
+      "p1": "Deepen Asian Market: Increase market share to 25%.",
+      "p2": "PFAS Solution: Accelerate R&D for alternative materials."
+    },
+    "action": {
+      "stock": "Inventory Optimization",
+      "oee": "OEE Improvement",
+      "price": "Price Optimization"
+    },
+    "table": {
+      "action": "Action",
+      "target": "Concrete Target",
+      "financialImpact": "Financial Impact",
+      "investment": "Investment",
+      "indicator": "Indicator",
+      "strategicImpact": "Strategic Impact"
+    },
+    "totalImpact": "Total Expected Impact (12-18 Months)",
+    "annualProfit": "Annual Net Profit Increase",
+    "transformationTitle": "Expected 3-Year Transformation Scenario",
+    "chartTitle": "Current vs Target Performance",
+    "current": "Current (2024)",
+    "target": "Target (2027)",
+    "metric": {
+      "margin": "Net Profit Margin",
+      "roe": "ROE (Return on Equity)",
+      "turnover": "Inv. Turnover Rate",
+      "revenuePerEmp": "Revenue Per Employee",
+      "fcf": "Free Cash Flow"
+    },
+    "impact": {
+      "sustainability": "Financial sustainability secured.",
+      "shareholder": "Attractive returns for shareholders.",
+      "efficiency": "Improved human capital efficiency.",
+      "growth": "Internal resources created for growth."
+    },
+    "conclusion": {
+      "title": "Conclusion & Final Assessment",
+      "text1": "JUMO has built an excellent technical foundation as a typical German 'Hidden Champion'. However, its overly inward-looking and security-focused growth model has trapped the company in 'comfortable inefficiency'. The biggest risk is failing to channel the existing cash cushion into radical efficiency investments.",
+      "callToAction": "Transformation must begin not with 'more sales' or 'a new product', but with the mathematical optimization of existing operations."
+    }
+  },
+  "ai": {
+    "readinessTitle": "Current Status & AI Readiness (Score: 5.8/10)",
+    "readinessStatus": "Intermediate - Strong Data, Weak Infrastructure",
+    "strengths": "Strong Foundations",
+    "weaknesses": "Critical Gaps",
+    "strength": {
+      "dataAsset": "Rich Data Asset (75+ Years, 150K+ Variants)",
+      "rdCulture": "Strong R&D Culture (7% Intensity)",
+      "lockIn": "Customer Lock-in & Pilot Opportunity",
+      "cloud": "JUMO Cloud Presence"
+    },
+    "weakness": {
+      "silos": "Data Silos (Inter-departmental isolation)",
+      "talent": "Software/AI Talent Gap",
+      "legacyIT": "Legacy IT/IoT Infrastructure",
+      "dataQuality": "Data Quality & Labeling Challenges"
+    },
+    "prioritiesTitle": "Priority AI Use Cases & ROI Analysis",
+    "problem": "Problem",
+    "solution": "AI Solution",
+    "impact": "Financial Impact",
+    "current": "Current",
+    "target": "Target",
+    "p1": {
+      "title": "Predictive Maintenance & OEE",
+      "problem": "70% OEE, 12% Unplanned Downtime, High Scrap",
+      "solution": "Anomaly detection via sensor data (LSTM)."
+    },
+    "p2": {
+      "title": "Demand Forecasting & Inventory",
+      "problem": "123.5 M€ Stock, Low Turnover (1.8x)",
+      "solution": "Multivariate time-series forecasting (Prophet/XGBoost)."
+    },
+    "p3": {
+      "title": "Autonomous Sensor Calibration",
+      "problem": "Manual process (4-8 hrs/device), human error.",
+      "solution": "Automated adjustment via Computer Vision (CNN)."
+    },
+    "p4": {
+      "title": "Smart Design (Digital Twin)",
+      "problem": "150K+ variants, long design cycles.",
+      "solution": "Config recommendation based on historical data (GNN)."
+    },
+    "servicesTitle": "Personalized AI Customer Solutions",
+    "service": {
+      "processGuard": "Process Guard: Monitors deviations in industrial processes.",
+      "healthMonitor": "Sensor Health: Pre-failure replacement & warranty opt.",
+      "configurator": "AI Configurator: Recommends optimal sensor config."
+    },
+    "roadmapTitle": "Implementation Roadmap (3 Years)",
+    "phase1": {
+      "title": "Phase 1: Foundation & Pilot",
+      "focus": "Predictive Maintenance pilot, AI team setup, data pipeline."
+    },
+    "phase2": {
+      "title": "Phase 2: Scaling",
+      "focus": "Rollout to full facility, Demand Forecasting, Cloud integration."
+    },
+    "phase3": {
+      "title": "Phase 3: Commercialization",
+      "focus": "Launch of AI services, new revenue streams."
+    },
+    "investment": "Investment",
+    "totalInvestment": "Total 3-Year Investment",
+    "investmentNote": "<8% of existing cash",
+    "risksTitle": "Risks & Mitigation Strategies",
+    "risk": {
+      "title": "Risk",
+      "data": "Data Quality",
+      "culture": "Cultural Resistance",
+      "cyber": "Cyber Security"
+    },
+    "prob": "Probability",
+    "impactTitle": "Impact",
+    "mitigationTitle": "Mitigation Strategy",
+    "mitigation": {
+      "data": "Start pilot on the data-richest line (Sensilo).",
+      "culture": "Make production manager a sponsor, celebrate wins.",
+      "cyber": "'Secure by Design' and IEC 62443 compliance."
+    },
+    "high": "High",
+    "medium": "Medium",
+    "critical": "Critical",
+    "conclusion": {
+      "title": "Conclusion & Recommendation",
+      "text": "AI is not a luxury innovation for JUMO, but the key to escaping the operational inefficiency trap.",
+      "recommendation": "Recommendation: Start with a 6-9 month 'Predictive Maintenance & Stock Opt.' pilot to rapidly realize ~20 M€ annual potential."
+    }
+  },
+  "rec": {
+    "approachTitle": "Core Approach: \"Accelerating the Slow Ship\"",
+    "approachDesc": "Recommendations targeting chronic operational inefficiencies with fast ROI and low risk, while preserving JUMO's financial strength and loyal customer base.",
+    "problem": "Problem",
+    "target": "Cumulative Target",
+    "table": {
+      "code": "Code",
+      "action": "Concrete Action",
+      "impact": "Expected Impact",
+      "owner": "Owner"
+    },
+    "phase1": {
+      "title": "A. URGENT ACTIONS",
+      "subtitle": "0-12 Months (Fast Cash & Efficiency)"
+    },
+    "action": {
+      "stock": {
+        "title": "\"Inventory Reduction\" Operation",
+        "problem": "123.5 M€ stock, 1.8x low turnover, ~31 M€ holding cost.",
+        "target": "Reduce stock by 30% (to 85 M€), release ~38.5 M€ cash.",
+        "a1": {
+          "act": "ABC/XYZ Categorization & Cleaning 'CZ' group.",
+          "imp": "15-20 M€ Immediate Cash"
+        },
+        "a2": {
+          "act": "Virtual 'Stock Finance Invoice' (8%) to departments.",
+          "imp": "25% drop in stock demand"
+        },
+        "a3": {
+          "act": "Switch to VMI (Vendor Managed Inventory).",
+          "imp": "Working capital gain"
+        }
+      },
+      "hr": {
+        "title": "\"Plug the Leaks\" Personnel Efficiency",
+        "problem": "Revenue per employee 123k€ (Sector <200k€), Negative ELTV.",
+        "target": "Increase rev/emp to 130k€, reduce personnel cost ratio to 43%.",
+        "b1": {
+          "act": "Micro-Learning Network in Production (1 lead per 7).",
+          "imp": "5-8% Efficiency Increase"
+        },
+        "b2": {
+          "act": "White-collar 'Value-Time' analysis (Admin vs Value).",
+          "imp": "20% admin load reduction"
+        },
+        "b3": {
+          "act": "4x4 Performance Matrix (Result vs Behavior).",
+          "imp": "Avg efficiency increase"
+        }
+      },
+      "factory": {
+        "title": "\"Smart Factory Lite\" - Staged Automation",
+        "problem": "70% OEE, high setup times, low flexibility.",
+        "target": "OEE 82%, Production Cost -15%.",
+        "c1": {
+          "act": "Real-time OEE Dashboard (IoT).",
+          "imp": "+3-5% immediate OEE boost"
+        },
+        "c2": {
+          "act": "\"Agile Production Cell\" Pilot (Top 10 products).",
+          "imp": "Lead time -35%"
+        },
+        "c3": {
+          "act": "'Rent-an-Engineer' program (R&D to Production).",
+          "imp": "Production-R&D bridge"
+        }
+      },
+      "price": {
+        "title": "\"Capture Value via Pricing\" Strategy",
+        "problem": "Excellent customer lock-in but low profit margin.",
+        "target": "Increase Net Margin %1.61 -> %4.0.",
+        "d1": {
+          "act": "Value-Based Pricing Matrix (Commodity vs Strategic).",
+          "imp": "Avg price increase 8-12%"
+        },
+        "d2": {
+          "act": "\"JUMO Performance Guarantee\" Premium Contract.",
+          "imp": "5-7% extra revenue"
+        },
+        "d3": {
+          "act": "Technical Sales Training (Value Selling & ROI).",
+          "imp": "Bid acceptance increase"
+        }
+      },
+      "business": {
+        "title": "\"JUMO 5.0\" - Business Model Innovation",
+        "problem": "100% Hardware sales, no recurring revenue.",
+        "target": "20% of revenue from services/software.",
+        "e1": {
+          "act": "\"JUMO Care\" Subscription Service.",
+          "imp": "Recurring revenue stream"
+        },
+        "e2": {
+          "act": "\"Sensor Data Exchange\" Pilot.",
+          "imp": "Monetizing data"
+        },
+        "e3": {
+          "act": "JUMO Certified Re-Manufacturing (Circular Economy).",
+          "imp": "New market segment"
+        }
+      }
+    },
+    "role": {
+      "supplyChain": "Dir. Supply Chain",
+      "cfo": "CFO",
+      "purchasing": "Purchasing Mgr",
+      "prodMgr": "Production Mgr",
+      "hr": "HR Director",
+      "opEx": "Dir. OpEx",
+      "cto": "CTO",
+      "sales": "Sales Director",
+      "marketing": "Marketing Dir.",
+      "ceo": "CEO / Product",
+      "sustain": "Dir. Sustainability"
+    },
+    "phase2": {
+      "title": "B. MID-TERM TRANSFORMATION",
+      "subtitle": "12-36 Months (Profitability & Tech)"
+    },
+    "phase3": {
+      "title": "C. LONG-TERM STRUCTURAL",
+      "subtitle": "36+ Months (New Business Models)"
+    },
+    "matrixTitle": "Priority & Resource Matrix",
+    "matrix": {
+      "col": {
+        "code": "Code",
+        "benefit": "Annual Benefit",
+        "time": "Time",
+        "invest": "Invest",
+        "priority": "Priority"
+      },
+      "stock": "A1-A3 (Stock)",
+      "price": "D1-D3 (Pricing)",
+      "hr": "B1-B3 (Human Capital)",
+      "oee": "C1-C3 (OEE/Factory)",
+      "model": "E1-E3 (Biz Model)"
+    },
+    "priority": {
+      "critical": "CRITICAL",
+      "high": "HIGH",
+      "medium": "MEDIUM",
+      "strategic": "STRATEGIC"
+    },
+    "principlesTitle": "Implementation Principles",
+    "principle": {
+      "winwin": "Start \"Win-Win\"",
+      "winwinDesc": "Begin with Inventory & Price opt. which don't burden the customer.",
+      "funding": "Fund with Existing Cash",
+      "fundingDesc": "Investment (9.3 M€) is <11% of cash. No debt needed.",
+      "speed": "\"Speed > Perfection\"",
+      "speedDesc": "Pilots start in 90 days, results in 6 months.",
+      "motivation": "Internal Motivation",
+      "motivationDesc": "20% of savings should be distributed as team bonuses."
+    },
+    "conclusion": {
+      "title": "Final Word",
+      "text": "JUMO's transformation must start not with seeking 'more sales', but by optimizing existing operational inefficiencies. Recommendations A1 and D1 should start within 3 months.",
+      "call": "This transformation makes the company's philosophy of 'control' and 'quality' financially meaningful without compromising them."
+    }
+  }
+}
+
+

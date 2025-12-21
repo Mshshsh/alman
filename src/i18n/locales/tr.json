@@ -1,0 +1,1243 @@
+{
+  "appTitle": "JUMO GmbH & Co. KG",
+  "projectManagement": "JUMO GmbH & Co. KG",
+  "menu": {
+    "companyInfo": "Şirket Hakkında Genel Bilgiler",
+    "financialPerformance": "Finansal Performans",
+    "hrOrganization": "İnsan Kaynakları ve Organizasyon",
+    "operationalEfficiency": "Operasyonel Verimlilik",
+    "marketingSales": "Pazarlama & Satış",
+    "rdInnovation": "AR-GE ve İnovasyon",
+    "supplyChain": "Tedarik Zinciri ve Lojistik",
+    "macroEnvironment": "Makro Çevre ve Sektör",
+    "strategicSynthesis": "Stratejik Sentez",
+    "aiSolutions": "AI Kullanılabilecek Alanlar ve Olası Çözümler",
+    "recommendations": "Öneriler"
+  },
+  "pages": {
+    "companyInfo": {
+      "title": "Şirket Hakkında Genel Bilgiler",
+      "welcome": "Şirket hakkında genel bilgiler ve detaylar."
+    },
+    "financialPerformance": {
+      "title": "Finansal Performans",
+      "welcome": "Şirketin finansal performans analizi."
+    },
+    "hrOrganization": {
+      "title": "İnsan Kaynakları ve Organizasyon",
+      "welcome": "İnsan kaynakları yapısı ve organizasyon analizi."
+    },
+    "operationalEfficiency": {
+      "title": "Operasyonel Verimlilik",
+      "welcome": "Operasyonel süreçler ve verimlilik analizi."
+    },
+    "marketingSales": {
+      "title": "Pazarlama & Satış",
+      "welcome": "Pazarlama stratejileri ve satış analizi."
+    },
+    "rdInnovation": {
+      "title": "AR-GE ve İnovasyon",
+      "welcome": "Araştırma geliştirme ve inovasyon faaliyetleri."
+    },
+    "supplyChain": {
+      "title": "Tedarik Zinciri ve Lojistik",
+      "welcome": "Tedarik zinciri yönetimi ve lojistik analizi."
+    },
+    "macroEnvironment": {
+      "title": "Makro Çevre ve Sektör",
+      "welcome": "Makro ekonomik çevre ve sektör analizi."
+    },
+    "strategicSynthesis": {
+      "title": "Stratejik Sentez",
+      "welcome": "Stratejik analiz ve sentez."
+    },
+    "aiSolutions": {
+      "title": "AI Kullanılabilecek Alanlar ve Olası Çözümler",
+      "welcome": "Yapay zeka çözümleri ve uygulama alanları."
+    },
+    "recommendations": {
+      "title": "Öneriler",
+      "welcome": "Analiz sonuçlarına dayalı öneriler."
+    }
+  },
+  "language": {
+    "select": "Dil Seçin",
+    "english": "İngilizce",
+    "german": "Almanca",
+    "turkish": "Türkçe"
+  },
+  "companyInfo": {
+    "basicInfoTitle": "Temel Bilgiler",
+    "productsTitle": "Ürünler ve Hizmetler",
+    "managementTitle": "Yönetim Ekibi",
+    "competitorsTitle": "Ana Rakipler",
+    "operatingCompany": "İşletme Şirketi",
+    "parentCompany": "Ana Şirket (Holding)",
+    "company": "Şirket",
+    "registrationNo": "Ticaret Sicil No",
+    "structure": "Yapı",
+    "founded": "Kuruluş",
+    "years": "yıl",
+    "sector": "Sektör",
+    "sectorValue": "Endüstriyel ölçüm, kontrol ve otomasyon teknolojileri",
+    "employees": "Çalışan Sayısı",
+    "globalPresence": "Küresel Varlık",
+    "globalPresenceValue": "5 şube, 25 bağlı ortaklık, 50+ acente",
+    "website": "Web Sitesi",
+    "products": {
+      "temperature": "Sıcaklık sensörleri ve transmiterleri",
+      "processControl": "Proses kontrol cihazları",
+      "automation": "Otomasyon sistemleri (JUMO mTRON)",
+      "recording": "Kayıt cihazları ve veri toplama sistemleri"
+    },
+    "management": {
+      "shareholder": "Hissedar",
+      "charisiadis": "Satış, AR-GE, Üretim",
+      "hr": "İnsan Kaynakları",
+      "itFinance": "IT & Finans"
+    }
+  },
+  "financial": {
+    "healthScore": "Finansal Sağlık Skoru",
+    "healthScoreDescription": "Şirket finansal olarak güvenli bölgede ancak kârlılık düşük",
+    "totalAssets": "Toplam Varlıklar",
+    "equity": "Özkaynak",
+    "revenue": "Ciro",
+    "ebitda": "FAVÖK",
+    "netProfit": "Net Kâr",
+    "cash": "Nakit",
+    "altmanZScore": "Altman Z-Skoru",
+    "safeZone": "Güvenli Bölge",
+    "altmanInterpretation": "Z'' > 2.6 → Güvenli | 1.1-2.6 → Gri Bölge | <1.1 → Tehlike",
+    "score": "Skor",
+    "dupontAnalysis": "DuPont Analizi",
+    "profitMargin": "Kâr Marjı",
+    "assetTurnover": "Varlık Devir Hızı",
+    "financialLeverage": "Finansal Kaldıraç",
+    "keyRatios": "Temel Finansal Oranlar",
+    "category": "Kategori",
+    "ratio": "Oran",
+    "value": "Değer",
+    "benchmark": "Kıyaslama",
+    "status": "Durum",
+    "good": "İyi",
+    "bad": "Kötü",
+    "liquidity": "Likidite",
+    "efficiency": "Verimlilik",
+    "leverage": "Kaldıraç",
+    "currentRatio": "Cari Oran",
+    "cashRatio": "Nakit Oranı",
+    "inventoryTurnover": "Stok Devir Hızı",
+    "debtToEquity": "Borç/Özkaynak",
+    "debtToEBITDA": "Borç/FAVÖK",
+    "healthBreakdown": "Sağlık Skoru Dağılımı",
+    "healthMetrics": {
+      "liquidity": "Likidite",
+      "profitability": "Kârlılık",
+      "efficiency": "Verimlilik",
+      "leverage": "Kaldıraç",
+      "cashFlow": "Nakit Akışı"
+    },
+    "strengths": {
+      "title": "Güçlü Yönler",
+      "liquidity": "Mükemmel likidite - 81.7 M€ nakit",
+      "lowDebt": "Düşük borç yükü - Borç/Özkaynak = 1.0",
+      "altmanScore": "Finansal istikrar - Altman Z-Skoru 2.9",
+      "equityBase": "Güçlü özkaynak yapısı - 190 M€"
+    },
+    "weaknesses": {
+      "title": "Zayıf Yönler",
+      "lowProfitability": "Çok düşük kârlılık - Net kâr marjı ~%1.6",
+      "inventoryManagement": "Verimsiz stok yönetimi - Stok devir hızı 2.52x",
+      "personnelCost": "Yüksek personel maliyeti - Cironun %46'sı",
+      "cashFlowGeneration": "Düşük nakit akışı üretimi - FCF marjı %1.88"
+    },
+    "urgentActions": {
+      "title": "Acil Düzeltme Gerektiren Noktalar",
+      "inventoryOptimization": "Stok optimizasyonu - 123.5 M€ stok çok yüksek",
+      "personnelEfficiency": "Personel verimliliği - Çalışan başına ciro 123k€ → hedef 150k€+",
+      "operationalMargin": "Operasyonel marj iyileştirme - EBIT marjı <%1"
+    },
+    "sources": "Kaynaklar",
+    "officialWebsite": "Resmi Web Sitesi"
+  },
+  "hr": {
+    "performanceScore": "İK Performans Skoru",
+    "performanceScoreValue": "Orta Düzeyde",
+    "scoreDescription": "Şirket güçlü elde tutma gösteriyor ancak verimlilik iyileştirme gerekiyor",
+    "totalEmployees": "Toplam Çalışan",
+    "apprentices": "Çıraklar",
+    "turnoverRate": "Devir Oranı",
+    "avgTenure": "Ortalama Görev Süresi",
+    "revenuePerEmployee": "Çalışan Başına Ciro",
+    "personnelCostRatio": "Personel Maliyet Oranı",
+    "years": "yıl",
+    "criticalFindings": "Kritik Bulgular",
+    "negativeELTV": "Negatif ELTV - Çalışan yaşam boyu değeri -519.000€",
+    "highPersonnelCost": "Yüksek personel maliyeti - Cironun %46'sı",
+    "scoreBreakdown": "Skor Dağılımı",
+    "score": "Skor",
+    "scoreCategories": {
+      "loyalty": "Sadakat",
+      "development": "Gelişim",
+      "efficiency": "Verimlilik",
+      "futureReadiness": "Geleceğe Hazırlık",
+      "orgHealth": "Organizasyon Sağlığı"
+    },
+    "findings": {
+      "negativeELTV": "Negatif ELTV - Her çalışan yaşam boyu -519.000€ zarar",
+      "highPersonnelCost": "Çok yüksek personel maliyeti - Cironun %46'sı",
+      "lowTCI": "Düşük TCI (0.67) - Verimsiz maliyet yapısı",
+      "knowledgeLossRisk": "Bilgi kaybı riski - Yaşlanan işgücü"
+    },
+    "scoreMetrics": {
+      "recruitment": "İşe Alım",
+      "retention": "Elde Tutma",
+      "productivity": "Verimlilik",
+      "training": "Eğitim",
+      "costEfficiency": "Maliyet Verimliliği",
+      "engagement": "Bağlılık"
+    },
+    "eltvAnalysis": "ELTV (Çalışan Yaşam Boyu Değeri) Analizi",
+    "eltvResult": "ELTV Sonucu",
+    "eltvDescription": "Mevcut durumda her çalışan şirket için yaşam boyu zarar oluşturuyor",
+    "contribution": "Katkı",
+    "cost": "Maliyet",
+    "cumulative": "Kümülatif",
+    "eltvMetrics": {
+      "annualRevenue": "Yıllık Ciro/Çalışan",
+      "grossMargin": "Brüt Marj",
+      "personnelCost": "Personel Maliyeti",
+      "avgTenure": "Ortalama Görev Süresi",
+      "eltv": "ELTV"
+    },
+    "negativeValue": "Negatif değer!",
+    "productivityScenarios": "Verimlilik Senaryoları",
+    "profitMargin": "Kâr Marjı",
+    "scenarios": {
+      "current": "Mevcut",
+      "pessimistic": "Kötümser",
+      "realistic": "Gerçekçi",
+      "optimistic": "İyimser",
+      "benchmark": "Kıyaslama",
+      "optimized": "Optimize Edilmiş",
+      "target": "Hedef"
+    },
+    "revPerEmployee": "Çalışan Başına Ciro",
+    "employees": "Çalışanlar",
+    "revenue": "Ciro",
+    "apprenticeSystem": "Çırak Sistemi Analizi",
+    "apprenticeROI": "Çırak Sistemi ROI",
+    "apprenticeROIDescription": "Çırak sistemi şu anda negatif getiri gösteriyor - iyileştirme gerekiyor",
+    "apprentice": {
+      "externalCost": "Dış İşe Alım Maliyeti",
+      "trainingCost": "Eğitim Maliyeti",
+      "netSaving": "Net Tasarruf"
+    },
+    "apprenticeMetrics": {
+      "totalApprentices": "Toplam Çırak",
+      "annualCost": "Yıllık Maliyet/Çırak",
+      "hireProbability": "İşe Alma Olasılığı",
+      "avgRetention": "Ortalama Elde Tutma",
+      "roi": "Yatırım Getirisi"
+    },
+    "negativeROI": "Negatif ROI",
+    "strengths": {
+      "title": "Güçlü Yönler",
+      "lowTurnover": "Düşük personel devir oranı - %4 (sektör ortalaması %12)",
+      "highTenure": "Yüksek görev süresi - 15 yıl ortalama",
+      "apprenticeSystem": "Yapılandırılmış çırak programı - 93 aktif çırak",
+      "awardedTraining": "Ödüllü eğitim programları",
+      "apprenticeProgram": "Yapılandırılmış çırak programı - 93 çırak",
+      "longTenure": "Uzun görev süresi - 15 yıl ortalama",
+      "globalWorkforce": "Küresel işgücü dağılımı - 5 ülkede 2.530+ çalışan"
+    },
+    "weaknesses": {
+      "title": "Zayıf Yönler",
+      "lowProductivity": "Düşük verimlilik - 123k€/çalışan (hedef 150k€+)",
+      "highCostRatio": "Yüksek maliyet oranı - %46 (hedef <%40)",
+      "negativeROI": "Negatif çırak ROI - -%63,4",
+      "agingWorkforce": "Yaşlanan işgücü - Bilgi kaybı riski",
+      "negativeELTV": "Negatif ELTV - -519.000€ (her çalışan zarar ediyor)",
+      "negativeApprenticeCost": "Negatif çırak ROI - -%63,4 yatırım getirisi"
+    },
+    "strategicPriorities": "Stratejik Öncelikler",
+    "expectedImpact": "Beklenen Etki",
+    "priorities": {
+      "productivity": "Verimlilik İyileştirme",
+      "productivityDesc": "Çalışan başına ciroyu artırın 123k€'dan 150k€+'ya",
+      "talentDevelopment": "Yetenek Gelişimi ve İçeriden Terfi",
+      "fasterFilling": "Pozisyon dolum süresini hızlandırma",
+      "ageStructure": "Yaş Yapısı Dengeleme",
+      "reduceKLR": "KLR azaltma ve bilgi aktarımı",
+      "flexibleWork": "Esnek Çalışma Modelleri",
+      "retentionIncrease": "Elde tutma artışı",
+      "costOptimization": "Maliyet Optimizasyonu",
+      "costOptimizationDesc": "Personel maliyetini azaltın %46'dan %40'a",
+      "apprenticeROI": "Çırak ROI İyileştirme",
+      "apprenticeROIDesc": "Çırak elde tutma ve üretkenliğini artırın",
+      "automation": "Otomasyon & Dijitalleşme",
+      "automationDesc": "Rutin görevlerde %20 maliyet azaltma potansiyeli"
+    },
+    "difficulty": {
+      "high": "Yüksek",
+      "medium": "Orta",
+      "low": "Düşük"
+    },
+    "actionPlan": "12 Aylık Eylem Planı",
+    "monthlyMetrics": "Aylık Ölçülebilir Hedefler",
+    "current": "Mevcut",
+    "days": "gün",
+    "metrics": {
+      "valueAdded": "Çalışan başına katma değer",
+      "internalDevelopment": "İçeriden terfi oranı",
+      "fillTime": "Pozisyon dolum süresi"
+    },
+    "mathematicalTargets": "Matematiksel Hedefler",
+    "targets": {
+      "costRatio": "Personel maliyet oranı",
+      "eltv": "ELTV",
+      "revenuePerEmployee": "Çalışan başına ciro"
+    },
+    "months": {
+      "m1_3": "Ay 1-3",
+      "m4_6": "Ay 4-6",
+      "m7_9": "Ay 7-9",
+      "m10_12": "Ay 10-12"
+    },
+    "actions": {
+      "diagnostics": "Detaylı verimlilik tanılaması",
+      "pilotAutomation": "Pilot otomasyon projeleri",
+      "apprenticeReform": "Çırak programı reformu",
+      "scaleAutomation": "Otomasyonu ölçeklendirme",
+      "performanceSystem": "Performans yönetim sistemi",
+      "continuousImprovement": "Sürekli iyileştirme programı"
+    },
+    "indices": "Temel Göstergeler",
+    "tci": "TCI (Toplam Maliyet Endeksi)",
+    "tciValue": "Düşük = Daha İyi",
+    "tciDescription": "Toplam maliyet verimliliği - Hedef <0.5",
+    "klr": "KLR (Personel Maliyet Oranı)",
+    "klrValue": "Düşük = Daha İyi",
+    "klrDescription": "Personel maliyet oranı - Hedef <1.0",
+    "conclusion": "Sonuç",
+    "conclusionStrong": "Güçlü Yönler",
+    "conclusionStrengthText": "Mükemmel elde tutma (%4 devir), uzun görev süresi (15 yıl), güçlü çırak sistemi",
+    "conclusionWeak": "İyileştirme Alanları",
+    "conclusionWeaknessText": "Verimlilik artışı kritik (123k€→150k€+), personel maliyet oranı yüksek (%46→%40), ELTV negatif (-519k€→pozitif)",
+    "conclusionText": "JUMO güçlü elde tutma ve istikrar gösteriyor ancak verimlilik ve maliyet optimizasyonu gerektiriyor. ELTV'yi pozitif bölgeye çıkarmak için acil eylem gerekiyor - potansiyel iyileşme yıllık 10M€+."
+  },
+  "operational": {
+    "performanceScore": "Operasyonel Performans Skoru",
+    "performanceScoreValue": "Orta Düzeyde",
+    "scoreDescription": "Şirket üretim kapasitesi gösteriyor ancak verimlilik optimizasyonu gerektiriyor",
+    "dataDisclaimerTitle": "Veri Feragatnamesi",
+    "dataDisclaimer": "Gerçek operasyonel verilerin elde edilmesinin imkansızlığı nedeniyle, bu analizde sunulan tüm değerler sektör kıyaslamalarına ve genel şirket bilgilerine dayalı tahminler ve varsayımlardır. Bu rakamlar analitik metodolojiyi göstermek için örnek amaçlıdır.",
+    "overallScore": "Genel Operasyonel Skor",
+    "oeeAnalysis": "OEE (Toplam Ekipman Etkinliği) Analizi",
+    "oeeScore": "OEE Skoru",
+    "oeeComponents": "OEE Bileşenleri",
+    "current": "Mevcut",
+    "benchmark": "Kıyaslama",
+    "oee": {
+      "availability": "Kullanılabilirlik",
+      "performance": "Performans",
+      "quality": "Kalite",
+      "currentOEE": "Mevcut OEE",
+      "annualLoss": "Yıllık Kayıp",
+      "lossDescription": "Düşük kullanılabilirlik, performans ve kalite sorunları nedeniyle kapasite kaybı",
+      "formula": "Formül"
+    },
+    "setupCostAnalysis": "Yüksek-Çeşitli, Düşük-Hacimli Üretim - Kurulum Maliyet Analizi",
+    "setup": {
+      "setupTime": "Kurulum Zamanı Maliyeti",
+      "inventoryCost": "Stok Maliyeti",
+      "financingCost": "Finansman Maliyeti",
+      "description": "Ürün varyantı",
+      "variations": "varyasyon",
+      "dailySetups": "Günlük kurulum",
+      "timePerSetup": "Kurulum başına süre"
+    },
+    "minutes": "dakika",
+    "verticalIntegration": "Dikey Entegrasyon Analizi",
+    "scenario": "Senaryo",
+    "personnel": "Personel",
+    "totalCost": "Toplam Maliyet",
+    "integration": {
+      "current": "Mevcut (Şirket İçi Üretim)",
+      "outsourcing": "Dış Kaynak Senaryosu",
+      "netSavings": "Net Tasarruf Potansiyeli",
+      "savingsDescription": "Dış kaynak maliyetleri azaltabilir ancak kalite risklerini artırabilir"
+    },
+    "inventoryOptimization": "Stok Optimizasyonu (Newsvendor Modeli)",
+    "inventory": {
+      "current": "Mevcut Stok",
+      "optimal": "Optimal Stok (Q*)",
+      "excess": "Fazla Stok",
+      "units": "birim",
+      "excessValue": "Toplam Fazla Değer",
+      "releasableCash": "Serbest Bırakılabilir Nakit",
+      "newsvendorModel": "Newsvendor Model Formülü"
+    },
+    "sensiloROI": "Sensilo Fabrika (Akıllı Fabrika) ROI Analizi",
+    "sensilo": {
+      "investment": "Toplam Yatırım",
+      "annualBenefit": "Yıllık Fayda",
+      "payback": "Geri Ödeme Süresi",
+      "wasteRate": "Fire Oranı",
+      "productivity": "Verimlilik",
+      "agvIntegration": "AGV Entegrasyonu",
+      "darkFactory": "Karanlık Fabrika Operasyonları",
+      "training": "Personel Eğitimi",
+      "supplyChain": "Tedarik Zinciri Senkronizasyonu",
+      "successProbability": "Genel Başarı Olasılığı",
+      "riskNote": "Başarı AGV entegrasyonu, eğitim etkinliği ve tedarik zinciri senkronizasyonuna bağlıdır",
+      "criticalFactors": "Kritik Başarı Faktörleri"
+    },
+    "years": "yıl",
+    "sixSigma": "Altı Sigma Seviye Analizi",
+    "sigma": {
+      "current": "Mevcut Sigma Seviyesi",
+      "industry": "Sektör Ortalaması",
+      "formula": "Altı Sigma Hesaplama",
+      "needsImprovement": "iyileştirme gerekiyor"
+    },
+    "performanceScorecard": "Performans Karnesi",
+    "metric": "Metrik",
+    "target": "Hedef",
+    "gap": "Fark",
+    "priority": {
+      "title": "Öncelik",
+      "high": "Yüksek",
+      "medium": "Orta",
+      "low": "Düşük",
+      "critical": "Kritik"
+    },
+    "metrics": {
+      "inventoryTurnover": "Stok Devir Hızı",
+      "sigmaLevel": "Sigma Seviyesi",
+      "productivity": "Verimlilik Endeksi",
+      "unitCost": "Birim Maliyet"
+    },
+    "strategicPriorities": "Stratejik Öncelikler (NPV Sıralaması)",
+    "impact": "Etki",
+    "difficulty": {
+      "high": "Yüksek",
+      "medium": "Orta",
+      "low": "Düşük"
+    },
+    "priorities": {
+      "inventory": "Stok Optimizasyonu",
+      "immediate": "Anında nakit serbest bırakma",
+      "sensilo": "Sensilo Fabrika Yatırımı",
+      "oee": "OEE İyileştirme (%70,4 → %85)",
+      "waste": "Altı Sigma & Fire Azaltma"
+    },
+    "conclusion": {
+      "title": "Sonuç",
+      "paradox": "Verimlilik Paradoksu",
+      "paradoxText": "JUMO orta düzeyde operasyonel verimlilikle (62/100) çalışıyor ancak kritik çelişkilerle karşı karşıya",
+      "keyIssues": "Ana Sorunlar",
+      "issue1": "Fazla stokta 272 M€ bağlı (%43 fazla stoklama)",
+      "issue2": "Düşük OEE nedeniyle 17,75 M€ yıllık kayıp (%70,4 vs %85 hedef)",
+      "issue3": "Yüksek-çeşitli, düşük-hacimli üretim 5,72 M€ kurulum maliyetine neden oluyor",
+      "issue4": "Sensilo Fabrika %52,9 ROI sunuyor ancak %45,9 başarı olasılığıyla dikkatli uygulama gerektiriyor"
+    }
+  },
+  "marketing": {
+    "dataDisclaimer": "Gerçek pazarlama ve satış verilerinin elde edilmesinin imkansızlığı nedeniyle, bu analizde sunulan tüm değerler sektör kıyaslamalarına ve genel şirket bilgilerine dayalı tahminler ve varsayımlardır. Bu rakamlar analitik metodolojiyi göstermek için örnek amaçlıdır.",
+    "overallScore": "Genel Pazarlama Performans Skoru",
+    "scoreDescription": "Mükemmel müşteri ekonomisi ancak zayıf operasyonel satış verimliliği",
+    "customerEconomics": "Müşteri Ekonomisi (LTV/CAC Analizi)",
+    "ltv": {
+      "title": "LTV (Yaşam Boyu Değer)",
+      "investment": "Yatırım",
+      "return": "Getiri",
+      "description": "Her 2.000€ yatırım 1,71 M€ getiri sağlıyor - olağanüstü müşteri kazanım verimliliği",
+      "lifetime": "Müşteri Ömrü",
+      "churnRate": "Kayıp Oranı",
+      "formula": "LTV Formülü (İndirgenmiş Nakit Akışı)",
+      "discountRate": "İskonto oranı"
+    },
+    "segmentation": {
+      "title": "ABC Müşteri Segmentasyonu (Pareto Analizi)",
+      "segment": "Segment",
+      "customers": "Müşteriler",
+      "revenue": "Ciro",
+      "margin": "Marj",
+      "profit": "Kar",
+      "focus": "Optimal Odaklanma",
+      "optimization": "Optimizasyondan Beklenen Kar",
+      "optimizationDesc": "A müşterilerine %60, B'ye %30 ve C'ye %10 efor odaklanması ek kar üretebilir"
+    },
+    "others": "Diğerleri",
+    "marketAnalysis": "Pazar Yoğunlaşma Analizi",
+    "hhi": {
+      "concentrated": "Yoğunlaşmış Pazar",
+      "description": "HHI > 2.500 yoğunlaşmış pazar gösterir. JUMO küçük bir oyuncu (%3) ancak niş segmentlerde güçlü"
+    },
+    "digitalChannels": "Dijital Kanal Etkinliği",
+    "budget": "Bütçe Dağılımı",
+    "optimalBudget": "Optimal Bütçe Dağılımı",
+    "channels": {
+      "seo": "SEO & Teknik İçerik",
+      "webinars": "Web Seminerleri",
+      "tradeFairs": "Fuarlar"
+    },
+    "campusROI": "JUMO Campus ROI",
+    "campus": {
+      "costs": "Yıllık Maliyetler",
+      "revenue": "Toplam Gelir",
+      "description": "JUMO Campus pozitif ROI üretiyor",
+      "investment": "Her",
+      "return": "getiriyor"
+    },
+    "salesEfficiency": "Satış Verimliliği (Çalışan Başına Ciro)",
+    "sales": {
+      "current": "Mevcut Performans",
+      "benchmark": "Kıyaslama",
+      "gap": "Fark"
+    },
+    "pricingOptimization": "Fiyatlandırma Optimizasyon Potansiyeli",
+    "pricing": {
+      "current": "Mevcut Fiyat",
+      "optimal": "Optimal Fiyat",
+      "potential": "Potansiyel Ek Kar"
+    },
+    "churnPrevention": "Müşteri Kaybı Önleme ROI",
+    "churn": {
+      "annualLoss": "Yıllık Müşteri Kaybı",
+      "customers": "müşteri",
+      "loss": "kayıp",
+      "preventionCost": "Önleme Yatırımı",
+      "savings": "Potansiyel Tasarruf"
+    },
+    "mei": {
+      "title": "Pazarlama Etkinlik Endeksi",
+      "inefficient": "Verimsiz",
+      "description": "Her %1 bütçe artışı sadece %0,325 performans artışı sağlıyor - pazarlama yatırımları yeterince verimli değil",
+      "formula": "MEI Formülü",
+      "marketShare": "Pazar Payı Büyümesi",
+      "brandAwareness": "Marka Bilinirliği",
+      "satisfaction": "Müşteri Memnuniyeti",
+      "budgetEfficiency": "Bütçe Verimliliği"
+    },
+    "performanceScorecard": "Pazarlama Performans Karnesi",
+    "status": {
+      "title": "Durum",
+      "excellent": "Mükemmel",
+      "good": "İyi",
+      "weak": "Zayıf",
+      "low": "Düşük"
+    },
+    "metrics": {
+      "customerLifetime": "Müşteri Ömrü",
+      "churnRate": "Kayıp Oranı",
+      "salesEfficiency": "Satış Verimliliği",
+      "digitalROI": "Dijital ROI",
+      "marketShare": "Pazar Payı"
+    },
+    "strategicPriorities": "Stratejik Öncelikler",
+    "impact": "Etki",
+    "timeline": "Zaman Çizelgesi",
+    "investmentLevel": "Yatırım",
+    "months": "ay",
+    "priority": {
+      "high": "Yüksek",
+      "medium": "Orta",
+      "low": "Düşük",
+      "critical": "Kritik"
+    },
+    "investment": {
+      "high": "Yüksek",
+      "medium": "Orta",
+      "low": "Düşük"
+    },
+    "priorities": {
+      "pricing": "Fiyat Optimizasyonu",
+      "churnPrevention": "Kayıp Önleme Programı",
+      "customerFocus": "A-Müşteri Odaklı Strateji",
+      "asiaExpansion": "Asya Pazarı Genişlemesi",
+      "digitalOptimization": "Dijital Kanal Optimizasyonu"
+    },
+    "conclusion": {
+      "title": "Sonuç: Pazarlama Paradoksu",
+      "paradox": "Pazarlama Paradoksu",
+      "paradoxText": "JUMO pazarlama yapısında temel bir çelişki sergiliyor",
+      "strengths": "Olağanüstü Güçlü Yönler",
+      "strength1": "Mükemmel müşteri ekonomisi - CAC/LTV = 0,0012 (ideal < 0,33)",
+      "strength2": "Üstün müşteri elde tutma - <%3 kayıp vs %10 sektör ortalaması",
+      "strength3": "Güçlü müşteri ömrü - 15+ yıl vs 8 yıl kıyaslama",
+      "weaknesses": "Kritik Zayıf Yönler",
+      "weakness1": "Düşük satış verimliliği - 819k€/çalışan vs 1,2M€ kıyaslama (-%31,7)",
+      "weakness2": "Suboptimal fiyatlandırma - Mevcut 90€ vs optimal 107,50€ (+%19,4 potansiyel)",
+      "weakness3": "Verimsiz pazarlama harcaması - MEI = 0,325 (hedef 0,80)",
+      "solution": "Öncelikli Çözüm",
+      "solutionText": "Fiyat optimizasyonu (potansiyel +24,2 M€ kar) ve kayıp önleme programı (ROI %3.747) derhal uygulanmalı. Toplam potansiyel etki: Yıllık 100+ M€."
+    }
+  },
+  "rd": {
+    "dataDisclaimerTitle": "Veri Feragatnamesi",
+    "dataDisclaimer": "Gerçek Ar-Ge ve inovasyon verilerinin elde edilmesinin imkansızlığı nedeniyle, bu analizde sunulan tüm değerler sektör kıyaslamalarına ve genel şirket bilgilerine dayalı tahminler ve varsayımlardır. Bu rakamlar analitik metodolojiyi göstermek için örnek amaçlıdır.",
+    "overallScore": "Genel İnovasyon Performans Skoru",
+    "scoreDescription": "Yüksek patent sayısı ancak düşük nitelik - koruma odaklı strateji",
+    "years": "yıl",
+    "units": "birim",
+    "patentPortfolio": {
+      "title": "Patent Portföy Analizi",
+      "totalPatents": "Toplam Patent",
+      "patentImpact": "Patent Etki Skoru (PI)",
+      "belowTarget": "Hedefin altında (<1.0)",
+      "annualPatents": "Yıllık Yeni Patent",
+      "impactFormula": "Patent Etki Formülü",
+      "impactDescription": "PI = (Alıntı/Yaş) × (Aile Büyüklüğü/Sektör Ort.) - JUMO: 0.857 (sektör ortalamasının altında)",
+      "technologyConcentration": "Teknoloji Yoğunlaşma İndeksi",
+      "ageDistribution": "Patent Yaş Dağılımı",
+      "patents": "Patent",
+      "value": "Değer",
+      "portfolioValue": "Portföy Değeri",
+      "annualDepreciation": "Yıllık Amortisman",
+      "depreciationDesc": "patent eskimesi maliyeti"
+    },
+    "technologies": {
+      "temperature": "Sıcaklık Sensörleri",
+      "liquid": "Sıvı Analizi",
+      "pressure": "Basınç & Otomasyon"
+    },
+    "rdEfficiency": {
+      "title": "Ar-Ge Yatırım Verimliliği",
+      "rdIntensity": "Ar-Ge Yoğunluğu",
+      "ofRevenue": "ciro oranı",
+      "annualBudget": "Yıllık Bütçe",
+      "innovationReturn": "İnovasyon Getiri Oranı",
+      "targetReturn": "Hedef: >%100",
+      "returnFormula": "Getiri Formülü",
+      "newProductRevenue": "Yeni Ürün Geliri",
+      "rdInvestment": "Ar-Ge Yatırımı",
+      "calculation": "Hesaplama",
+      "taxBenefit": "Vergi Teşviki",
+      "year": "yıl",
+      "germanIncentive": "Almanya Forschungszulage",
+      "effectiveCost": "Efektif Maliyet",
+      "afterTax": "vergi sonrası"
+    },
+    "personnel": {
+      "title": "Ar-Ge Personel Verimliliği",
+      "rdPersonnel": "Ar-Ge Personeli",
+      "patentsPerEmployee": "Çalışan Başına Patent",
+      "sectorBenchmark": "Sektör Kıyaslaması",
+      "productivityRatio": "Verimlilik Oranı",
+      "belowSector": "Sektörün altında",
+      "productivityNote": "Ar-Ge personeli verimliliği sektörün %57'si kadar - iyileştirme gerekiyor"
+    },
+    "roadmap": {
+      "title": "Teknoloji Yol Haritası (TRL Analizi)",
+      "technology": "Teknoloji",
+      "trl": "TRL",
+      "market": "Pazara Çıkış",
+      "investment": "Yatırım",
+      "success": "Başarı Olasılığı",
+      "potentialRevenue": "Potansiyel Gelir",
+      "years": "yıl",
+      "year": "yıl",
+      "portfolioRisk": "Portföy Riski",
+      "failureProb": "başarısızlık olasılığı",
+      "riskNote": "Teknoloji portföyü orta-yüksek risk taşıyor - dikkatli uygulama gerekiyor"
+    },
+    "projects": {
+      "autonomous": "Otonom Sensörler",
+      "basicRD": "Temel Ar-Ge",
+      "efficiency": "Verimlilik Projeleri"
+    },
+    "university": {
+      "title": "Üniversite İşbirliği ROI Analizi",
+      "annualCost": "Yıllık Maliyet",
+      "annualBenefit": "Yıllık Fayda",
+      "roi": "ROI",
+      "negativeROI": "Negatif ROI",
+      "strategicNote": "Üniversite işbirliği kısa vadede negatif net değer ama uzun vadeli stratejik yatırım"
+    },
+    "innovationRadar": {
+      "title": "İnovasyon Metrikleri Radar Analizi",
+      "score": "Skor",
+      "description": "Kapsamlı inovasyon performans değerlendirmesi - tüm boyutlar"
+    },
+    "metrics": {
+      "patentImpact": "Patent Etkisi",
+      "rdIntensity": "Ar-Ge Yoğunluğu",
+      "innovationReturn": "İnovasyon Getirisi",
+      "personnelProductivity": "Personel Verimliliği",
+      "portfolioRisk": "Portföy Riski",
+      "universityROI": "Üniversite ROI"
+    },
+    "scorecard": {
+      "title": "İnovasyon Performans Karnesi",
+      "metric": "Metrik",
+      "current": "Mevcut",
+      "target": "Hedef",
+      "gap": "Fark",
+      "status": "Durum",
+      "good": "İyi",
+      "medium": "Orta",
+      "weak": "Zayıf",
+      "patentImpact": "Patent Etki Skoru",
+      "rdIntensity": "Ar-Ge Yoğunluğu",
+      "innovationReturn": "İnovasyon Getiri Oranı",
+      "personnelProductivity": "Personel Verimliliği",
+      "portfolioRisk": "Portföy Riski",
+      "universityROI": "Üniversite İşbirliği ROI"
+    },
+    "portfolio": {
+      "title": "Optimal Ar-Ge Portföy Tahsisi (Markowitz Modeli)",
+      "allocation": "Tahsis",
+      "expectedReturn": "Beklenen Getiri",
+      "risk": "Risk",
+      "portfolioRisk": "Portföy Riski",
+      "sharpeRatio": "Sharpe Oranı"
+    },
+    "strategicPriorities": "Stratejik Öncelikler (ROI Sıralaması)",
+    "impact": "Etki",
+    "investment": "Yatırım",
+    "priority": {
+      "critical": "Kritik",
+      "high": "Yüksek",
+      "medium": "Orta"
+    },
+    "priorities": {
+      "iolink": "IO-Link Hızlandırma",
+      "patentQuality": "Patent Niteliğini Artır",
+      "rdEfficiency": "Ar-Ge Süreç Verimliliği",
+      "rdEfficiencyDesc": "Getiri: %84.5 → %100",
+      "university": "Üniversite İşbirliği Optimize"
+    },
+    "conclusion": {
+      "title": "Sonuç",
+      "paradox": "İnovasyon Paradoksu",
+      "paradoxText": "JUMO'nun inovasyon stratejisi 'koruma odaklı' ama 'kırılma yaratıcı' değil",
+      "keyIssues": "Ana Sorunlar",
+      "issue1": "Patent Paradoksu: 600-700 patent ama düşük etki (PI: 0.857) - süreç patentleri koruma sağlıyor ama teknoloji liderliği getirmiyor",
+      "issue2": "Ar-Ge Verimliliği Sınırlı: Yüksek yoğunluk (%7) ama düşük getiri (%84.5) - Her 1€ Ar-Ge, 0.85€ gelir",
+      "issue3": "Gelecek Riskli: Teknoloji portföyü %43.5 başarısızlık riski taşıyor",
+      "issue4": "İnsan Kaynağı Zayıf: Ar-Ge personeli sektörün %57'si kadar verimli",
+      "recommendation": "Öncelikli Eylemler",
+      "recommendationText": "IO-Link hızlandırma (+75 M€ gelir, ROI +400%) derhal uygulanmalı. Patent niteliği artırılmalı (PI: 0.857→1.0). Toplam potansiyel: Yıllık 80+ M€ ek gelir."
+    }
+  },
+  
+  "supplyChain": {
+    "overallPerformance": "Genel Tedarik Zinciri Performansı",
+    "scoreDesc": "Verimlilik zayıf olsa da, güvenilirlik ve teslimat performansı mükemmel seviyede.",
+    "stockManagementAnalysis": "Bölüm 1: Stok Yönetiminin Maliyet-Fayda Analizi",
+    "annualHoldingCost": "Yıllık Stok Tutma Maliyeti",
+    "inventoryValue": "Ortalama Stok Değeri",
+    "eoqPotential": "EOQ Optimizasyon Potansiyeli",
+    "reduction": "Stok Azaltma",
+    "units": "birim",
+    "unitComparison": "Mevcut vs EOQ Stok Miktarı (Milyon Birim)",
+    "current": "Mevcut",
+    "eoq": "EOQ Modeli",
+    "unitsMillion": "Milyon Birim",
+    "strategicBufferValue": "Stratejik Tampon Stok Değerlemesi (Real Options)",
+    "holdingCost": "Stok Tutma Maliyeti",
+    "optionValue": "Opsiyon Değeri",
+    "optionValueResult": "Yüksek stok seviyesinin opsiyon değeri",
+    "costMultiplier": "Maliyet Çarpanı",
+    "supplierRiskAnalysis": "Bölüm 2: Tedarikçi Risk Yönetimi Analizi",
+    "type": "Tedarikçi Türü",
+    "share": "Pay",
+    "criticality": "Kritiklik",
+    "totalSCR": "Toplam SCR Skoru",
+    "risk": {
+      "chips": "Elektronik Çipler",
+      "metals": "Kıymetli Metaller",
+      "raw": "Genel Hammadde",
+      "veryHigh": "Çok Yüksek",
+      "high": "Yüksek",
+      "medium": "Orta",
+      "mediumHigh": "Orta-Yüksek Risk"
+    },
+    "dualSourcingSavings": "Çift Kaynaklı Tedarik Senaryosu",
+    "newTotalCost": "Yeni Toplam Maliyet",
+    "decrease": "Düşüş",
+    "logisticsOptimization": "Bölüm 3: Lojistik Ağ Optimizasyonu",
+    "logistics": {
+      "central": "Merkezi (Mevcut)",
+      "distributed": "Dağıtık (3 Hub)"
+    },
+    "costMEur": "Maliyet (M€)",
+    "roi": "ROI",
+    "fasterDelivery": "Daha Hızlı Teslimat ile Pazar Payı Artışı",
+    "airVsSea": "Hava vs Deniz Yolu Kararı",
+    "criticalValue": "Kritik Değer",
+    "days": "gün",
+    "airReasoning": "Teslimat süresi farkı kritik değeri aşıyorsa hava kargo ekonomiktir.",
+    "resilienceScorecard": "Bölüm 4: Tedarik Zinciri Dayanıklılık Endeksi",
+    "rciEfficient": "Dayanıklılık yatırımı verimli",
+    "metric": "Metrik",
+    "sector": "Sektör Ort.",
+    "score": "Skor",
+    "weight": "Ağırlık",
+    "metrics": {
+      "turnover": "Stok Devir Hızı",
+      "delivery": "Teslimat Doğruluk",
+      "scr": "Tedarikçi SCR",
+      "logisticsCost": "Lojistik Mal./Ciro",
+      "rci": "Esneklik RCI"
+    },
+    "strategicScenarios": "Bölüm 5: Stratejik Optimizasyon Senaryoları",
+    "scenario": "Senaryo",
+    "stockLevel": "Stok Seviyesi",
+    "turnover": "Devir Hızı",
+    "cost": "Yıllık Maliyet",
+    "netImpact": "Net Etki",
+    "scenarios": {
+      "current": "1. Mevcut (Just-in-Case)",
+      "optimized": "2. Optimize (Hybrid)",
+      "aggressive": "3. Agresif (Just-in-Time)"
+    },
+    "recommendationMatrix": "Stratejik Öneriler Matrisi",
+    "rec": {
+      "dualSource": "Çift Kaynak (Elektronik)",
+      "stockOpt": "Stok Optimizasyonu",
+      "distributed": "Dağıtık Depolama",
+      "logistics": "Lojistik Mod Optimize"
+    },
+    "difficulty": {
+      "high": "Zor",
+      "medium": "Orta",
+      "low": "Kolay"
+    },
+    "source": {
+      "current": "Tek Kaynak (Mevcut)",
+      "dual": "Çift Kaynak (Öneri)"
+    },
+    "conclusion": {
+      "title": "Sonuç: Stratejik Değerlendirme",
+      "paradox": "Ana Paradoks",
+      "paradoxText": "Şirket 81,7 M€ nakit biriktiriyor ama 123,5 M€ stokla para bağlıyor. Bu finansal verimsizlik olsa da operasyonel güvence sağlıyor.",
+      "recommendation": "Öneri",
+      "hybridModel": "Hibrit Model (Senaryo #2) uygulanmalıdır:",
+      "point1": "Stoku %50 azalt (61,8 M€ seviyesine çek).",
+      "point2": "Devir hızını 2 katına çıkar (3,6x).",
+      "point3": "Tedarik güvenliğini 'Çift Kaynak' ile korurken yıllık 15,5 M€ ek kâr sağla."
+    }
+},
+"macro": {
+    "mriTitle": "Makro Risk Endeksi (MRI)",
+    "mriDesc": "Her 3 makro şoktan 2'si şirketi doğrudan etkileme potansiyeline sahiptir.",
+    "riskLevel": {
+      "high": "YÜKSEK RİSK"
+    },
+    "pestelAnalysis": "Bölüm 1: PESTEL Analizi ve Risk Dağılımı",
+    "impactWeight": "Etki Ağırlığı",
+    "criticalFinding": "Kritik Sonuç",
+    "pestel": {
+      "economic": "Ekonomik",
+      "technological": "Teknolojik",
+      "legal": "Yasal/Regülasyon",
+      "social": "Sosyal",
+      "environmental": "Çevresel",
+      "political": "Politik",
+      "findingText": "En büyük risk Ekonomik (%23), en büyük fırsat Teknolojik (%20)."
+    },
+    "sectorAndCompetition": "Bölüm 2: Sektör Çekiciliği ve Rekabet",
+    "porterTitle": "Porter 5 Güç Analizi",
+    "competitorMatrix": "Rekabetçi Pozisyon Matrisi",
+    "axis": {
+      "ops": "Operasyonel Mükemmellik",
+      "tech": "Teknolojik Liderlik"
+    },
+    "porter": {
+      "rivalry": "Rekabet Yoğ.",
+      "supplier": "Tedarikçi Gücü",
+      "buyer": "Müşteri Gücü",
+      "entry": "Yeni Giriş",
+      "substitute": "İkame Tehdidi"
+    },
+    "scenarioSensitivity": "Bölüm 3: Senaryo Analizi ve Duyarlılık",
+    "scenarioTitle": "Finansal Senaryolar (2025)",
+    "revenue": "Ciro (M€)",
+    "profit": "Net Kâr (M€)",
+    "expectedRevenue": "Beklenen Ciro (EV)",
+    "sensitivityTitle": "Duyarlılık Analizi (Net Kâr Etkisi)",
+    "scenario": {
+      "pessimistic": "Kötümser",
+      "base": "Temel",
+      "optimistic": "İyimser"
+    },
+    "sens": {
+      "energy": "Enerji Mal.",
+      "pfas": "PFAS Mal.",
+      "efficiency": "Çalışan Verim.",
+      "iolink": "IO-Link Adap.",
+      "inventory": "Stok Devir Hızı",
+      "finding": "Stok optimizasyonu net kâr üzerinde en büyük kaldıraç etkisine sahip."
+    },
+    "gapAnalysis": "Bölüm 4: Stratejik GAP Analizi",
+    "metric": "Metrik",
+    "current": "Mevcut",
+    "target": "Hedef",
+    "gap": "Fark (Gap)",
+    "priority": "Öncelik",
+    "gaps": {
+      "marketShare": "Pazar Payı",
+      "margin": "Net Kâr Marjı",
+      "roe": "ROE",
+      "turnover": "Stok Devir Hızı",
+      "perCapita": "Kişi Başı Ciro"
+    },
+    "integratedScore": "Bölüm 5: Entegre Makro-Sektör Skoru",
+    "topsisResults": "TOPSIS Strateji Sıralaması",
+    "healthScore": "Makro-Sektör Sağlık Skoru",
+    "healthDesc": "ORTA-DÜŞÜK SEVİYE",
+    "mainThreat": "Ana Tehdit: Yüksek Makro Risk (%62.4)",
+    "mainOpp": "Ana Fırsat: Yüksek Sektör Çekiciliği (%71)",
+    "topsis": {
+      "A": "A: Operasyonel Verimlilik",
+      "B": "B: Büyüme Odaklı",
+      "C": "C: İnovasyon Odaklı"
+    },
+    "score": {
+      "mri": "Makro Risk (MRI)",
+      "scs": "Sektör Çekiciliği",
+      "comp": "Rekabet Konumu",
+      "reg": "Regülasyon Uyumu"
+    }
+  },
+  "synthesis": {
+    "strengthsTitle": "Özet Bulgular: Korunması Gereken Güçlü Yönler",
+    "strength": {
+      "financial": "Finansal Sağlamlık",
+      "financialImp": "Krizlere dayanıklılık ve stratejik yatırım gücü.",
+      "customer": "Müşteri Sadakati",
+      "customerImp": "Teknik 'lock-in' ile tekrarlayan güvenli gelir.",
+      "operational": "Operasyonel Kontrol",
+      "operationalImp": "Tedarik şoklarına direnç ve hız avantajı.",
+      "tech": "Teknolojik Yetkinlik",
+      "techImp": "Uzun vadeli rekabetçiliğin temeli."
+    },
+    "diagnosisTitle": "Teşhis: Üç Temel Paradoks ve Kritik Zayıflıklar",
+    "paradox1": {
+      "title": "Paradoks 1: \"Nakit Zengini ama Kârlılık Fakiri\"",
+      "desc": "Şirket 81.7 M€ nakit biriktirmiş ancak bu kaynak verimsiz varlıklara hapsolmuştur."
+    },
+    "paradox2": {
+      "title": "Paradoks 2: \"Operasyonel Güvenilirlik Uğruna Verimlilikten Vazgeçme\"",
+      "desc": "Güvenilirliğe yapılan aşırı vurgu, maliyet yapısını bozmuştur."
+    },
+    "paradox3": {
+      "title": "Paradoks 3: \"AR-GE'ye Yatırım Yap, Patent Kalitesinden Ödün Ver\"",
+      "desc": "İnovasyona kaynak ayrılmasına rağmen, çıktının kalitesi ve ticarileştirilmesi yetersizdir."
+    },
+    "margin": "Net Kâr Marjı",
+    "inventory": "Stok",
+    "humanCap": "İnsan Sermayesi",
+    "verticalCost": "Dikey Entegrasyon Maliyeti",
+    "oee": "OEE",
+    "actionPlanTitle": "Stratejik Öncelikler ve Eylem Planı",
+    "phase1": {
+      "title": "ACİL: Operasyonel Verimlilik Patlaması (0-12 Ay)",
+      "desc": "Mevcut nakit ve operasyonel kaynaklardan hızla serbest nakit akışı (FCF) yaratmak."
+    },
+    "phase2": {
+      "title": "ORTA VADELİ: Teknoloji Liderliğine Geçiş (12-36 Ay)",
+      "desc": "Büyüme motorunu, AR-GE yatırımlarının getirisini artırarak çeşitlendirmek.",
+      "p1": "IO-Link & SPE Odaklanması: Pazar payını %15'e çıkar.",
+      "p2": "JUMO Cloud Ticarileştirme: Donanımdan SaaS modeline geçiş.",
+      "p3": "Patent Stratejisi: Yazılım ve sistem mimarisi patentlerine odaklan."
+    },
+    "phase3": {
+      "title": "UZUN VADELİ: Coğrafi ve Ürün Çeşitlendirmesi (24-48 Ay)",
+      "desc": "Almanya'daki makro risklere (enerji, işgücü) bağımlılığı azaltmak.",
+      "p1": "Asya Pazarını Derinleştirmek: Pazar payını %25'e çıkar.",
+      "p2": "PFAS Çözümü: Alternatif malzeme AR-GE'sine hız ver."
+    },
+    "action": {
+      "stock": "Stok Optimizasyonu",
+      "oee": "OEE İyileştirme",
+      "price": "Fiyat Optimizasyonu"
+    },
+    "table": {
+      "action": "Eylem",
+      "target": "Somut Hedef",
+      "financialImpact": "Finansal Etki",
+      "investment": "Yatırım",
+      "indicator": "Gösterge",
+      "strategicImpact": "Stratejik Etki"
+    },
+    "totalImpact": "Toplam Beklenen Etki (12-18 Ay)",
+    "annualProfit": "Yıllık Net Kâr Artışı",
+    "transformationTitle": "Beklenen 3 Yıllık Dönüşüm Senaryosu",
+    "chartTitle": "Mevcut vs Hedef Performans",
+    "current": "Mevcut (2024)",
+    "target": "Hedef (2027)",
+    "metric": {
+      "margin": "Net Kâr Marjı",
+      "roe": "ROE (Özkaynak Kârlılığı)",
+      "turnover": "Stok Devir Hızı",
+      "revenuePerEmp": "Çalışan Başı Ciro",
+      "fcf": "Serbest Nakit Akışı"
+    },
+    "impact": {
+      "sustainability": "Finansal sürdürülebilirlik sağlanır.",
+      "shareholder": "Hissedarlar için cazip getiri.",
+      "efficiency": "İnsan kaynağı verimliliği iyileşir.",
+      "growth": "Büyüme için iç kaynak yaratılır."
+    },
+    "conclusion": {
+      "title": "Sonuç ve Nihai Değerlendirme",
+      "text1": "JUMO, tipik bir Alman 'Hidden Champion' olarak mükemmel bir teknik temel inşa etmiştir. Ancak, aşırı içe dönük ve güvenlik odaklı büyüme modeli, şirketi 'rahat bir verimsizlik' tuzağına düşürmüştür. En büyük risk, mevcut nakit yastığını radikal verimlilik yatırımlarına kanalize edememektir.",
+      "callToAction": "Dönüşüm, 'daha fazla satış' veya 'yeni bir ürün' ile değil, mevcut operasyonların matematiksel optimizasyonuyla başlamalıdır."
+    }
+  },
+  "ai": {
+    "readinessTitle": "Mevcut Durum ve AI Hazırbulunuşluk (Skor: 5.8/10)",
+    "readinessStatus": "Orta Seviye - Güçlü Veri, Zayıf Altyapı",
+    "strengths": "Güçlü Temeller",
+    "weaknesses": "Kritik Eksiklikler",
+    "strength": {
+      "dataAsset": "Zengin Veri Varlığı (75+ Yıl, 150K+ Varyant)",
+      "rdCulture": "Güçlü AR-GE Kültürü (%7 Yoğunluk)",
+      "lockIn": "Müşteri Kilidi ve Pilot Fırsatı",
+      "cloud": "JUMO Cloud Varlığı"
+    },
+    "weakness": {
+      "silos": "Veri Siloları (Departmanlar arası izolasyon)",
+      "talent": "Yazılım/AI Yetenek Eksikliği",
+      "legacyIT": "Sınırlı BT/IoT Altyapısı",
+      "dataQuality": "Veri Kalitesi ve Etiketleme Zorluğu"
+    },
+    "prioritiesTitle": "Öncelikli AI Uygulama Alanları ve ROI Analizi",
+    "problem": "Problem",
+    "solution": "AI Çözümü",
+    "impact": "Finansal Etki",
+    "current": "Mevcut",
+    "target": "Hedef",
+    "p1": {
+      "title": "Kestirimci Bakım & OEE",
+      "problem": "%70 OEE, %12 Plansız Duruş, Yüksek Fire",
+      "solution": "Sensör verilerinden anormallik tespiti (LSTM)."
+    },
+    "p2": {
+      "title": "Talep Tahmini & Stok Opt.",
+      "problem": "123.5 M€ Stok, Düşük Devir Hızı (1.8x)",
+      "solution": "Çok değişkenli zaman serisi tahmini (Prophet/XGBoost)."
+    },
+    "p3": {
+      "title": "Otonom Sensör Kalibrasyonu",
+      "problem": "Manuel işlem (4-8 saat/cihaz), insan hatası.",
+      "solution": "Bilgisayarlı görü ile otomatik ayar (CNN)."
+    },
+    "p4": {
+      "title": "Akıllı Tasarım (Dijital İkiz)",
+      "problem": "150K+ varyant, uzun tasarım döngüsü.",
+      "solution": "Geçmiş verilerle yeni konfigürasyon önerisi (GNN)."
+    },
+    "servicesTitle": "Kişiselleştirilmiş AI Müşteri Çözümleri",
+    "service": {
+      "processGuard": "Process Guard: Endüstriyel süreçteki sapmaları izler ve uyarır.",
+      "healthMonitor": "Sensor Health: Arıza öncesi değişim ve garanti optimizasyonu.",
+      "configurator": "AI Configurator: İhtiyaca en uygun sensörü otomatik önerir."
+    },
+    "roadmapTitle": "Uygulama Yol Haritası (3 Yıl)",
+    "phase1": {
+      "title": "Aşama 1: Temel ve Pilot",
+      "focus": "Kestirimci Bakım pilotu, AI ekibi kurulumu, veri pipeline'ı."
+    },
+    "phase2": {
+      "title": "Aşama 2: Ölçeklendirme",
+      "focus": "Tüm tesise yayılım, Talep Tahmini projesi, JUMO Cloud entegrasyonu."
+    },
+    "phase3": {
+      "title": "Aşama 3: Ticarileştirme",
+      "focus": "AI servislerinin lansmanı, yeni gelir akışları."
+    },
+    "investment": "Yatırım",
+    "totalInvestment": "Toplam 3 Yıllık Yatırım",
+    "investmentNote": "Mevcut nakitin <%8'i",
+    "risksTitle": "Riskler ve Azaltma Stratejileri",
+    "risk": {
+      "title": "Risk",
+      "data": "Veri Kalitesi",
+      "culture": "Kültürel Direnç",
+      "cyber": "Siber Güvenlik"
+    },
+    "prob": "Olasılık",
+    "impactTitle": "Etki",
+    "mitigationTitle": "Azaltma Stratejisi",
+    "mitigation": {
+      "data": "Pilotu en zengin veri hattında (Sensilo) başlatmak.",
+      "culture": "Üretim müdürünü sponsor yapmak, başarıyı kutlamak.",
+      "cyber": "'Secure by Design' ve IEC 62443 uyumu."
+    },
+    "high": "Yüksek",
+    "medium": "Orta",
+    "critical": "Kritik",
+    "conclusion": {
+      "title": "Sonuç ve Tavsiye",
+      "text": "AI, JUMO için lüks bir inovasyon değil, operasyonel verimsizlik tuzağından çıkışın anahtarıdır.",
+      "recommendation": "Öneri: 6-9 aylık 'Kestirimci Bakım & Stok Optimizasyonu' pilot projesi ile başlayarak yıllık ~20 M€ potansiyeli hızla realize edin."
+    }
+  },
+  "rec": {
+    "approachTitle": "Temel Yaklaşım: \"Yavaş Gemiyi Hızlandırma\"",
+    "approachDesc": "JUMO'nun güçlü finansal temeli ve sadık müşteri tabanını korurken, kronik operasyonel verimsizlikleri hedef alan, hızlı ROI'li ve düşük riskli dönüşüm önerileri.",
+    "problem": "Problem",
+    "target": "Kümülatif Hedef",
+    "table": {
+      "code": "Kod",
+      "action": "Somut Aksiyon",
+      "impact": "Beklenen Etki",
+      "owner": "Sorumlu"
+    },
+    "phase1": {
+      "title": "A. ACİL EYLEM ÖNERİLERİ",
+      "subtitle": "0-12 Ay (Hızlı Nakit & Verimlilik)"
+    },
+    "action": {
+      "stock": {
+        "title": "\"Stok Eritme\" Operasyonu",
+        "problem": "123.5 M€ stok, 1.8x düşük devir, ~31 M€ finansman maliyeti.",
+        "target": "Stokları %30 azalt (85 M€), ~38.5 M€ nakit serbest bırak.",
+        "a1": {
+          "act": "ABC/XYZ Kategorizasyonu & 'CZ' grubunun temizlenmesi.",
+          "imp": "15-20 M€ Acil Nakit"
+        },
+        "a2": {
+          "act": "Departmanlara sanal 'Stok Finansman Faturası' (%8) kesilmesi.",
+          "imp": "Stok talebinde %25 düşüş"
+        },
+        "a3": {
+          "act": "VMI (Tedarikçi Yönetimli Envanter) geçişi.",
+          "imp": "İşletme sermayesi kazancı"
+        }
+      },
+      "hr": {
+        "title": "\"Kaçak Su\" Personel Verimlilik Projesi",
+        "problem": "Çalışan başı ciro 123k€ (Sektör <200k€), Negatif ELTV.",
+        "target": "Çalışan başı ciroyu 130k€'ya çıkar, personel gider oranını %43'e çek.",
+        "b1": {
+          "act": "Üretimde Mikro-Öğrenme Ağı (7 işçiye 1 lider).",
+          "imp": "%5-8 Verimlilik Artışı"
+        },
+        "b2": {
+          "act": "Beyaz yaka 'Değer-Zaman' analizi (İdari vs Değer).",
+          "imp": "İdari yükte %20 azalma"
+        },
+        "b3": {
+          "act": "4x4 Performans Matrisi (Sonuç vs Davranış).",
+          "imp": "Ortalama verim artışı"
+        }
+      },
+      "factory": {
+        "title": "\"Smart Fabrika Lite\" - Kademeli Otomasyon",
+        "problem": "%70 OEE, yüksek kurulum süreleri, düşük esneklik.",
+        "target": "OEE %82, Üretim Maliyeti -%15.",
+        "c1": {
+          "act": "OEE Gerçek Zamanlı Gösterge Paneli (IoT).",
+          "imp": "OEE'de +%3-5 acil artış"
+        },
+        "c2": {
+          "act": "\"Çevik Üretim Hücresi\" Pilotu (Top 10 ürün).",
+          "imp": "Lead time -%35"
+        },
+        "c3": {
+          "act": "AR-GE Mühendislerini üretime 'kiralama' programı.",
+          "imp": "Üretim-ARGE köprüsü"
+        }
+      },
+      "price": {
+        "title": "\"Fiyat ile Değeri Yakala\" Stratejisi",
+        "problem": "Mükemmel müşteri kilidi ancak düşük kâr marjı.",
+        "target": "Net kâr marjını %1.61 -> %4.0'e yükselt.",
+        "d1": {
+          "act": "Değer Bazlı Fiyatlandırma Matrisi (Commodity vs Strategic).",
+          "imp": "Ort. fiyatta %8-12 artış"
+        },
+        "d2": {
+          "act": "\"JUMO Performans Garantisi\" Premium Sözleşmesi.",
+          "imp": "Ciroda %5-7 ek gelir"
+        },
+        "d3": {
+          "act": "Teknik Satış Eğitimi (Değer Satışı & ROI).",
+          "imp": "Teklif kabul artışı"
+        }
+      },
+      "business": {
+        "title": "\"JUMO 5.0\" - İş Modeli İnovasyonu",
+        "problem": "%100 Donanım satışı, tekrarlayan gelir yok.",
+        "target": "Gelirin %20'sinin servis/yazılımdan gelmesi.",
+        "e1": {
+          "act": "\"JUMO Care\" Abonelik Hizmeti.",
+          "imp": "Tekrarlayan gelir akışı"
+        },
+        "e2": {
+          "act": "\"Sensör Verisi Borsası\" Pilotu.",
+          "imp": "Veriyi varlığa dönüştürme"
+        },
+        "e3": {
+          "act": "JUMO Certified Re-Manufacturing (Döngüsel Ekonomi).",
+          "imp": "Yeni pazar segmenti"
+        }
+      }
+    },
+    "role": {
+      "supplyChain": "Ted. Zinciri Dir.",
+      "cfo": "CFO",
+      "purchasing": "Satın Alma Müd.",
+      "prodMgr": "Üretim Müd.",
+      "hr": "İK Direktörü",
+      "opEx": "Op. Mük. Dir.",
+      "cto": "Teknoloji Dir.",
+      "sales": "Satış Dir.",
+      "marketing": "Pazarlama Dir.",
+      "ceo": "CEO / Ürün",
+      "sustain": "Sürd. Dir."
+    },
+    "phase2": {
+      "title": "B. ORTA VADELİ DÖNÜŞÜM",
+      "subtitle": "12-36 Ay (Kârlılık & Teknoloji)"
+    },
+    "phase3": {
+      "title": "C. UZUN VADELİ YAPISAL",
+      "subtitle": "36+ Ay (Yeni İş Modelleri)"
+    },
+    "matrixTitle": "Önerilerin Öncelik ve Kaynak Matrisi",
+    "matrix": {
+      "col": {
+        "code": "Kod",
+        "benefit": "Yıllık Fayda",
+        "time": "Süre",
+        "invest": "Yatırım",
+        "priority": "Öncelik"
+      },
+      "stock": "A1-A3 (Stok)",
+      "price": "D1-D3 (Fiyat)",
+      "hr": "B1-B3 (İnsan Kaynağı)",
+      "oee": "C1-C3 (OEE/Fabrika)",
+      "model": "E1-E3 (İş Modeli)"
+    },
+    "priority": {
+      "critical": "KRİTİK",
+      "high": "YÜKSEK",
+      "medium": "ORTA",
+      "strategic": "STRATEJİK"
+    },
+    "principlesTitle": "Uygulama Prensipleri",
+    "principle": {
+      "winwin": "\"Kazan-Kazan\" Başla",
+      "winwinDesc": "Müşteriye yük getirmeyen Stok ve Fiyat optimizasyonu ile başla.",
+      "funding": "Mevcut Nakitle Fonla",
+      "fundingDesc": "Yatırım (9.3 M€), mevcut nakdin %11'i. Borçlanmaya gerek yok.",
+      "speed": "\"Hız > Mükemmeliyet\"",
+      "speedDesc": "Pilotlar 90 günde başlamalı, 6 ayda sonuç alınmalı.",
+      "motivation": "İç Motivasyon",
+      "motivationDesc": "Tasarrufun %20'si çalışanlara prim olarak dağıtılmalı."
+    },
+    "conclusion": {
+      "title": "Son Söz",
+      "text": "JUMO'nun dönüşümü, 'daha fazla satış' arayışıyla değil, mevcut operasyonun verimsizliğini optimize ederek başlamalıdır. A1 ve D1 önerileri 3 ay içinde başlatılmalıdır.",
+      "call": "Bu dönüşüm, şirketin 'kontrol' ve 'kalite' felsefesini bozmadan, onları finansal olarak anlamlı kılacaktır."
+    }
+  }
+}
