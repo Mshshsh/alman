@@ -22,7 +22,7 @@ import {
   Psychology as PsychologyIcon,
   Lightbulb as LightbulbIcon,
 } from '@mui/icons-material';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 // Logo dosyasını import ediyoruz. 
@@ -33,6 +33,7 @@ const drawerWidth = 240;
 
 function SideDrawer({ mobileOpen, handleDrawerToggle }) {
   const navigate = useNavigate();
+  const location = useLocation();
   const { t } = useTranslation();
 
   const menuItems = [
@@ -70,6 +71,7 @@ function SideDrawer({ mobileOpen, handleDrawerToggle }) {
         {menuItems.map((item) => (
           <ListItem key={item.text} disablePadding>
             <ListItemButton
+              selected={location.pathname === item.path}
               onClick={() => {
                 navigate(item.path);
                 handleDrawerToggle();

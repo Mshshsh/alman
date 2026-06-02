@@ -145,7 +145,7 @@ function StrategicSynthesis() {
         
         <Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: 3,mb:5 }}>
           {strengthsData.map((item, index) => (
-            <Paper key={index} elevation={1} sx={{ p: 2.5, height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', bgcolor: 'grey.50', borderRadius: 2, transition: 'transform 0.2s', '&:hover': {transform: 'translateY(-3px)'} }}>
+            <Paper key={index} elevation={1} sx={{ p: 2.5, height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.04)' : 'grey.50', borderRadius: 2, transition: 'transform 0.2s', '&:hover': {transform: 'translateY(-3px)'} }}>
               <Box sx={{ mb: 2, p: 1.5, bgcolor: 'background.paper', borderRadius: '50%', boxShadow: 1 }}>{item.icon}</Box>
               <Typography variant="subtitle1" fontWeight="bold" gutterBottom>{item.title}</Typography>
               <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>{item.indicator}</Typography>
@@ -200,10 +200,10 @@ function StrategicSynthesis() {
               <Chip label="1" color="error" sx={{ mr: 2, fontWeight: 'bold', width: 32, height: 32, borderRadius: '50%' }} />
               <Typography variant="h6">{t('synthesis.phase1.title')}</Typography>
           </Box>
-          <TableContainer component={Paper} elevation={0} sx={{ border: '1px solid #e0e0e0', borderRadius: 2 }}>
+          <TableContainer component={Paper} elevation={0} sx={{ border: '1px solid', borderColor: 'divider', borderRadius: 2 }}>
             <Table size="small">
               <TableHead>
-                <TableRow sx={{ bgcolor: 'error.50' }}>
+                <TableRow sx={{ bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(211,47,47,0.15)' : 'error.50' }}>
                   <TableCell sx={{ color: 'error.main', fontWeight: 'bold' }}>{t('synthesis.table.action')}</TableCell>
                   <TableCell sx={{ color: 'error.main', fontWeight: 'bold' }}>{t('synthesis.table.target')}</TableCell>
                   <TableCell sx={{ color: 'error.main', fontWeight: 'bold' }}>{t('synthesis.table.financialImpact')}</TableCell>
@@ -222,7 +222,7 @@ function StrategicSynthesis() {
               </TableBody>
             </Table>
           </TableContainer>
-          <Box sx={{ mt: 2, p: 2, bgcolor: 'success.50', borderRadius: 2, display: 'flex', alignItems: 'center', gap: 1 }}>
+          <Box sx={{ mt: 2, p: 2, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(46,125,50,0.15)' : 'success.50', borderRadius: 2, display: 'flex', alignItems: 'center', gap: 1 }}>
             <CheckCircle color="success" />
             <Typography variant="subtitle2">
               {t('synthesis.totalImpact')}: <strong>+27.5 - 33.4 M€ {t('synthesis.annualProfit')}</strong>
@@ -232,7 +232,7 @@ function StrategicSynthesis() {
 
         <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: 3 }}>
           {/* Orta Vadeli */}
-          <Box sx={{ flex: 1, p: 2, borderLeft: '4px solid #1976d2', bgcolor: 'grey.50', borderRadius: 2 }}>
+          <Box sx={{ flex: 1, p: 2, borderLeft: '4px solid #1976d2', bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.04)' : 'grey.50', borderRadius: 2 }}>
               <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
                 <Chip label="2" color="primary" size="small" sx={{ mr: 1, fontWeight: 'bold' }} />
                 <Typography variant="subtitle1" fontWeight="bold">{t('synthesis.phase2.title')}</Typography>
@@ -246,7 +246,7 @@ function StrategicSynthesis() {
           </Box>
           
           {/* Uzun Vadeli */}
-          <Box sx={{ flex: 1, p: 2, borderLeft: '4px solid #2e7d32', bgcolor: 'grey.50', borderRadius: 2 }}>
+          <Box sx={{ flex: 1, p: 2, borderLeft: '4px solid #2e7d32', bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.04)' : 'grey.50', borderRadius: 2 }}>
               <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
                 <Chip label="3" color="success" size="small" sx={{ mr: 1, fontWeight: 'bold' }} />
                 <Typography variant="subtitle1" fontWeight="bold">{t('synthesis.phase3.title')}</Typography>
@@ -285,10 +285,10 @@ function StrategicSynthesis() {
           </Box>
           
           <Box sx={{ flex: 1 }}>
-            <TableContainer sx={{ border: '1px solid #e0e0e0', borderRadius: 2 }}>
+            <TableContainer sx={{ border: '1px solid', borderColor: 'divider', borderRadius: 2 }}>
               <Table size="small">
                 <TableHead>
-                   <TableRow sx={{ bgcolor: 'grey.100' }}>
+                   <TableRow sx={{ bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.07)' : 'grey.100' }}>
                      <TableCell><strong>{t('synthesis.table.indicator')}</strong></TableCell>
                      <TableCell align="center"><strong>{t('synthesis.current')}</strong></TableCell>
                      <TableCell align="center"><strong>{t('synthesis.target')}</strong></TableCell>
@@ -297,7 +297,7 @@ function StrategicSynthesis() {
                 </TableHead>
                 <TableBody>
                   {transformationTable.map((row, index) => (
-                    <TableRow key={index} sx={index % 2 === 0 ? { bgcolor: 'grey.50' } : {}}>
+                    <TableRow key={index} sx={index % 2 === 0 ? { bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.04)' : 'grey.50' } : {}}>
                       <TableCell component="th" scope="row">{row.metric}</TableCell>
                       <TableCell align="center">{row.current}</TableCell>
                       <TableCell align="center" sx={{ fontWeight: 'bold', color: 'success.main' }}>{row.target}</TableCell>

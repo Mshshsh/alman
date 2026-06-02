@@ -75,7 +75,7 @@ function CompanyInfo() {
             <Divider sx={{ mb: 2 }} />
             <List disablePadding>
               {basicInfo.map((item, index) => (
-                <ListItem key={index} sx={{ py: 1.5, px: 0, borderBottom: index !== basicInfo.length - 1 ? '1px solid #f0f0f0' : 'none' }}>
+                <ListItem key={index} sx={{ py: 1.5, px: 0, borderBottom: index !== basicInfo.length - 1 ? '1px solid' : 'none', borderColor: 'divider' }}>
                   <ListItemIcon sx={{ minWidth: 40, color: 'primary.main' }}>
                     {item.icon}
                   </ListItemIcon>
@@ -149,9 +149,9 @@ function CompanyInfo() {
                 <Paper 
                   key={index} 
                   elevation={0} 
-                  sx={{ 
-                    p: 2, 
-                    backgroundColor: 'grey.50',
+                  sx={{
+                    p: 2,
+                    backgroundColor: (theme) => theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.04)' : 'grey.50',
                     border: '1px solid',
                     borderColor: 'divider',
                     borderRadius: 2,

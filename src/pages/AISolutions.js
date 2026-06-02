@@ -149,7 +149,7 @@ function AISolutions() {
 
         <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: 4 }}>
             {/* Score Gauge */}
-            <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', p: 2, bgcolor: 'grey.50', borderRadius: 2 }}>
+            <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', p: 2, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.04)' : 'grey.50', borderRadius: 2 }}>
                 <Box sx={{ position: 'relative', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', mb: 2, height: 120 }}>
                     <Typography variant="h2" fontWeight="bold" color={readinessScore > 5 ? 'warning.main' : 'error.main'}>
                         {readinessScore}
@@ -223,7 +223,7 @@ function AISolutions() {
                         </Typography>
                     </Box>
                     
-                    <Box sx={{ bgcolor: 'primary.50', p: 1.5, borderRadius: 1, textAlign: 'center', mb: 2 }}>
+                    <Box sx={{ bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(83,53,255,0.12)' : 'primary.50', p: 1.5, borderRadius: 1, textAlign: 'center', mb: 2 }}>
                         <Typography variant="subtitle2" color="primary.dark" fontWeight="bold">{t('ai.impact')}: {p.impact}</Typography>
                     </Box>
 
@@ -278,7 +278,7 @@ function AISolutions() {
 
         <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: 2 }}>
             {roadmap.map((step, i) => (
-                <Paper key={i} elevation={1} sx={{ flex: 1, position: 'relative', p: 2.5, borderTop: `4px solid`, borderColor: i === 0 ? 'error.main' : i === 1 ? 'warning.main' : 'success.main', bgcolor: 'grey.50' }}>
+                <Paper key={i} elevation={1} sx={{ flex: 1, position: 'relative', p: 2.5, borderTop: `4px solid`, borderColor: i === 0 ? 'error.main' : i === 1 ? 'warning.main' : 'success.main', bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.04)' : 'grey.50' }}>
                     <Typography variant="caption" display="block" color="text.secondary" sx={{ mb: 0.5 }}>{step.time}</Typography>
                     <Typography variant="subtitle1" fontWeight="bold" gutterBottom>{step.phase}</Typography>
                     <Typography variant="body2" paragraph color="text.primary">{step.focus}</Typography>

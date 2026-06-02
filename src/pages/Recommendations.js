@@ -161,10 +161,10 @@ function Recommendations() {
               </Typography>
            </Box>
            
-           <TableContainer component={Box} sx={{ mb: 2, border: '1px solid #eee', borderRadius: 1 }}>
+           <TableContainer component={Box} sx={{ mb: 2, border: '1px solid', borderColor: 'divider', borderRadius: 1 }}>
               <Table size="small">
                  <TableHead>
-                    <TableRow sx={{ bgcolor: 'grey.100' }}>
+                    <TableRow sx={{ bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.07)' : 'grey.100' }}>
                        <TableCell width="10%"><strong>{t('rec.table.code')}</strong></TableCell>
                        <TableCell width="40%"><strong>{t('rec.table.action')}</strong></TableCell>
                        <TableCell width="30%"><strong>{t('rec.table.impact')}</strong></TableCell>
@@ -201,7 +201,7 @@ function Recommendations() {
       </Typography>
 
       {/* 1. TEMEL YAKLAŞIM */}
-      <Paper elevation={3} sx={{ p: 3, mb: 3, bgcolor: '#e3f2fd' }}>
+      <Paper elevation={3} sx={{ p: 3, mb: 3, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(2,136,209,0.12)' : '#e3f2fd' }}>
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
            <Speed fontSize="large" color="primary" sx={{ fontSize: 50 }} />
            <Box>
@@ -230,7 +230,7 @@ function Recommendations() {
         <TableContainer>
            <Table>
               <TableHead>
-                 <TableRow sx={{ bgcolor: 'grey.200' }}>
+                 <TableRow sx={{ bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.10)' : 'grey.200' }}>
                     <TableCell><strong>{t('rec.matrix.col.code')}</strong></TableCell>
                     <TableCell><strong>{t('rec.matrix.col.benefit')}</strong></TableCell>
                     <TableCell><strong>{t('rec.matrix.col.time')}</strong></TableCell>
@@ -240,7 +240,7 @@ function Recommendations() {
               </TableHead>
               <TableBody>
                  {matrixData.map((row, index) => (
-                    <TableRow key={index} sx={index < 2 ? { bgcolor: '#fff3e0' } : {}}>
+                    <TableRow key={index} sx={index < 2 ? { bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(237,108,2,0.12)' : '#fff3e0' } : {}}>
                        <TableCell>
                           <Typography variant="body2" fontWeight="bold">{row.code}</Typography>
                           <Typography variant="caption">{row.name}</Typography>
@@ -268,7 +268,7 @@ function Recommendations() {
         <Grid container spacing={2}>
            {principles.map((p, index) => (
               <Grid item xs={12} md={6} key={index}>
-                 <Box sx={{ display: 'flex', gap: 2, p: 2, border: '1px solid #eee', borderRadius: 2, height: '100%' }}>
+                 <Box sx={{ display: 'flex', gap: 2, p: 2, border: '1px solid', borderColor: 'divider', borderRadius: 2, height: '100%' }}>
                     <CheckCircle color="success" />
                     <Box>
                        <Typography variant="subtitle2" fontWeight="bold">{p.title}</Typography>

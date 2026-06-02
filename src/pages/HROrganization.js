@@ -177,7 +177,7 @@ function HROrganization() {
           <LinearProgress
             variant="determinate"
             value={65.2}
-            sx={{ height: 12, borderRadius: 6, mb: 2, bgcolor: 'grey.200' }}
+            sx={{ height: 12, borderRadius: 6, mb: 2, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.10)' : 'grey.200' }}
             color="warning"
           />
           <Typography variant="body2" color="text.secondary">
@@ -279,7 +279,7 @@ function HROrganization() {
           </Typography>
           <Divider sx={{ mb: 2 }} />
           
-          <Box sx={{ mb: 2, p: 2, bgcolor: 'error.50', borderRadius: 1, border: '1px dashed', borderColor: 'error.main' }}>
+          <Box sx={{ mb: 2, p: 2, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(211,47,47,0.15)' : 'error.50', borderRadius: 1, border: '1px dashed', borderColor: 'error.main' }}>
              <Typography variant="subtitle1" color="error.main" fontWeight="bold">
                 {t('hr.eltvResult')}: -519,000€
              </Typography>
@@ -332,7 +332,7 @@ function HROrganization() {
                 {t('hr.apprenticeROI')}
             </Typography>
             <Divider sx={{ mb: 2 }} />
-            <Box sx={{ mb: 2, p: 1.5, bgcolor: 'warning.50', borderRadius: 1 }}>
+            <Box sx={{ mb: 2, p: 1.5, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(237,108,2,0.15)' : 'warning.50', borderRadius: 1 }}>
                 <Typography variant="subtitle2" fontWeight="bold" color="warning.dark">
                 ROI: -63.4%
                 </Typography>
@@ -358,7 +358,7 @@ function HROrganization() {
 
       {/* 5. SWOT Analizi */}
       <Box sx={{ display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, gap: 3, mb: 3 }}>
-        <Paper elevation={2} sx={{ flex: 1, bgcolor: '#edf7ed', p: 3, borderRadius: 2 }}>
+        <Paper elevation={2} sx={{ flex: 1, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(46,125,50,0.15)' : '#edf7ed', p: 3, borderRadius: 2 }}>
           <Typography variant="h6" gutterBottom sx={{ display: 'flex', alignItems: 'center', color: 'success.dark', fontWeight: 600 }}>
             <CheckCircle sx={{ mr: 1 }} /> {t('hr.strengths.title')}
           </Typography>
@@ -370,7 +370,7 @@ function HROrganization() {
           ))}
         </Paper>
 
-        <Paper elevation={2} sx={{ flex: 1, bgcolor: '#fdeded', p: 3, borderRadius: 2 }}>
+        <Paper elevation={2} sx={{ flex: 1, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(211,47,47,0.15)' : '#fdeded', p: 3, borderRadius: 2 }}>
           <Typography variant="h6" gutterBottom sx={{ display: 'flex', alignItems: 'center', color: 'error.dark', fontWeight: 600 }}>
             <TrendingDown sx={{ mr: 1 }} /> {t('hr.weaknesses.title')}
           </Typography>
@@ -392,7 +392,7 @@ function HROrganization() {
         
         <Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 2 }}>
             {priorities.map((priority, index) => (
-            <Box key={index} sx={{ p: 2, bgcolor: 'grey.50', borderRadius: 2, border: '1px solid', borderColor: 'divider' }}>
+            <Box key={index} sx={{ p: 2, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.04)' : 'grey.50', borderRadius: 2, border: '1px solid', borderColor: 'divider' }}>
                 <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', mb: 1 }}>
                 <Typography variant="subtitle1" fontWeight="bold">
                     {index + 1}. {priority.title}
@@ -429,7 +429,7 @@ function HROrganization() {
             {/* Sol: Metrikler ve Hedefler */}
             <Box sx={{ flex: 1 }}>
                  {/* Monthly Metrics */}
-                <Box sx={{ mb: 2, p: 2, bgcolor: 'info.50', borderRadius: 2, borderLeft: '4px solid', borderColor: 'info.main' }}>
+                <Box sx={{ mb: 2, p: 2, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(2,136,209,0.15)' : 'info.50', borderRadius: 2, borderLeft: '4px solid', borderColor: 'info.main' }}>
                     <Typography variant="subtitle2" fontWeight="bold" gutterBottom color="info.dark">
                     {t('hr.monthlyMetrics')}:
                     </Typography>
@@ -441,7 +441,7 @@ function HROrganization() {
                 </Box>
 
                 {/* Mathematical Targets */}
-                <Box sx={{ p: 2, bgcolor: 'warning.50', borderRadius: 2, borderLeft: '4px solid', borderColor: 'warning.main' }}>
+                <Box sx={{ p: 2, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(237,108,2,0.15)' : 'warning.50', borderRadius: 2, borderLeft: '4px solid', borderColor: 'warning.main' }}>
                     <Typography variant="subtitle2" fontWeight="bold" gutterBottom color="warning.dark">
                     {t('hr.mathematicalTargets')}:
                     </Typography>

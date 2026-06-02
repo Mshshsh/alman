@@ -144,7 +144,7 @@ function MacroEnvironment() {
                     {t('macro.mriDesc')}
                 </Typography>
             </Box>
-            <Box sx={{ textAlign: 'center', minWidth: 150, p: 2, bgcolor: 'error.50', borderRadius: 2 }}>
+            <Box sx={{ textAlign: 'center', minWidth: 150, p: 2, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(211,47,47,0.15)' : 'error.50', borderRadius: 2 }}>
                 <Typography variant="h3" fontWeight="bold" color="error.main">
                     %{mriScore}
                 </Typography>
@@ -227,7 +227,7 @@ function MacroEnvironment() {
 
 
 
-            <Box sx={{ height: 300, width: '100%', bgcolor: 'grey.50', borderRadius: 2, p: 1 }}>
+            <Box sx={{ height: 300, width: '100%', bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.04)' : 'grey.50', borderRadius: 2, p: 1 }}>
                 <ResponsiveContainer>
                     <ScatterChart margin={{ top: 20, right: 20, bottom: 20, left: 20 }}>
                         <CartesianGrid />
@@ -321,10 +321,10 @@ function MacroEnvironment() {
         </Typography>
         <Divider sx={{ mb: 3 }} />
 
-        <TableContainer sx={{ border: '1px solid #e0e0e0', borderRadius: 2 }}>
+        <TableContainer sx={{ border: '1px solid', borderColor: 'divider', borderRadius: 2 }}>
             <Table size="small">
                 <TableHead>
-                    <TableRow sx={{ bgcolor: 'grey.100' }}>
+                    <TableRow sx={{ bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.07)' : 'grey.100' }}>
                         <TableCell><strong>{t('macro.metric')}</strong></TableCell>
                         <TableCell align="center"><strong>{t('macro.current')}</strong></TableCell>
                         <TableCell align="center"><strong>{t('macro.target')}</strong></TableCell>
@@ -355,7 +355,7 @@ function MacroEnvironment() {
       </Paper>
 
       {/* 6. Integrated Score Card */}
-      <Paper elevation={3} sx={{ p: 3, mb: 3, bgcolor: '#f9fafb', borderRadius: 2 }}>
+      <Paper elevation={3} sx={{ p: 3, mb: 3, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.04)' : '#f9fafb', borderRadius: 2 }}>
         <Typography variant="h6" gutterBottom color="primary" fontWeight={600} sx={{ display: 'flex', alignItems: 'center' }}>
             <Business sx={{ mr: 1 }} /> {t('macro.integratedScore')}
         </Typography>
@@ -375,14 +375,14 @@ function MacroEnvironment() {
                             variant="determinate" 
                             value={item.score * 100} 
                             color={index === 0 ? "success" : "secondary"} 
-                            sx={{ height: 10, borderRadius: 5, bgcolor: 'grey.300' }}
+                            sx={{ height: 10, borderRadius: 5, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.12)' : 'grey.300' }}
                         />
                     </Box>
                 ))}
             </Box>
 
             {/* Health Score */}
-            <Paper elevation={0} sx={{ p: 2, border: '1px solid #ddd', textAlign: 'center', borderRadius: 2, bgcolor: 'white' }}>
+            <Paper elevation={0} sx={{ p: 2, border: '1px solid', borderColor: 'divider', textAlign: 'center', borderRadius: 2, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.04)' : 'white' }}>
                 <Typography variant="subtitle2" color="text.secondary">{t('macro.healthScore')}</Typography>
                 <Box sx={{ position: 'relative', display: 'inline-flex', m: 2 }}>
                     <Speed sx={{ fontSize: 60, color: 'warning.main', opacity: 0.8 }} />

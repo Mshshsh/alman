@@ -229,7 +229,7 @@ function OperationalEfficiency() {
             <LinearProgress
                 variant="determinate"
                 value={overallScore}
-                sx={{ height: 12, borderRadius: 6, mb: 1, bgcolor: 'grey.200' }}
+                sx={{ height: 12, borderRadius: 6, mb: 1, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.10)' : 'grey.200' }}
                 color="warning"
             />
             <Typography variant="body2" color="text.secondary">
@@ -267,7 +267,7 @@ function OperationalEfficiency() {
             </BarChart>
           </ResponsiveContainer>
           
-          <Box sx={{ mt: 2, p: 1.5, bgcolor: 'grey.50', borderRadius: 1 }}>
+          <Box sx={{ mt: 2, p: 1.5, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.04)' : 'grey.50', borderRadius: 1 }}>
             <Typography variant="caption" color="text.secondary" display="block">
                 {t('operational.oee.formula')}: 0.85 × 0.90 × 0.92 = 0.704
             </Typography>
@@ -329,7 +329,7 @@ function OperationalEfficiency() {
                 </TableBody>
                 </Table>
             </TableContainer>
-            <Box sx={{ mt: 2, p: 2, bgcolor: 'success.50', borderRadius: 2, display: 'flex', alignItems: 'center', gap: 2 }}>
+            <Box sx={{ mt: 2, p: 2, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(46,125,50,0.15)' : 'success.50', borderRadius: 2, display: 'flex', alignItems: 'center', gap: 2 }}>
                  <CheckCircle color="success" />
                  <Box>
                     <Typography variant="subtitle2" fontWeight="bold" color="success.dark">
@@ -353,16 +353,16 @@ function OperationalEfficiency() {
 
             <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column', gap: 2, justifyContent: 'center' }}>
                 <Box sx={{ display: 'flex', gap: 2 }}>
-                    <Paper elevation={0} sx={{ flex: 1, p: 1.5, bgcolor: 'error.50', textAlign: 'center', borderRadius: 2 }}>
+                    <Paper elevation={0} sx={{ flex: 1, p: 1.5, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(211,47,47,0.15)' : 'error.50', textAlign: 'center', borderRadius: 2 }}>
                         <Typography variant="caption" color="text.secondary">{t('operational.sigma.current')}</Typography>
                         <Typography variant="h4" fontWeight="bold" color="error.main">{sigmaData.sigmaLevel}σ</Typography>
                     </Paper>
-                    <Paper elevation={0} sx={{ flex: 1, p: 1.5, bgcolor: 'warning.50', textAlign: 'center', borderRadius: 2 }}>
+                    <Paper elevation={0} sx={{ flex: 1, p: 1.5, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(237,108,2,0.15)' : 'warning.50', textAlign: 'center', borderRadius: 2 }}>
                         <Typography variant="caption" color="text.secondary">{t('operational.sigma.industry')}</Typography>
                         <Typography variant="h4" fontWeight="bold" color="warning.main">{sigmaData.industryAverage}σ</Typography>
                     </Paper>
                 </Box>
-                <Box sx={{ p: 1.5, bgcolor: 'grey.50', borderRadius: 1 }}>
+                <Box sx={{ p: 1.5, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.04)' : 'grey.50', borderRadius: 1 }}>
                      <Typography variant="caption" color="text.secondary" display="block" align="center">
                         DPMO = {sigmaData.dpmo}
                      </Typography>
@@ -379,17 +379,17 @@ function OperationalEfficiency() {
         <Divider sx={{ mb: 3 }} />
         
         <Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 2, mb: 3 }}>
-          <Paper elevation={0} sx={{ p: 2, bgcolor: 'error.50', borderRadius: 2, border: '1px solid', borderColor: 'error.100' }}>
+          <Paper elevation={0} sx={{ p: 2, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(211,47,47,0.15)' : 'error.50', borderRadius: 2, border: '1px solid', borderColor: (theme) => theme.palette.mode === 'dark' ? 'rgba(211,47,47,0.3)' : 'error.100' }}>
             <Typography variant="body2" color="text.secondary">{t('operational.inventory.current')}</Typography>
             <Typography variant="h4" fontWeight="bold" color="error.dark">{inventoryOptimization.current}</Typography>
             <Typography variant="caption">{t('operational.inventory.units')}</Typography>
           </Paper>
-          <Paper elevation={0} sx={{ p: 2, bgcolor: 'success.50', borderRadius: 2, border: '1px solid', borderColor: 'success.100' }}>
+          <Paper elevation={0} sx={{ p: 2, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(46,125,50,0.15)' : 'success.50', borderRadius: 2, border: '1px solid', borderColor: (theme) => theme.palette.mode === 'dark' ? 'rgba(46,125,50,0.3)' : 'success.100' }}>
             <Typography variant="body2" color="text.secondary">{t('operational.inventory.optimal')}</Typography>
             <Typography variant="h4" fontWeight="bold" color="success.dark">{inventoryOptimization.optimal}</Typography>
             <Typography variant="caption">{t('operational.inventory.units')}</Typography>
           </Paper>
-          <Paper elevation={0} sx={{ p: 2, bgcolor: 'warning.50', borderRadius: 2, border: '1px solid', borderColor: 'warning.100' }}>
+          <Paper elevation={0} sx={{ p: 2, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(237,108,2,0.15)' : 'warning.50', borderRadius: 2, border: '1px solid', borderColor: (theme) => theme.palette.mode === 'dark' ? 'rgba(237,108,2,0.3)' : 'warning.100' }}>
             <Typography variant="body2" color="text.secondary">{t('operational.inventory.excess')}</Typography>
             <Typography variant="h4" fontWeight="bold" color="warning.dark">{inventoryOptimization.excess}</Typography>
             <Typography variant="caption">{t('operational.inventory.units')}</Typography>
@@ -405,7 +405,7 @@ function OperationalEfficiency() {
                     {t('operational.inventory.releasableCash')}: {inventoryOptimization.releasableCash} M€
                 </Typography>
             </Alert>
-            <Box sx={{ flex: 1, p: 2, bgcolor: 'grey.50', borderRadius: 2 }}>
+            <Box sx={{ flex: 1, p: 2, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.04)' : 'grey.50', borderRadius: 2 }}>
                 <Typography variant="caption" color="text.secondary">
                     {t('operational.inventory.newsvendorModel')} Calculation: Q* = 1,135 (Critical Ratio = 0.75)
                 </Typography>
@@ -523,7 +523,7 @@ function OperationalEfficiency() {
             <Divider sx={{ mb: 2 }} />
             <Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 2 }}>
                 {strategicPriorities.map((priority, index) => (
-                <Paper key={index} elevation={0} sx={{ p: 2, bgcolor: 'grey.50', borderRadius: 2, border: '1px solid', borderColor: 'divider' }}>
+                <Paper key={index} elevation={0} sx={{ p: 2, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.04)' : 'grey.50', borderRadius: 2, border: '1px solid', borderColor: 'divider' }}>
                     <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 1 }}>
                         <Typography variant="subtitle2" fontWeight="bold" noWrap title={priority.priority}>
                             {index + 1}. {priority.priority}

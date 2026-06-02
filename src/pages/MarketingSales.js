@@ -330,7 +330,7 @@ function MarketingSales() {
             <LinearProgress
                 variant="determinate"
                 value={overallScore}
-                sx={{ height: 12, borderRadius: 6, mb: 1, bgcolor: 'grey.200' }}
+                sx={{ height: 12, borderRadius: 6, mb: 1, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.10)' : 'grey.200' }}
                 color="warning"
             />
             <Typography variant="body2" color="text.secondary">
@@ -354,25 +354,25 @@ function MarketingSales() {
         </Alert>
 
         <Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 2 }}>
-            <Paper elevation={0} sx={{ p: 2, bgcolor: 'success.50', borderRadius: 2, border: '1px solid', borderColor: 'success.100' }}>
+            <Paper elevation={0} sx={{ p: 2, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(46,125,50,0.15)' : 'success.50', borderRadius: 2, border: '1px solid', borderColor: (theme) => theme.palette.mode === 'dark' ? 'rgba(46,125,50,0.3)' : 'success.100' }}>
                 <Typography variant="body2" color="text.secondary">{t('marketing.ltv.title')}</Typography>
                 <Typography variant="h4" fontWeight="bold" color="success.dark">1.71 M€</Typography>
             </Paper>
-            <Paper elevation={0} sx={{ p: 2, bgcolor: 'grey.50', borderRadius: 2, border: '1px solid', borderColor: 'grey.200' }}>
+            <Paper elevation={0} sx={{ p: 2, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.04)' : 'grey.50', borderRadius: 2, border: '1px solid', borderColor: 'divider' }}>
                 <Typography variant="body2" color="text.secondary">CAC</Typography>
                 <Typography variant="h4" fontWeight="bold" color="text.primary">2.000€</Typography>
             </Paper>
-            <Paper elevation={0} sx={{ p: 2, bgcolor: 'info.50', borderRadius: 2, border: '1px solid', borderColor: 'info.100' }}>
+            <Paper elevation={0} sx={{ p: 2, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(2,136,209,0.15)' : 'info.50', borderRadius: 2, border: '1px solid', borderColor: (theme) => theme.palette.mode === 'dark' ? 'rgba(2,136,209,0.3)' : 'info.100' }}>
                 <Typography variant="body2" color="text.secondary">{t('marketing.ltv.lifetime')}</Typography>
                 <Typography variant="h4" fontWeight="bold" color="info.dark">15 {t('operational.years')}</Typography>
             </Paper>
-            <Paper elevation={0} sx={{ p: 2, bgcolor: 'success.50', borderRadius: 2, border: '1px solid', borderColor: 'success.100' }}>
+            <Paper elevation={0} sx={{ p: 2, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(46,125,50,0.15)' : 'success.50', borderRadius: 2, border: '1px solid', borderColor: (theme) => theme.palette.mode === 'dark' ? 'rgba(46,125,50,0.3)' : 'success.100' }}>
                 <Typography variant="body2" color="text.secondary">{t('marketing.ltv.churnRate')}</Typography>
                 <Typography variant="h4" fontWeight="bold" color="success.dark">&lt;3%</Typography>
             </Paper>
         </Box>
 
-        <Box sx={{ mt: 3, p: 2, bgcolor: 'grey.50', borderRadius: 1 }}>
+        <Box sx={{ mt: 3, p: 2, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.04)' : 'grey.50', borderRadius: 1 }}>
              <Typography variant="caption" color="text.secondary">
                 {t('marketing.ltv.formula')}: Σ(200.000€ / (1+0.08)^t) = 1,71 M€ | {t('marketing.ltv.discountRate')}: 8%
              </Typography>
@@ -455,7 +455,7 @@ function MarketingSales() {
                     </PieChart>
                 </ResponsiveContainer>
             </Box>
-            <Box sx={{ mt: 2, p: 1.5, bgcolor: 'info.50', borderRadius: 1, textAlign: 'center' }}>
+            <Box sx={{ mt: 2, p: 1.5, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(2,136,209,0.15)' : 'info.50', borderRadius: 1, textAlign: 'center' }}>
                 <Typography variant="subtitle2" fontWeight="bold" color="info.dark">
                     HHI = {hhi}
                 </Typography>
@@ -502,17 +502,17 @@ function MarketingSales() {
             <Divider sx={{ mb: 2 }} />
             
             <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2, mb: 2 }}>
-                <Paper elevation={0} sx={{ p: 1.5, bgcolor: 'error.50', borderRadius: 2 }}>
+                <Paper elevation={0} sx={{ p: 1.5, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(211,47,47,0.15)' : 'error.50', borderRadius: 2 }}>
                     <Typography variant="caption" color="text.secondary">{t('marketing.campus.costs')}</Typography>
                     <Typography variant="h6" fontWeight="bold" color="error.main">-{campusROI.costs} M€</Typography>
                 </Paper>
-                <Paper elevation={0} sx={{ p: 1.5, bgcolor: 'success.50', borderRadius: 2 }}>
+                <Paper elevation={0} sx={{ p: 1.5, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(46,125,50,0.15)' : 'success.50', borderRadius: 2 }}>
                     <Typography variant="caption" color="text.secondary">{t('marketing.campus.revenue')}</Typography>
                     <Typography variant="h6" fontWeight="bold" color="success.main">+{campusROI.totalRevenue} M€</Typography>
                 </Paper>
             </Box>
             
-            <Box sx={{ textAlign: 'center', p: 2, border: '1px dashed', borderColor: 'success.main', borderRadius: 2, bgcolor: 'success.50' }}>
+            <Box sx={{ textAlign: 'center', p: 2, border: '1px dashed', borderColor: 'success.main', borderRadius: 2, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(46,125,50,0.15)' : 'success.50' }}>
                  <Typography variant="h3" fontWeight="bold" color="success.dark">{campusROI.roi}%</Typography>
                  <Typography variant="subtitle2" color="success.dark">ROI</Typography>
             </Box>
@@ -560,7 +560,7 @@ function MarketingSales() {
                     <Typography variant="h5" fontWeight="bold" color="success.main">107.50€</Typography>
                  </Box>
             </Box>
-            <Paper elevation={0} sx={{ p: 2, bgcolor: 'success.50', borderRadius: 2, textAlign: 'center' }}>
+            <Paper elevation={0} sx={{ p: 2, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(46,125,50,0.15)' : 'success.50', borderRadius: 2, textAlign: 'center' }}>
                  <Typography variant="subtitle1" fontWeight="bold" color="success.dark">
                     {t('marketing.pricing.potential')}: +24.2 M€
                  </Typography>
@@ -621,7 +621,7 @@ function MarketingSales() {
                     </RadarChart>
                     </ResponsiveContainer>
                 </Box>
-                <Box sx={{ flex: 0.6, p: 2, bgcolor: 'warning.50', borderRadius: 2, textAlign: 'center' }}>
+                <Box sx={{ flex: 0.6, p: 2, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(237,108,2,0.15)' : 'warning.50', borderRadius: 2, textAlign: 'center' }}>
                     <Typography variant="caption" display="block">MEI Score</Typography>
                     <Typography variant="h4" fontWeight="bold" color="warning.main">0.325</Typography>
                     <Typography variant="caption" display="block" color="text.secondary">{t('marketing.mei.inefficient')}</Typography>
@@ -674,7 +674,7 @@ function MarketingSales() {
             <Divider sx={{ mb: 2 }} />
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
                 {strategicPriorities.map((priority, index) => (
-                    <Paper key={index} elevation={0} sx={{ p: 2, bgcolor: 'grey.50', borderRadius: 2, border: '1px solid', borderColor: 'divider' }}>
+                    <Paper key={index} elevation={0} sx={{ p: 2, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.04)' : 'grey.50', borderRadius: 2, border: '1px solid', borderColor: 'divider' }}>
                         <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', mb: 1 }}>
                             <Typography variant="subtitle2" fontWeight="bold">
                                 {index + 1}. {priority.priority}

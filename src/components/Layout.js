@@ -11,16 +11,22 @@ import {
 } from '@mui/material';
 import {
   Menu as MenuIcon,
-  Language as LanguageIcon
+  Language as LanguageIcon,
+  DarkMode as DarkModeIcon,
+  LightMode as LightModeIcon,
 } from '@mui/icons-material';
 import { Outlet } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import SideDrawer, { drawerWidth } from './SideDrawer';
+import { useThemeContext } from '../context/ThemeContext';
+import Plasma from './Plasma';
+import Iridescence from './Iridescence';
 
 function Layout() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [anchorEl, setAnchorEl] = useState(null);
   const { t, i18n } = useTranslation();
+  const { mode, toggleMode } = useThemeContext();
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -41,6 +47,16 @@ function Layout() {
 
   return (
     <Box sx={{ display: 'flex' }}>
+
+      {/* Animated full-viewport background */}
+      <Box sx={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, zIndex: -1, pointerEvents: 'none' }}>
+        {mode === 'dark' ? (
+          <Plasma color="#5335ff" speed={0.6} direction="forward" scale={1.1} opacity={0.8} mouseInteractive={true} />
+        ) : (
+          <Iridescence color={[0.5, 0.6, 0.8]} mouseReact={false} amplitude={0.1} speed={1} />
+        )}
+      </Box>
+
       <AppBar
         position="fixed"
         sx={{
@@ -60,6 +76,15 @@ function Layout() {
           <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
             {t('projectManagement')}
           </Typography>
+
+          <IconButton
+            color="inherit"
+            onClick={toggleMode}
+            sx={{ mr: 1 }}
+            aria-label="toggle color mode"
+          >
+            {mode === 'dark' ? <LightModeIcon /> : <DarkModeIcon />}
+          </IconButton>
 
           <Button
             color="inherit"
@@ -88,16 +113,14 @@ function Layout() {
 
       <SideDrawer mobileOpen={mobileOpen} handleDrawerToggle={handleDrawerToggle} />
 
-      {/* --- SORUNUN ÇÖZÜLDÜĞÜ YER BURASI --- */}
       <Box
         component="main"
         sx={{
           flexGrow: 1,
           p: 3,
           width: { sm: `calc(100% - ${drawerWidth}px)` },
-          // AŞAĞIDAKİ İKİ SATIR EKLENDİ:
-          height: '95vh',    // Sayfa yüksekliğini ekran boyutuna sabitler
-          overflow: 'auto',   // İçerik taşarsa kaydırma çubuğunu aktif eder
+          height: '95vh',
+          overflow: 'auto',
         }}
       >
         <Toolbar />

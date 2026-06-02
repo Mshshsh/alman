@@ -148,7 +148,7 @@ function FinancialPerformance() {
           <LinearProgress
             variant="determinate"
             value={65}
-            sx={{ height: 12, borderRadius: 6, mb: 2, backgroundColor: 'grey.200' }}
+            sx={{ height: 12, borderRadius: 6, mb: 2, backgroundColor: (theme) => theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.10)' : 'grey.200' }}
             color="warning"
           />
           <Typography variant="body2" color="text.secondary">
@@ -233,7 +233,7 @@ function FinancialPerformance() {
             </Typography>
             <Divider sx={{ mb: 2 }} />
             
-            <Box sx={{ mb: 3, p: 2, bgcolor: 'grey.50', borderRadius: 1 }}>
+            <Box sx={{ mb: 3, p: 2, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.04)' : 'grey.50', borderRadius: 1 }}>
               <Typography variant="body2" color="text.secondary" align="center">
                 ROE Formula
               </Typography>
@@ -351,7 +351,7 @@ function FinancialPerformance() {
         <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column', gap: 2 }}>
           
           {/* Strengths */}
-          <Paper elevation={2} sx={{ p: 2.5, bgcolor: '#edf7ed', borderRadius: 2, flex: 1 }}>
+          <Paper elevation={2} sx={{ p: 2.5, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(46,125,50,0.15)' : '#edf7ed', borderRadius: 2, flex: 1 }}>
             <Typography variant="h6" gutterBottom sx={{ display: 'flex', alignItems: 'center', color: 'success.dark', fontWeight: 600 }}>
               <CheckCircle sx={{ mr: 1 }} /> {t('financial.strengths.title')}
             </Typography>
@@ -364,7 +364,7 @@ function FinancialPerformance() {
           </Paper>
 
           {/* Weaknesses */}
-          <Paper elevation={2} sx={{ p: 2.5, bgcolor: '#fdeded', borderRadius: 2, flex: 1 }}>
+          <Paper elevation={2} sx={{ p: 2.5, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(211,47,47,0.15)' : '#fdeded', borderRadius: 2, flex: 1 }}>
             <Typography variant="h6" gutterBottom sx={{ display: 'flex', alignItems: 'center', color: 'error.dark', fontWeight: 600 }}>
               <TrendingDown sx={{ mr: 1 }} /> {t('financial.weaknesses.title')}
             </Typography>
@@ -399,7 +399,7 @@ function FinancialPerformance() {
         </Paper>
 
         {/* Sources */}
-        <Paper elevation={1} sx={{ p: 2, bgcolor: 'grey.100', borderRadius: 2 }}>
+        <Paper elevation={1} sx={{ p: 2, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.07)' : 'grey.100', borderRadius: 2 }}>
           <Typography variant="subtitle1" gutterBottom fontWeight={600} color="text.secondary">
             {t('financial.sources')}
           </Typography>

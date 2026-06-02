@@ -93,7 +93,7 @@ function General() {
       </Box>
 
       {/* 1. PROJECT OVERVIEW CARD */}
-      <Paper elevation={3} sx={{ p: 3, mb: 3, borderRadius: 2, background: 'linear-gradient(to right, #ece9e6, #ffffff)' }}>
+      <Paper elevation={3} sx={{ p: 3, mb: 3, borderRadius: 2, background: (theme) => theme.palette.mode === 'dark' ? undefined : 'linear-gradient(to right, #ece9e6, #ffffff)' }}>
         <Box sx={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', flexWrap: 'wrap', gap: 2 }}>
           <Box sx={{ flex: 1, minWidth: '300px' }}>
             <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
@@ -109,7 +109,7 @@ function General() {
             </Box>
           </Box>
           
-          <Box sx={{ width: '100%', maxWidth: 300, bgcolor: 'white', p: 2, borderRadius: 2, boxShadow: 1 }}>
+          <Box sx={{ width: '100%', maxWidth: 300, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.06)' : 'white', p: 2, borderRadius: 2, boxShadow: 1 }}>
             <Typography variant="subtitle2" gutterBottom fontWeight="bold">Overall Progress</Typography>
             <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
               <Box sx={{ width: '100%', mr: 1 }}>
@@ -138,7 +138,7 @@ function General() {
           
           <Box sx={{ display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, gap: 2, alignItems: 'stretch' }}>
             {methodologySteps.map((step, index) => (
-              <Box key={index} sx={{ flex: 1, p: 2, bgcolor: 'grey.50', borderRadius: 2, position: 'relative', border: '1px solid #e0e0e0' }}>
+              <Box key={index} sx={{ flex: 1, p: 2, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.04)' : 'grey.50', borderRadius: 2, position: 'relative', border: '1px solid', borderColor: 'divider' }}>
                 <Box sx={{ color: 'primary.main', mb: 1 }}>{step.icon}</Box>
                 <Typography variant="subtitle2" fontWeight="bold" gutterBottom>{step.title}</Typography>
                 <Typography variant="caption" color="text.secondary" sx={{ lineHeight: 1.3, display: 'block' }}>{step.desc}</Typography>

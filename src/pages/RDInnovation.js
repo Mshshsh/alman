@@ -307,16 +307,16 @@ function RDInnovation() {
 
         {/* Key Stats Row */}
         <Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 2, mb: 3 }}>
-            <Paper elevation={0} sx={{ p: 2, bgcolor: 'grey.50', borderRadius: 2 }}>
+            <Paper elevation={0} sx={{ p: 2, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.04)' : 'grey.50', borderRadius: 2 }}>
                 <Typography variant="body2" color="text.secondary">{t('rd.patentPortfolio.totalPatents')}</Typography>
                 <Typography variant="h4" fontWeight="bold" color="primary">{totalPatents}</Typography>
             </Paper>
-            <Paper elevation={0} sx={{ p: 2, bgcolor: 'warning.50', borderRadius: 2 }}>
+            <Paper elevation={0} sx={{ p: 2, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(237,108,2,0.15)' : 'warning.50', borderRadius: 2 }}>
                 <Typography variant="body2" color="text.secondary">{t('rd.patentPortfolio.patentImpact')}</Typography>
                 <Typography variant="h4" fontWeight="bold" color="warning.main">{patentImpactScore}</Typography>
                 <Typography variant="caption" color="error">{t('rd.patentPortfolio.belowTarget')}</Typography>
             </Paper>
-            <Paper elevation={0} sx={{ p: 2, bgcolor: 'success.50', borderRadius: 2 }}>
+            <Paper elevation={0} sx={{ p: 2, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(46,125,50,0.15)' : 'success.50', borderRadius: 2 }}>
                 <Typography variant="body2" color="text.secondary">{t('rd.patentPortfolio.annualPatents')}</Typography>
                 <Typography variant="h4" fontWeight="bold" color="success.main">{annualNewPatents}</Typography>
             </Paper>
@@ -376,7 +376,7 @@ function RDInnovation() {
             </Box>
         </Box>
         
-        <Box sx={{ mt: 3, p: 2, bgcolor: 'grey.50', borderRadius: 2 }}>
+        <Box sx={{ mt: 3, p: 2, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.04)' : 'grey.50', borderRadius: 2 }}>
              <Typography variant="caption" color="text.secondary">
                <strong>{t('rd.patentPortfolio.portfolioValue')}:</strong> {totalPortfolioValue.toLocaleString()} {t('rd.units')} | 
                <strong> {t('rd.patentPortfolio.annualDepreciation')}:</strong> {annualDepreciation.toLocaleString()} {t('rd.units')}
@@ -395,17 +395,17 @@ function RDInnovation() {
             <Divider sx={{ mb: 2 }} />
             
             <Box sx={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2, mb: 2 }}>
-                <Paper elevation={0} sx={{ p: 1.5, bgcolor: 'success.50', borderRadius: 2 }}>
+                <Paper elevation={0} sx={{ p: 1.5, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(46,125,50,0.15)' : 'success.50', borderRadius: 2 }}>
                     <Typography variant="caption" color="text.secondary">{t('rd.rdEfficiency.rdIntensity')}</Typography>
                     <Typography variant="h5" fontWeight="bold" color="success.main">{rdIntensity}%</Typography>
                 </Paper>
-                <Paper elevation={0} sx={{ p: 1.5, bgcolor: 'info.50', borderRadius: 2 }}>
+                <Paper elevation={0} sx={{ p: 1.5, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(2,136,209,0.15)' : 'info.50', borderRadius: 2 }}>
                     <Typography variant="caption" color="text.secondary">{t('rd.rdEfficiency.annualBudget')}</Typography>
                     <Typography variant="h5" fontWeight="bold" color="info.main">{rdBudget} M€</Typography>
                 </Paper>
             </Box>
             
-            <Paper elevation={0} sx={{ p: 2, bgcolor: 'warning.50', borderRadius: 2, textAlign: 'center', mb: 2 }}>
+            <Paper elevation={0} sx={{ p: 2, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(237,108,2,0.15)' : 'warning.50', borderRadius: 2, textAlign: 'center', mb: 2 }}>
                 <Typography variant="h4" fontWeight="bold" color="warning.main">{innovationReturnRate}%</Typography>
                 <Typography variant="body2" color="text.secondary">{t('rd.rdEfficiency.innovationReturn')}</Typography>
                 <Typography variant="caption" color="error">{t('rd.rdEfficiency.targetReturn')}</Typography>
@@ -426,12 +426,12 @@ function RDInnovation() {
             <Divider sx={{ mb: 2 }} />
             
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-                 <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', p: 2, bgcolor: 'grey.50', borderRadius: 2 }}>
+                 <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', p: 2, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.04)' : 'grey.50', borderRadius: 2 }}>
                     <Typography variant="body2">{t('rd.personnel.rdPersonnel')}</Typography>
                     <Typography variant="h5" fontWeight="bold" color="primary">{rdPersonnel}</Typography>
                  </Box>
                  
-                 <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', p: 2, bgcolor: 'warning.50', borderRadius: 2 }}>
+                 <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', p: 2, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(237,108,2,0.15)' : 'warning.50', borderRadius: 2 }}>
                     <Box>
                         <Typography variant="body2">{t('rd.personnel.patentsPerEmployee')}</Typography>
                         <Typography variant="caption" color="text.secondary">{t('rd.personnel.sectorBenchmark')}: {sectorBenchmark}</Typography>
@@ -439,7 +439,7 @@ function RDInnovation() {
                     <Typography variant="h5" fontWeight="bold" color="warning.main">{patentsPerEmployee}</Typography>
                  </Box>
 
-                 <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', p: 2, bgcolor: 'error.50', borderRadius: 2 }}>
+                 <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', p: 2, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(211,47,47,0.15)' : 'error.50', borderRadius: 2 }}>
                     <Typography variant="body2">{t('rd.personnel.productivityRatio')}</Typography>
                     <Box sx={{ textAlign: 'right' }}>
                         <Typography variant="h5" fontWeight="bold" color="error.main">{productivityRatio}%</Typography>
@@ -518,11 +518,11 @@ function RDInnovation() {
                 <Divider sx={{ mb: 2 }} />
                 
                 <Box sx={{ display: 'flex', gap: 2, mb: 2 }}>
-                    <Box sx={{ flex: 1, textAlign: 'center', p: 1, bgcolor: 'error.50', borderRadius: 2 }}>
+                    <Box sx={{ flex: 1, textAlign: 'center', p: 1, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(211,47,47,0.15)' : 'error.50', borderRadius: 2 }}>
                         <Typography variant="caption" display="block">{t('rd.university.annualCost')}</Typography>
                         <Typography variant="h6" fontWeight="bold" color="error.main">{collaborationCost} M€</Typography>
                     </Box>
-                    <Box sx={{ flex: 1, textAlign: 'center', p: 1, bgcolor: 'success.50', borderRadius: 2 }}>
+                    <Box sx={{ flex: 1, textAlign: 'center', p: 1, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(46,125,50,0.15)' : 'success.50', borderRadius: 2 }}>
                         <Typography variant="caption" display="block">{t('rd.university.annualBenefit')}</Typography>
                         <Typography variant="h6" fontWeight="bold" color="success.main">{collaborationBenefit} M€</Typography>
                     </Box>
@@ -598,7 +598,7 @@ function RDInnovation() {
             <Divider sx={{ mb: 2 }} />
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
                 {strategicPriorities.map((priority, index) => (
-                    <Paper key={index} elevation={0} sx={{ p: 2, bgcolor: 'grey.50', borderRadius: 2, border: '1px solid', borderColor: 'divider' }}>
+                    <Paper key={index} elevation={0} sx={{ p: 2, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.04)' : 'grey.50', borderRadius: 2, border: '1px solid', borderColor: 'divider' }}>
                         <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 1 }}>
                             <Typography variant="subtitle1" fontWeight="bold">
                                 {index + 1}. {priority.priority}
@@ -638,15 +638,15 @@ function RDInnovation() {
          </ResponsiveContainer>
 
          <Box sx={{ display: 'flex', gap: 2, mt: 3, flexWrap: 'wrap' }}>
-            <Paper elevation={2} sx={{ flex: 1, minWidth: '200px', p: 2, bgcolor: 'success.50' }}>
+            <Paper elevation={2} sx={{ flex: 1, minWidth: '200px', p: 2, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(46,125,50,0.15)' : 'success.50' }}>
                <Typography variant="body2" color="text.secondary">{t('rd.portfolio.expectedReturn')}</Typography>
                <Typography variant="h4" fontWeight="bold" color="success.dark">{portfolioExpectedReturn}%</Typography>
             </Paper>
-            <Paper elevation={2} sx={{ flex: 1, minWidth: '200px', p: 2, bgcolor: 'warning.50' }}>
+            <Paper elevation={2} sx={{ flex: 1, minWidth: '200px', p: 2, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(237,108,2,0.15)' : 'warning.50' }}>
                <Typography variant="body2" color="text.secondary">{t('rd.portfolio.portfolioRisk')}</Typography>
                <Typography variant="h4" fontWeight="bold" color="warning.dark">{portfolioRiskLevel}%</Typography>
             </Paper>
-            <Paper elevation={2} sx={{ flex: 1, minWidth: '200px', p: 2, bgcolor: 'info.50' }}>
+            <Paper elevation={2} sx={{ flex: 1, minWidth: '200px', p: 2, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(2,136,209,0.15)' : 'info.50' }}>
                <Typography variant="body2" color="text.secondary">{t('rd.portfolio.sharpeRatio')}</Typography>
                <Typography variant="h4" fontWeight="bold" color="info.dark">{sharpeRatio}</Typography>
             </Paper>
@@ -654,7 +654,7 @@ function RDInnovation() {
       </Paper>
 
       {/* 7. Conclusion */}
-      <Paper elevation={3} sx={{ p: 3, bgcolor: '#fff3e0', borderRadius: 2 }}>
+      <Paper elevation={3} sx={{ p: 3, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(237,108,2,0.12)' : '#fff3e0', borderRadius: 2 }}>
         <Typography variant="h6" gutterBottom color="warning.main" fontWeight="bold">
           {t('rd.conclusion.title')}
         </Typography>

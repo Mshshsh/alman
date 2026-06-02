@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JUMO GmbH & Co. KG – Umfassende Unternehmensanalyse 2024</title>
+<style>
+  /* ===== GENEL STILLER ===== */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 11pt;
+    color: #1a1a1a;
+    background: #fff;
+    line-height: 1.5;
+  }
+  a { color: inherit; text-decoration: none; }
+
+  /* ===== SAYFA DÜZENİ ===== */
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto;
+    padding: 18mm 20mm 18mm 20mm;
+  }
+
+  /* ===== KAPAK SAYFASI ===== */
+  .cover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 297mm;
+    background: linear-gradient(135deg, #0d47a1 0%, #1565c0 50%, #1976d2 100%);
+    color: white;
+    padding: 30mm 20mm;
+  }
+  .cover .logo-area {
+    font-size: 14pt;
+    font-weight: 300;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: 0.9;
+    margin-bottom: 8mm;
+  }
+  .cover h1 {
+    font-size: 28pt;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 6mm;
+  }
+  .cover .subtitle {
+    font-size: 14pt;
+    font-weight: 300;
+    opacity: 0.85;
+    margin-bottom: 15mm;
+  }
+  .cover .meta {
+    font-size: 11pt;
+    opacity: 0.75;
+    border-top: 1px solid rgba(255,255,255,0.3);
+    padding-top: 6mm;
+    margin-top: 6mm;
+    width: 100%;
+  }
+  .cover .score-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4mm;
+    width: 100%;
+    margin: 10mm 0;
+  }
+  .cover .score-box {
+    background: rgba(255,255,255,0.15);
+    border-radius: 4px;
+    padding: 5mm;
+    text-align: center;
+  }
+  .cover .score-box .val { font-size: 18pt; font-weight: 700; }
+  .cover .score-box .lbl { font-size: 7pt; opacity: 0.8; margin-top: 2px; }
+
+  /* ===== BÖLÜM BAŞLIKLARI ===== */
+  .section-page {
+    page-break-before: always;
+    padding: 18mm 20mm;
+  }
+  h1.chapter {
+    font-size: 22pt;
+    font-weight: 700;
+    color: #0d47a1;
+    border-bottom: 3px solid #1976d2;
+    padding-bottom: 4mm;
+    margin-bottom: 6mm;
+  }
+  h2.section {
+    font-size: 15pt;
+    font-weight: 600;
+    color: #1565c0;
+    margin: 6mm 0 3mm 0;
+    padding-left: 3mm;
+    border-left: 4px solid #1976d2;
+  }
+  h3.subsection {
+    font-size: 12pt;
+    font-weight: 600;
+    color: #1976d2;
+    margin: 4mm 0 2mm 0;
+  }
+
+  /* ===== KARTLAR ===== */
+  .card {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    padding: 5mm 6mm;
+    margin-bottom: 4mm;
+  }
+  .card-danger { border-left: 4px solid #d32f2f; background: #fff5f5; }
+  .card-warning { border-left: 4px solid #f57c00; background: #fffde7; }
+  .card-success { border-left: 4px solid #2e7d32; background: #f1f8e9; }
+  .card-info { border-left: 4px solid #0288d1; background: #e1f5fe; }
+  .card-primary { border-left: 4px solid #0d47a1; background: #e8eaf6; }
+
+  /* ===== METRİK KARTLARI ===== */
+  .metric-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3mm;
+    margin: 4mm 0;
+  }
+  .metric-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3mm;
+    margin: 4mm 0;
+  }
+  .metric-box {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    padding: 4mm;
+    text-align: center;
+  }
+  .metric-box .val {
+    font-size: 18pt;
+    font-weight: 700;
+    color: #0d47a1;
+    display: block;
+  }
+  .metric-box .lbl {
+    font-size: 8.5pt;
+    color: #555;
+    margin-top: 1mm;
+  }
+  .metric-box.red .val { color: #d32f2f; }
+  .metric-box.green .val { color: #2e7d32; }
+  .metric-box.orange .val { color: #f57c00; }
+
+  /* ===== TABLOLAR ===== */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 9.5pt;
+    margin: 3mm 0;
+  }
+  th {
+    background: #1565c0;
+    color: white;
+    padding: 3mm 4mm;
+    text-align: left;
+    font-weight: 600;
+  }
+  td {
+    padding: 2.5mm 4mm;
+    border-bottom: 1px solid #dee2e6;
+    vertical-align: top;
+  }
+  tr:nth-child(even) td { background: #f5f5f5; }
+  tr:hover td { background: #e8f4fd; }
+  .td-center { text-align: center; }
+  .td-right { text-align: right; }
+  .td-green { color: #2e7d32; font-weight: 600; }
+  .td-red { color: #d32f2f; font-weight: 600; }
+  .td-orange { color: #f57c00; font-weight: 600; }
+  .td-bold { font-weight: 600; }
+
+  /* ===== BADGE / CHIP ===== */
+  .badge {
+    display: inline-block;
+    padding: 1mm 3mm;
+    border-radius: 3px;
+    font-size: 8pt;
+    font-weight: 600;
+  }
+  .badge-red { background: #ffebee; color: #c62828; border: 1px solid #ef9a9a; }
+  .badge-green { background: #e8f5e9; color: #1b5e20; border: 1px solid #a5d6a7; }
+  .badge-orange { background: #fff8e1; color: #e65100; border: 1px solid #ffcc80; }
+  .badge-blue { background: #e3f2fd; color: #0d47a1; border: 1px solid #90caf9; }
+  .badge-gray { background: #f5f5f5; color: #424242; border: 1px solid #bdbdbd; }
+
+  /* ===== SWOT ===== */
+  .swot-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3mm;
+    margin: 4mm 0;
+  }
+  .swot-box { padding: 4mm; border-radius: 4px; }
+  .swot-strength { background: #e8f5e9; border: 1px solid #a5d6a7; }
+  .swot-weakness { background: #ffebee; border: 1px solid #ef9a9a; }
+  .swot-box h4 { font-size: 11pt; font-weight: 700; margin-bottom: 2mm; }
+  .swot-strength h4 { color: #1b5e20; }
+  .swot-weakness h4 { color: #b71c1c; }
+  .swot-box ul { padding-left: 5mm; }
+  .swot-box li { margin-bottom: 1.5mm; font-size: 9.5pt; }
+
+  /* ===== İLERLEME ÇUBUKLARI ===== */
+  .progress-item { margin-bottom: 3mm; }
+  .progress-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 9.5pt;
+    margin-bottom: 1mm;
+  }
+  .progress-bar {
+    height: 5px;
+    background: #e0e0e0;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%;
+    border-radius: 3px;
+    background: #1976d2;
+  }
+  .progress-fill.red { background: #d32f2f; }
+  .progress-fill.green { background: #2e7d32; }
+  .progress-fill.orange { background: #f57c00; }
+
+  /* ===== ÇİZELGE YERİ ===== */
+  .chart-placeholder {
+    border: 1px dashed #aaa;
+    border-radius: 4px;
+    padding: 6mm;
+    text-align: center;
+    color: #888;
+    font-size: 9pt;
+    background: #fafafa;
+    margin: 3mm 0;
+  }
+
+  /* ===== GENEL ===== */
+  p { margin-bottom: 2mm; font-size: 10.5pt; }
+  ul, ol { padding-left: 6mm; margin-bottom: 2mm; }
+  li { margin-bottom: 1mm; font-size: 10pt; }
+  .text-danger { color: #d32f2f; }
+  .text-success { color: #2e7d32; }
+  .text-primary { color: #0d47a1; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 5mm; }
+  .three-col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 4mm; }
+  .spacer { height: 4mm; }
+  .spacer-lg { height: 8mm; }
+  hr { border: none; border-top: 1px solid #dee2e6; margin: 4mm 0; }
+  .highlight-box {
+    background: #e3f2fd;
+    border: 1px solid #90caf9;
+    border-radius: 4px;
+    padding: 4mm 5mm;
+    margin: 3mm 0;
+  }
+
+  /* ===== BASKIYA ÖZEL ===== */
+  @media print {
+    .page { margin: 0; padding: 15mm 18mm; }
+    .section-page { padding: 15mm 18mm; }
+    .cover { min-height: 100vh; }
+    .no-print { display: none; }
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    h1.chapter { page-break-after: avoid; }
+    table { page-break-inside: avoid; }
+    .card { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ================================================
+     KAPAK SAYFASI
+================================================ -->
+<div class="cover page">
+  <div class="logo-area">Unternehmensanalyse · JUMO 2030 Strategy</div>
+  <h1>JUMO GmbH &amp; Co. KG<br>Umfassende Geschäftsanalyse</h1>
+  <div class="subtitle">Strategische Diagnose &amp; Handlungsempfehlungen · 2024</div>
+
+  <div class="score-grid">
+    <div class="score-box">
+      <div class="val">6,5/10</div>
+      <div class="lbl">Finanzielle Gesundheit</div>
+    </div>
+    <div class="score-box">
+      <div class="val">62/100</div>
+      <div class="lbl">Betriebliche Effizienz</div>
+    </div>
+    <div class="score-box">
+      <div class="val">74/100</div>
+      <div class="lbl">Marketing &amp; Vertrieb</div>
+    </div>
+    <div class="score-box">
+      <div class="val">65,2/100</div>
+      <div class="lbl">HR &amp; Organisation</div>
+    </div>
+    <div class="score-box">
+      <div class="val">58/100</div>
+      <div class="lbl">F&amp;E &amp; Innovation</div>
+    </div>
+    <div class="score-box">
+      <div class="val">72,7/100</div>
+      <div class="lbl">Supply Chain</div>
+    </div>
+    <div class="score-box">
+      <div class="val">55,9/100</div>
+      <div class="lbl">Makroumfeld</div>
+    </div>
+    <div class="score-box">
+      <div class="val">5,8/10</div>
+      <div class="lbl">KI-Bereitschaft</div>
+    </div>
+  </div>
+
+  <div class="meta">
+    <strong>JUMO GmbH &amp; Co. KG</strong> · Handelsregister: HRA 302 (Fulda) · Gegründet: 1949 · Mitarbeiter: ~2.500+ · Website: jumo.group
+  </div>
+</div>
+
+
+<!-- ================================================
+     BÖLÜM 1: GENEL BİLGİLER
+================================================ -->
+<div class="section-page">
+  <h1 class="chapter">1. Allgemeine Unternehmensinformationen</h1>
+
+  <h2 class="section">1.1 Grundinformationen</h2>
+  <table>
+    <tbody>
+      <tr><td style="width:40%"><strong>Betriebsgesellschaft</strong></td><td>JUMO GmbH &amp; Co. KG</td></tr>
+      <tr><td><strong>Muttergesellschaft (Holding)</strong></td><td>B. Juchheim Beteiligungs GmbH</td></tr>
+      <tr><td><strong>Handelsregister-Nr</strong></td><td>HRA 302 (Fulda)</td></tr>
+      <tr><td><strong>Unternehmensstruktur</strong></td><td>GmbH &amp; Co. KG</td></tr>
+      <tr><td><strong>Gründungsjahr</strong></td><td>1949 (75+ Jahre Unternehmensgeschichte)</td></tr>
+      <tr><td><strong>Branche</strong></td><td>Industrielle Mess-, Regel- und Automatisierungstechnik</td></tr>
+      <tr><td><strong>Mitarbeiterzahl</strong></td><td>~2.500+</td></tr>
+      <tr><td><strong>Globale Präsenz</strong></td><td>5 Niederlassungen, 25 Tochtergesellschaften, 50+ Vertretungen weltweit</td></tr>
+      <tr><td><strong>Website</strong></td><td>jumo.group</td></tr>
+    </tbody>
+  </table>
+
+  <div class="two-col">
+    <div>
+      <h2 class="section">1.2 Produkte &amp; Dienstleistungen</h2>
+      <ul>
+        <li>Temperatursensoren und -transmitter</li>
+        <li>Prozessregelgeräte</li>
+        <li>Automatisierungssysteme (JUMO mTRON)</li>
+        <li>Aufzeichnungsgeräte und Datenerfassungssysteme</li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="section">1.3 Hauptkonkurrenten</h2>
+      <ul>
+        <li>Endress+Hauser</li>
+        <li>Siemens</li>
+        <li>WIKA</li>
+        <li>Vega</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 class="section">1.4 Führungsteam</h2>
+  <table>
+    <thead><tr><th>Name</th><th>Position</th><th>Verantwortungsbereich</th></tr></thead>
+    <tbody>
+      <tr><td>Dimitrios Charisiadis</td><td>CEO</td><td>Vertrieb, F&amp;E, Produktion</td></tr>
+      <tr><td>Steffen Hoßfeld</td><td>CEO</td><td>–</td></tr>
+      <tr><td>Bernhard Juchheim</td><td>Anteilseigner</td><td>Personalwesen</td></tr>
+      <tr><td>Michael Juchheim</td><td>Anteilseigner</td><td>IT &amp; Finanzen</td></tr>
+    </tbody>
+  </table>
+
+  <h2 class="section">1.5 Analysemethodik</h2>
+  <table>
+    <thead><tr><th>Phase</th><th>Inhalt</th><th>Methode</th></tr></thead>
+    <tbody>
+      <tr><td><strong>1. Datenerhebung</strong></td><td>ERP-Extraktion, Marktberichte, Wettbewerbsanalyse</td><td>SAP / ERP, Eurostat / Gartner</td></tr>
+      <tr><td><strong>2. Diagnoseanalyse</strong></td><td>Finanzielle Gesundheit, Betriebliche Effizienz, HR-Kennzahlen</td><td>Z-Score, OEE, ELTV</td></tr>
+      <tr><td><strong>3. Strategische Synthese</strong></td><td>SWOT, PESTEL, Porter's 5 Forces, Gap-Analyse</td><td>TOPSIS, MRI, SCS</td></tr>
+      <tr><td><strong>4. Empfehlungen</strong></td><td>KI-Lösungen, Roadmap, Investitionsplanung</td><td>NPV, ROI, Szenarioanalyse</td></tr>
+    </tbody>
+  </table>
+</div>
+
+
+<!-- ================================================
+     BÖLÜM 2: FİNANSAL PERFORMANS
+================================================ -->
+<div class="section-page">
+  <h1 class="chapter">2. Finanzielle Leistung</h1>
+
+  <div class="card card-warning">
+    <strong>Finanzielle Gesundheitsbewertung: 6,5 / 10</strong> — Unternehmen ist finanziell stabil, aber die Rentabilität ist niedrig.
+  </div>
+
+  <h2 class="section">2.1 Wichtige Finanzkennzahlen</h2>
+  <div class="metric-grid">
+    <div class="metric-box"><span class="val">379,8 M€</span><span class="lbl">Gesamtvermögen ↑</span></div>
+    <div class="metric-box"><span class="val">190 M€</span><span class="lbl">Eigenkapital ↑</span></div>
+    <div class="metric-box"><span class="val">311,4 M€</span><span class="lbl">Umsatz (neutral)</span></div>
+    <div class="metric-box red"><span class="val">17,5 M€</span><span class="lbl">EBITDA ↓</span></div>
+    <div class="metric-box red"><span class="val">5 M€</span><span class="lbl">Nettogewinn ↓</span></div>
+    <div class="metric-box green"><span class="val">81,7 M€</span><span class="lbl">Bargeld ↑</span></div>
+  </div>
+
+  <h2 class="section">2.2 Altman Z-Score Analyse</h2>
+  <div class="two-col">
+    <div>
+      <table>
+        <thead><tr><th>Faktor</th><th>Wert</th><th>Gewichtung</th><th>Score</th></tr></thead>
+        <tbody>
+          <tr><td>X1 (Liquidität)</td><td>0,274</td><td>6,56</td><td>1,797</td></tr>
+          <tr><td>X2 (Gewinnrücklagen)</td><td>0,013</td><td>3,26</td><td>0,042</td></tr>
+          <tr><td>X3 (EBIT/Aktiva)</td><td>0,0021</td><td>6,72</td><td>0,014</td></tr>
+          <tr><td>X4 (Eigenkapital/Schulden)</td><td>1,001</td><td>1,05</td><td>1,051</td></tr>
+          <tr><td colspan="3"><strong>Altman Z-Score Gesamt</strong></td><td class="td-green"><strong>2,904</strong></td></tr>
+        </tbody>
+      </table>
+      <div class="card card-success" style="margin-top:3mm">
+        <strong>✔ Sichere Zone (Z &gt; 2,6)</strong><br>
+        <small>Z'' &gt; 2,6 → Sicher | 1,1–2,6 → Grauzone | &lt;1,1 → Insolvenzgefahr</small>
+      </div>
+    </div>
+    <div>
+      <h3 class="subsection">DuPont-Analyse</h3>
+      <table>
+        <tbody>
+          <tr><td>Gewinnmarge</td><td class="td-red td-right">1,61 %</td></tr>
+          <tr><td>Vermögensumschlag</td><td class="td-orange td-right">0,82x</td></tr>
+          <tr><td>Finanzielle Hebelwirkung</td><td class="td-green td-right">2,0x</td></tr>
+          <tr><td><strong>ROE (Eigenkapitalrendite)</strong></td><td class="td-red td-right"><strong>2,64 %</strong></td></tr>
+        </tbody>
+      </table>
+      <div class="card card-danger" style="margin-top:3mm">
+        Formel: Margin × Asset Turnover × Leverage<br>
+        1,61% × 0,82 × 2,0 = <strong>2,64%</strong> ROE (Ziel: &gt;8%)
+      </div>
+    </div>
+  </div>
+
+  <h2 class="section">2.3 Finanzkennzahlen-Bewertung</h2>
+  <table>
+    <thead><tr><th>Kategorie</th><th>Kennzahl</th><th>Wert</th><th>Benchmark</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr><td>Liquidität</td><td>Liquiditätsgrad</td><td>1,78</td><td>1,50</td><td class="td-center"><span class="badge badge-green">Gut</span></td></tr>
+      <tr><td>Liquidität</td><td>Barliquidität</td><td>0,61</td><td>0,50</td><td class="td-center"><span class="badge badge-green">Gut</span></td></tr>
+      <tr><td>Effizienz</td><td>Lagerumschlag</td><td>2,52</td><td>5,00</td><td class="td-center"><span class="badge badge-red">Schlecht</span></td></tr>
+      <tr><td>Verschuldung</td><td>Verschuldungsgrad</td><td>1,00</td><td>1,50</td><td class="td-center"><span class="badge badge-green">Gut</span></td></tr>
+      <tr><td>Verschuldung</td><td>Verschuldung/EBITDA</td><td>10,80</td><td>3,00</td><td class="td-center"><span class="badge badge-red">Schlecht</span></td></tr>
+    </tbody>
+  </table>
+
+  <div class="swot-grid">
+    <div class="swot-box swot-strength">
+      <h4>✔ Finanzielle Stärken</h4>
+      <ul>
+        <li>Hervorragende Liquidität — 81,7 Mio. €</li>
+        <li>Geringe Verschuldung — Verschuldungsgrad = 1,0</li>
+        <li>Finanzielle Stabilität — Altman Z-Score 2,9</li>
+        <li>Starke Eigenkapitalbasis — 190 Mio. €</li>
+      </ul>
+    </div>
+    <div class="swot-box swot-weakness">
+      <h4>✘ Finanzielle Schwächen</h4>
+      <ul>
+        <li>Sehr niedrige Rentabilität — Nettogewinnmarge ~1,6%</li>
+        <li>Ineffizientes Lagermanagement — Umschlag 2,52x</li>
+        <li>Hohe Personalkosten — 46% des Umsatzes</li>
+        <li>Niedrige Cashflow-Generierung — FCF-Marge 1,88%</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card card-danger">
+    <strong>Dringende Maßnahmen:</strong>
+    <ul>
+      <li>Lageroptimierung — 123,5 Mio. € Bestand zu hoch (Ziel: 61,8 Mio. €)</li>
+      <li>Personaleffizienz — Umsatz pro Mitarbeiter 123k€ → Ziel 150k€+</li>
+      <li>Verbesserung der operativen Marge — EBIT-Marge &lt;1%</li>
+    </ul>
+  </div>
+
+  <div class="card card-info" style="margin-top:3mm; font-size:9pt">
+    <strong>Quellen:</strong> www.unternehmensregister.de · www.northdata.de · JUMO GmbH &amp; Co. KG Offizielle Website
+  </div>
+</div>
+
+
+<!-- ================================================
+     BÖLÜM 3: MAKRO ORTAM
+================================================ -->
+<div class="section-page">
+  <h1 class="chapter">3. Makroumfeld und Sektoranalyse</h1>
+
+  <div class="card card-danger">
+    <strong>Makrorisiko-Index (MRI): 62,4% — Hohes Risiko</strong><br>
+    Das externe Umfeld stellt signifikante Risiken für JUMO dar, insbesondere durch wirtschaftliche und regulatorische Faktoren.
+  </div>
+
+  <h2 class="section">3.1 PESTEL-Analyse (Gewichtete Risikobewertung)</h2>
+  <table>
+    <thead><tr><th>Faktor</th><th>Einfluss (1–10)</th><th>Wahrscheinlichkeit</th><th>Gewichteter Score</th><th>Einschätzung</th></tr></thead>
+    <tbody>
+      <tr><td>Wirtschaftlich</td><td class="td-center">8</td><td class="td-center">90%</td><td class="td-center td-red"><strong>23</strong></td><td class="td-center"><span class="badge badge-red">Hohes Risiko</span></td></tr>
+      <tr><td>Technologisch</td><td class="td-center">9</td><td class="td-center">70%</td><td class="td-center td-green"><strong>20</strong></td><td class="td-center"><span class="badge badge-green">Chance</span></td></tr>
+      <tr><td>Rechtlich / Regulatorisch</td><td class="td-center">7</td><td class="td-center">85%</td><td class="td-center td-orange"><strong>18</strong></td><td class="td-center"><span class="badge badge-orange">Mittleres Risiko</span></td></tr>
+      <tr><td>Sozial</td><td class="td-center">6</td><td class="td-center">95%</td><td class="td-center td-orange"><strong>17</strong></td><td class="td-center"><span class="badge badge-orange">Mittleres Risiko</span></td></tr>
+      <tr><td>Ökologisch</td><td class="td-center">6</td><td class="td-center">63%</td><td class="td-center"><strong>11</strong></td><td class="td-center"><span class="badge badge-blue">Niedrig</span></td></tr>
+      <tr><td>Politisch</td><td class="td-center">5</td><td class="td-center">52%</td><td class="td-center"><strong>8</strong></td><td class="td-center"><span class="badge badge-gray">Gering</span></td></tr>
+    </tbody>
+  </table>
+  <p><em>Kritischer Befund: Der wirtschaftliche Faktor (Energiekosten, Inflation) und die PFAS-Regulierung stellen die größten externen Risiken für JUMO dar.</em></p>
+
+  <h2 class="section">3.2 Porter's 5 Kräfte — Sektorattraktivität</h2>
+  <table>
+    <thead><tr><th>Wettbewerbskraft</th><th>Intensität (1–5)</th><th>Bewertung</th></tr></thead>
+    <tbody>
+      <tr><td>Wettbewerbsintensität (Rivalry)</td><td class="td-center">4</td><td>Hoch — Siemens, E+H, WIKA als direkte Wettbewerber</td></tr>
+      <tr><td>Lieferantenmacht</td><td class="td-center td-red">5</td><td>Sehr hoch — Abhängigkeit von Chips und Metallen</td></tr>
+      <tr><td>Käufermacht</td><td class="td-center">3</td><td>Mittel — B2B-Kunden mit hoher Wechselbarriere</td></tr>
+      <tr><td>Neue Marktteilnehmer</td><td class="td-center td-green">2</td><td>Niedrig — Hohe Eintrittsbarrieren (Patente, Kapital)</td></tr>
+      <tr><td>Substitutionsprodukte</td><td class="td-center td-green">2</td><td>Niedrig — Industrieautomatisierung unverzichtbar</td></tr>
+    </tbody>
+  </table>
+  <div class="card card-success"><strong>Sektorattraktivität (SCS): 71,0%</strong> — Die Branche ist attraktiv, trotz intensivem Wettbewerb.</div>
+
+  <h2 class="section">3.3 Wettbewerbspositionierung</h2>
+  <table>
+    <thead><tr><th>Unternehmen</th><th>Operational Excellence</th><th>Tech-Stärke</th><th>Marktposition</th></tr></thead>
+    <tbody>
+      <tr><td>Siemens</td><td class="td-center">8/10</td><td class="td-center">9/10</td><td><span class="badge badge-blue">Marktführer</span></td></tr>
+      <tr><td>Endress+Hauser</td><td class="td-center">7/10</td><td class="td-center">8/10</td><td><span class="badge badge-green">Follower</span></td></tr>
+      <tr><td>WIKA</td><td class="td-center">9/10</td><td class="td-center">6/10</td><td><span class="badge badge-green">Kostenführer</span></td></tr>
+      <tr><td><strong>JUMO</strong></td><td class="td-center td-orange"><strong>5/10</strong></td><td class="td-center"><strong>7/10</strong></td><td><span class="badge badge-orange">Nischenplayer</span></td></tr>
+    </tbody>
+  </table>
+
+  <h2 class="section">3.4 Szenarioanalyse &amp; Sensitivität</h2>
+  <table>
+    <thead><tr><th>Szenario</th><th>Umsatz (M€)</th><th>Nettogewinn (M€)</th></tr></thead>
+    <tbody>
+      <tr><td>Pessimistisch</td><td class="td-center">302,1</td><td class="td-center td-red">3,5</td></tr>
+      <tr style="background:#e8f5e9"><td><strong>Basis (erwartet)</strong></td><td class="td-center td-bold">316,0</td><td class="td-center td-green td-bold">4,5</td></tr>
+      <tr><td>Optimistisch</td><td class="td-center">336,3</td><td class="td-center td-green">6,5</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Sensitivitätsanalyse (Tornado):</strong></p>
+  <ul>
+    <li><strong>+31% Gewinnauswirkung:</strong> Lageroptimierung (größter Hebel)</li>
+    <li><strong>+15% Gewinnauswirkung:</strong> IO-Link/SPE Markterschließung</li>
+    <li><strong>-9% Gewinnauswirkung:</strong> Energiekostenanstieg</li>
+    <li><strong>-5% Gewinnauswirkung:</strong> PFAS-Regulierungskosten</li>
+  </ul>
+
+  <h2 class="section">3.5 Gap-Analyse</h2>
+  <table>
+    <thead><tr><th>Kennzahl</th><th>Aktuell</th><th>Ziel</th><th>Gap</th><th>Priorität</th></tr></thead>
+    <tbody>
+      <tr><td>Marktanteil</td><td class="td-center">3,0%</td><td class="td-center">3,5%</td><td class="td-center td-orange">+0,5%</td><td class="td-center"><span class="badge badge-orange">Hoch</span></td></tr>
+      <tr><td>Gewinnmarge</td><td class="td-center">1,61%</td><td class="td-center">3,5%</td><td class="td-center td-red">+1,89%</td><td class="td-center"><span class="badge badge-red">Kritisch</span></td></tr>
+      <tr><td>ROE</td><td class="td-center">2,64%</td><td class="td-center">8,0%</td><td class="td-center td-red">+5,36%</td><td class="td-center"><span class="badge badge-red">Kritisch</span></td></tr>
+      <tr><td>Lagerumschlag</td><td class="td-center">1,8x</td><td class="td-center">3,0x</td><td class="td-center td-red">+1,2x</td><td class="td-center"><span class="badge badge-red">Kritisch</span></td></tr>
+      <tr><td>Umsatz/Mitarbeiter</td><td class="td-center">123k€</td><td class="td-center">140k€</td><td class="td-center td-orange">+17k€</td><td class="td-center"><span class="badge badge-orange">Hoch</span></td></tr>
+    </tbody>
+  </table>
+
+  <h2 class="section">3.6 Integrierter Score</h2>
+  <div class="metric-grid-4">
+    <div class="metric-box red"><span class="val">62,4%</span><span class="lbl">MRI (Makrorisiko-Index)</span></div>
+    <div class="metric-box green"><span class="val">71,0%</span><span class="lbl">SCS (Sektorattraktivität)</span></div>
+    <div class="metric-box orange"><span class="val">65%</span><span class="lbl">Wettbewerbsposition</span></div>
+    <div class="metric-box orange"><span class="val">55,9</span><span class="lbl">Gesamtgesundheitsscore</span></div>
+  </div>
+</div>
+
+
+<!-- ================================================
+     BÖLÜM 4: HR & ORGANİZASYON
+================================================ -->
+<div class="section-page">
+  <h1 class="chapter">4. Personalwesen und Organisation</h1>
+
+  <div class="card card-warning">
+    <strong>HR-Leistungsbewertung: 65,2 / 100</strong> — Unternehmen zeigt starke Bindung, benötigt aber dringend Produktivitätsverbesserung.
+  </div>
+
+  <h2 class="section">4.1 Wichtige HR-Kennzahlen</h2>
+  <div class="metric-grid">
+    <div class="metric-box"><span class="val">2.530</span><span class="lbl">Gesamtmitarbeiter</span></div>
+    <div class="metric-box green"><span class="val">93</span><span class="lbl">Auszubildende</span></div>
+    <div class="metric-box green"><span class="val">4%</span><span class="lbl">Fluktuationsrate (Benchmark: 12%)</span></div>
+    <div class="metric-box"><span class="val">15 Jahre</span><span class="lbl">Durchschn. Betriebszugehörigkeit</span></div>
+    <div class="metric-box red"><span class="val">123,2k€</span><span class="lbl">Umsatz/Mitarbeiter</span></div>
+    <div class="metric-box red"><span class="val">46%</span><span class="lbl">Personalkostenquote</span></div>
+  </div>
+
+  <div class="card card-danger">
+    <strong>Kritische Befunde:</strong>
+    <ul>
+      <li>Negativer ELTV — Jeder Mitarbeiter verliert -519.000€ Lebenszeitwert</li>
+      <li>Sehr hohe Personalkosten — 46% des Umsatzes</li>
+      <li>Niedriger TCI (0,67) — Ineffiziente Kostenstruktur</li>
+      <li>Wissensverlustrisiko — Alternde Belegschaft</li>
+    </ul>
+  </div>
+
+  <h2 class="section">4.2 ELTV-Analyse (Employee Lifetime Value)</h2>
+  <table>
+    <thead><tr><th>Jahr</th><th>Beitrag/Mitarbeiter (k€)</th><th>Kosten (k€)</th><th>Kumulativ (k€)</th></tr></thead>
+    <tbody>
+      <tr><td>Jahr 1</td><td class="td-center">1.984</td><td class="td-center td-red">56.672</td><td class="td-center td-red">-54.688</td></tr>
+      <tr><td>Jahr 5</td><td class="td-center">9.920</td><td class="td-center td-red">283.360</td><td class="td-center td-red">-273.440</td></tr>
+      <tr><td>Jahr 10</td><td class="td-center">19.840</td><td class="td-center td-red">566.720</td><td class="td-center td-red">-546.880</td></tr>
+      <tr><td>Jahr 15</td><td class="td-center">29.760</td><td class="td-center td-red">850.080</td><td class="td-center td-red">-820.320</td></tr>
+    </tbody>
+  </table>
+  <div class="card card-danger"><strong>ELTV-Ergebnis: -519.000€</strong> — Derzeit erzeugt jeder Mitarbeiter einen Lebenszeitverlust für das Unternehmen.</div>
+
+  <h2 class="section">4.3 Produktivitätsszenarien</h2>
+  <table>
+    <thead><tr><th>Szenario</th><th>Umsatz/Mitarbeiter</th><th>Gewinnmarge</th><th>Zusatzgewinn</th></tr></thead>
+    <tbody>
+      <tr><td>Aktuell</td><td class="td-center">123,2k€</td><td class="td-center td-red">1,61%</td><td class="td-center">–</td></tr>
+      <tr><td>Pessimistisch</td><td class="td-center">129,4k€</td><td class="td-center">2,11%</td><td class="td-center">+1,6 M€</td></tr>
+      <tr><td>Realistisch</td><td class="td-center">135,5k€</td><td class="td-center">2,61%</td><td class="td-center">+3,1 M€</td></tr>
+      <tr><td>Optimistisch</td><td class="td-center">141,7k€</td><td class="td-center">3,11%</td><td class="td-center td-green">+4,7 M€</td></tr>
+      <tr style="background:#e8f5e9"><td><strong>Benchmark</strong></td><td class="td-center td-green"><strong>166,3k€</strong></td><td class="td-center td-green"><strong>5,11%</strong></td><td class="td-center td-green"><strong>+10,9 M€</strong></td></tr>
+    </tbody>
+  </table>
+
+  <div class="swot-grid">
+    <div class="swot-box swot-strength">
+      <h4>✔ HR-Stärken</h4>
+      <ul>
+        <li>Niedrige Fluktuationsrate — 4% (Branchendurchschnitt 12%)</li>
+        <li>Hohe Betriebszugehörigkeit — 15 Jahre im Durchschnitt</li>
+        <li>Strukturiertes Ausbildungsprogramm — 93 aktive Auszubildende</li>
+        <li>Ausgezeichnete Ausbildungsprogramme</li>
+      </ul>
+    </div>
+    <div class="swot-box swot-weakness">
+      <h4>✘ HR-Schwächen</h4>
+      <ul>
+        <li>Niedrige Produktivität — 123k€/Mitarbeiter (Ziel 150k€+)</li>
+        <li>Hohe Kostenquote — 46% (Ziel &lt;40%)</li>
+        <li>Negativer Ausbildungs-ROI — -63,4%</li>
+        <li>Alternde Belegschaft — Wissensverlustrisiko</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 class="section">4.4 Strategische Prioritäten</h2>
+  <table>
+    <thead><tr><th>Priorität</th><th>Erwartete Auswirkung</th><th>Schwierigkeit</th></tr></thead>
+    <tbody>
+      <tr><td>1. Produktivitätsverbesserung (123k€ → 150k€+)</td><td class="td-green">+12,4 M€</td><td class="td-center"><span class="badge badge-orange">Mittel</span></td></tr>
+      <tr><td>2. Talententwicklung &amp; interne Beförderung</td><td>Schnellere Stellenbesetzung</td><td class="td-center"><span class="badge badge-green">Niedrig</span></td></tr>
+      <tr><td>3. Altersstruktur-Ausgleich</td><td>KLR reduzieren, Wissenstransfer</td><td class="td-center"><span class="badge badge-red">Hoch</span></td></tr>
+      <tr><td>4. Flexible Arbeitsmodelle</td><td>Bindungssteigerung</td><td class="td-center"><span class="badge badge-orange">Mittel</span></td></tr>
+      <tr><td>5. Kostenoptimierung (46% → 42%)</td><td class="td-green">+8 M€</td><td class="td-center"><span class="badge badge-orange">Mittel</span></td></tr>
+      <tr><td>6. Automatisierung &amp; Digitalisierung (20% Routineaufgaben)</td><td class="td-green">+6 M€</td><td class="td-center"><span class="badge badge-green">Niedrig</span></td></tr>
+    </tbody>
+  </table>
+
+  <h2 class="section">4.5 Schlüsselindizes</h2>
+  <div class="two-col">
+    <div class="card card-warning"><strong>TCI (Gesamtkostenindex): 0,67</strong><br><small>Ziel &lt;0,5 — Ineffiziente Kostenstruktur</small></div>
+    <div class="card card-danger"><strong>KLR (Personalkostenquote): 1,6</strong><br><small>Ziel &lt;1,0 — Zu hoch</small></div>
+  </div>
+</div>
+
+
+<!-- ================================================
+     BÖLÜM 5: OPERASYONELVERİMLİLİK
+================================================ -->
+<div class="section-page">
+  <h1 class="chapter">5. Betriebliche Effizienz</h1>
+
+  <div class="card card-warning">
+    <strong>Betriebliche Gesamtbewertung: 62 / 100</strong> — Moderate Effizienz mit bedeutenden Verbesserungspotenzialen.<br>
+    <small><em>Hinweis: Alle Werte sind geschätzt, basierend auf Branchen-Benchmarks, da keine internen Betriebsdaten verfügbar sind.</em></small>
+  </div>
+
+  <h2 class="section">5.1 OEE-Analyse (Overall Equipment Effectiveness)</h2>
+  <div class="card card-danger">
+    <strong>Aktuelle OEE: 70,4% | Jährlicher Verlust: 17,75 Mio. €</strong><br>
+    Kapazitätsverlust durch niedrige Verfügbarkeit, Leistung und Qualitätsprobleme.
+  </div>
+  <table>
+    <thead><tr><th>OEE-Komponente</th><th>Aktuell</th><th>Benchmark (Ziel)</th><th>Gap</th></tr></thead>
+    <tbody>
+      <tr><td>Verfügbarkeit</td><td class="td-center td-orange">85%</td><td class="td-center">90%</td><td class="td-center td-red">-5%</td></tr>
+      <tr><td>Leistung</td><td class="td-center td-orange">90%</td><td class="td-center">95%</td><td class="td-center td-red">-5%</td></tr>
+      <tr><td>Qualität</td><td class="td-center td-orange">92%</td><td class="td-center">98%</td><td class="td-center td-red">-6%</td></tr>
+      <tr><td><strong>OEE Gesamt</strong></td><td class="td-center td-red"><strong>70,4%</strong></td><td class="td-center td-green"><strong>85%</strong></td><td class="td-center td-red"><strong>-14,6%</strong></td></tr>
+    </tbody>
+  </table>
+  <p><small>Formel: 0,85 × 0,90 × 0,92 = 0,704 | Kapazitätsverlust: 3,55 Mio. Einheiten/Jahr × 5€ Marge = 17,75 Mio. €/Jahr</small></p>
+
+  <h2 class="section">5.2 Vertikale Integrationsanalyse</h2>
+  <table>
+    <thead><tr><th>Szenario</th><th>Personal</th><th>Gesamtkosten (M€)</th></tr></thead>
+    <tbody>
+      <tr><td>Aktuell (Eigenproduktion)</td><td class="td-center">876</td><td class="td-center td-red">55,04</td></tr>
+      <tr style="background:#e8f5e9"><td>Outsourcing-Szenario</td><td class="td-center">526</td><td class="td-center td-green">47,26</td></tr>
+    </tbody>
+  </table>
+  <div class="card card-success"><strong>Nettoeinsparungspotenzial: 7,78 M€/Jahr</strong> — Outsourcing könnte Kosten senken, aber Qualitätsrisiken erhöhen.</div>
+
+  <h2 class="section">5.3 Lageroptimierung (Newsvendor-Modell)</h2>
+  <div class="metric-grid">
+    <div class="metric-box red"><span class="val">2.000</span><span class="lbl">Aktueller Bestand (Einheiten)</span></div>
+    <div class="metric-box green"><span class="val">1.135</span><span class="lbl">Optimaler Bestand Q* (Einheiten)</span></div>
+    <div class="metric-box orange"><span class="val">865</span><span class="lbl">Überschussbestand (Einheiten)</span></div>
+  </div>
+  <table>
+    <tbody>
+      <tr><td>Gesamtüberschusswert</td><td class="td-right td-red"><strong>389 M€</strong></td></tr>
+      <tr><td>Freisetzbares Kapital</td><td class="td-right td-green"><strong>272 M€</strong></td></tr>
+    </tbody>
+  </table>
+  <p><small>Newsvendor-Modell: Q* = 1.135 (Critical Ratio = 0,75)</small></p>
+
+  <h2 class="section">5.4 Sensilo Smart Factory ROI</h2>
+  <div class="metric-grid-4">
+    <div class="metric-box red"><span class="val">50 M€</span><span class="lbl">Gesamtinvestition</span></div>
+    <div class="metric-box green"><span class="val">+26,47 M€</span><span class="lbl">Jährlicher Nutzen</span></div>
+    <div class="metric-box green"><span class="val">52,9%</span><span class="lbl">ROI</span></div>
+    <div class="metric-box"><span class="val">1,89 Jahre</span><span class="lbl">Amortisationszeit</span></div>
+  </div>
+  <div class="card card-warning">
+    <strong>Gesamterfolgswahrscheinlichkeit: 45,9%</strong> — Risiko-Hinweis: Erfolg hängt von AGV-Integration (85%), Schulungseffektivität (90%) und Supply-Chain-Synchronisation (80%) ab.
+  </div>
+
+  <h2 class="section">5.5 Six Sigma Niveau</h2>
+  <div class="two-col">
+    <div class="card card-danger"><strong>Aktuelles Sigma-Niveau: 2,2σ</strong><br>DPMO = 15.250 | Branchendurchschnitt: 3,0σ</div>
+    <div class="card card-warning"><strong>Rüstkostenanalyse (HMLV-Produktion)</strong><br>Rüstzeitkosten: 0,99 M€ | Lagerkosten: 4,5 M€ | Finanzierungskosten: 0,225 M€</div>
+  </div>
+
+  <h2 class="section">5.6 Performance Scorecard</h2>
+  <table>
+    <thead><tr><th>Kennzahl</th><th>Aktuell</th><th>Ziel</th><th>Gap</th><th>Priorität</th></tr></thead>
+    <tbody>
+      <tr><td>OEE</td><td class="td-center td-red">70%</td><td class="td-center">85%</td><td class="td-center">+15%</td><td class="td-center"><span class="badge badge-red">Hoch</span></td></tr>
+      <tr><td>Lagerumschlag</td><td class="td-center td-red">2,52x</td><td class="td-center">4,0x</td><td class="td-center">+1,48x</td><td class="td-center"><span class="badge badge-red">Kritisch</span></td></tr>
+      <tr><td>Sigma-Niveau</td><td class="td-center td-orange">2,2σ</td><td class="td-center">3,0σ</td><td class="td-center">+0,8σ</td><td class="td-center"><span class="badge badge-orange">Mittel</span></td></tr>
+      <tr><td>Produktivitätsindex</td><td class="td-center td-red">0,68</td><td class="td-center">0,85</td><td class="td-center">+0,17</td><td class="td-center"><span class="badge badge-red">Hoch</span></td></tr>
+      <tr><td>Stückkosten</td><td class="td-center td-red">15€</td><td class="td-center">12€</td><td class="td-center">-3€</td><td class="td-center"><span class="badge badge-red">Hoch</span></td></tr>
+    </tbody>
+  </table>
+
+  <h2 class="section">5.7 Strategische Prioritäten (NPV-Ranking)</h2>
+  <table>
+    <thead><tr><th>Priorität</th><th>NPV</th><th>Auswirkung</th><th>Schwierigkeit</th></tr></thead>
+    <tbody>
+      <tr><td>1. Lageroptimierung</td><td class="td-center td-green">272 M€</td><td>Sofortige Kapitalfreisetzung</td><td class="td-center"><span class="badge badge-green">Niedrig</span></td></tr>
+      <tr><td>2. Sensilo-Fabrik-Investition</td><td class="td-center td-green">82,35 M€</td><td>+26,47 M€/Jahr</td><td class="td-center"><span class="badge badge-red">Hoch</span></td></tr>
+      <tr><td>3. OEE-Verbesserung (70% → 85%)</td><td class="td-center">44,4 M€</td><td>+8,88 M€/Jahr</td><td class="td-center"><span class="badge badge-orange">Mittel</span></td></tr>
+      <tr><td>4. Six Sigma &amp; Ausschussreduzierung</td><td class="td-center">13,5 M€</td><td>+2,7 M€/Jahr</td><td class="td-center"><span class="badge badge-green">Niedrig</span></td></tr>
+    </tbody>
+  </table>
+</div>
+
+
+<!-- ================================================
+     BÖLÜM 6: MARKETING & SATIŞ
+================================================ -->
+<div class="section-page">
+  <h1 class="chapter">6. Marketing &amp; Vertrieb</h1>
+
+  <div class="card card-warning">
+    <strong>Marketing-Leistungsbewertung: 74 / 100</strong> — Hervorragende Kundenbindung, aber schwache Vertriebseffizienz und niedriger Marktanteil.
+    <br><small><em>Hinweis: Alle Werte sind geschätzt, basierend auf Branchen-Benchmarks.</em></small>
+  </div>
+
+  <h2 class="section">6.1 Kundenökonomie (LTV/CAC-Analyse)</h2>
+  <div class="card card-success">
+    <strong>CAC/LTV = 0,0012 | Investition: 2.000€ → Rendite: 1,71 Mio. €</strong><br>
+    Jede 2.000€ Investition in Kundenakquise generiert 1,71 Mio. € Rendite (LTV/CAC Verhältnis außergewöhnlich gut).
+  </div>
+  <div class="metric-grid-4">
+    <div class="metric-box green"><span class="val">1,71 M€</span><span class="lbl">LTV (Lifetime Value)</span></div>
+    <div class="metric-box"><span class="val">2.000€</span><span class="lbl">CAC</span></div>
+    <div class="metric-box green"><span class="val">15+ Jahre</span><span class="lbl">Kundenlebensdauer</span></div>
+    <div class="metric-box green"><span class="val">&lt;3%</span><span class="lbl">Abwanderungsrate</span></div>
+  </div>
+  <p><small>LTV-Berechnung: Σ(200.000€ / (1+0,08)^t) = 1,71 Mio. € | Diskontierungssatz: 8%</small></p>
+
+  <h2 class="section">6.2 ABC-Kundensegmentierung</h2>
+  <table>
+    <thead><tr><th>Segment</th><th>Kunden</th><th>Umsatz (M€)</th><th>Gewinn (M€)</th><th>Ressourcenfokus</th></tr></thead>
+    <tbody>
+      <tr style="background:#e8f5e9"><td><span class="badge badge-green">A – Strategisch</span></td><td class="td-center">1.000</td><td class="td-center td-green">249,1</td><td class="td-center td-green">112,1</td><td class="td-center td-green"><strong>60%</strong></td></tr>
+      <tr><td><span class="badge badge-orange">B – Standard</span></td><td class="td-center">1.500</td><td class="td-center">49,8</td><td class="td-center">17,4</td><td class="td-center">30%</td></tr>
+      <tr><td><span class="badge badge-gray">C – Klein</span></td><td class="td-center">2.500</td><td class="td-center">12,5</td><td class="td-center">2,5</td><td class="td-center">10%</td></tr>
+    </tbody>
+  </table>
+  <div class="card card-warning">Optimierungspotenzial durch Fokus auf Segment A: <strong>+11,2 M€</strong></div>
+
+  <h2 class="section">6.3 Marktanteil &amp; Wettbewerb (HHI)</h2>
+  <table>
+    <thead><tr><th>Unternehmen</th><th>Marktanteil</th></tr></thead>
+    <tbody>
+      <tr><td>Siemens</td><td class="td-center">18%</td></tr>
+      <tr><td>Endress+Hauser</td><td class="td-center">12%</td></tr>
+      <tr><td>WIKA</td><td class="td-center">8%</td></tr>
+      <tr><td><strong>JUMO</strong></td><td class="td-center td-orange"><strong>3%</strong></td></tr>
+      <tr><td>Andere</td><td class="td-center">59%</td></tr>
+    </tbody>
+  </table>
+  <div class="card card-info"><strong>HHI = 4.022</strong> — Mäßig konzentrierter Markt mit Wachstumspotenzial für Nischenplayer.</div>
+
+  <h2 class="section">6.4 Digitale Kanäle (TOPSIS-Bewertung)</h2>
+  <table>
+    <thead><tr><th>Kanal</th><th>TOPSIS-Score</th><th>Budgetzuweisung</th></tr></thead>
+    <tbody>
+      <tr><td>SEO/Content Marketing</td><td class="td-center td-green">0,872</td><td class="td-center">40%</td></tr>
+      <tr><td>LinkedIn</td><td class="td-center">0,715</td><td class="td-center">30%</td></tr>
+      <tr><td>Webinare</td><td class="td-center">0,642</td><td class="td-center">20%</td></tr>
+      <tr><td>Messen</td><td class="td-center">0,458</td><td class="td-center">10%</td></tr>
+    </tbody>
+  </table>
+
+  <h2 class="section">6.5 Schlüsselkennzahlen &amp; Problembereiche</h2>
+  <div class="two-col">
+    <div>
+      <div class="card card-danger">
+        <strong>Vertriebseffizienz: 819k€/Mitarbeiter</strong><br>
+        Gap: -31,7% (Benchmark: 1,2 Mio. €)
+      </div>
+      <div class="card card-success" style="margin-top:3mm">
+        <strong>JUMO Campus ROI: 52,2%</strong><br>
+        Kosten: 2,3 M€ → Gesamtrendite: 3,5 M€<br>
+        Investition 1€ → Rendite 1,52€
+      </div>
+    </div>
+    <div>
+      <div class="card card-success">
+        <strong>Preisoptimierung: +24,2 M€ Potenzial</strong><br>
+        Aktueller Preis: 90€ → Optimaler Preis: 107,50€ (+19,4%)
+      </div>
+      <div class="card card-success" style="margin-top:3mm">
+        <strong>Churn-Prävention ROI: 3.747%</strong><br>
+        Kosten: 2 M€ → Einsparung: 76,95 M€<br>
+        (30% der 150 jährlichen Abwanderungen verhindern)
+      </div>
+    </div>
+  </div>
+
+  <h2 class="section">6.6 Strategische Prioritäten</h2>
+  <table>
+    <thead><tr><th>Priorität</th><th>Finanzielle Auswirkung</th><th>Zeitrahmen</th><th>Priorität</th></tr></thead>
+    <tbody>
+      <tr><td>Preisoptimierung</td><td class="td-green">+24,2 M€</td><td>6 Monate</td><td class="td-center"><span class="badge badge-red">Kritisch</span></td></tr>
+      <tr><td>Churn-Prävention</td><td class="td-green">+76,95 M€</td><td>12 Monate</td><td class="td-center"><span class="badge badge-red">Kritisch</span></td></tr>
+      <tr><td>Kundensegment-Fokus (A)</td><td class="td-green">+11,2 M€</td><td>12 Monate</td><td class="td-center"><span class="badge badge-orange">Hoch</span></td></tr>
+      <tr><td>Asien-Expansion</td><td class="td-green">+100 M€ NPV</td><td>24 Monate</td><td class="td-center"><span class="badge badge-orange">Hoch</span></td></tr>
+      <tr><td>Digitale Optimierung</td><td>+30% Effizienz</td><td>9 Monate</td><td class="td-center"><span class="badge badge-blue">Mittel</span></td></tr>
+    </tbody>
+  </table>
+</div>
+
+
+<!-- ================================================
+     BÖLÜM 7: F&E VE İNOVASYON
+================================================ -->
+<div class="section-page">
+  <h1 class="chapter">7. F&amp;E und Innovation</h1>
+
+  <div class="card card-warning">
+    <strong>Innovationsleistungsbewertung: 58 / 100</strong> — Hohes F&amp;E-Engagement, aber ineffiziente Ressourcennutzung.<br>
+    <small><em>Hinweis: Alle Werte sind geschätzt und dienen zur Illustration der Analysemethodik.</em></small>
+  </div>
+
+  <h2 class="section">7.1 Patentportfolio-Analyse</h2>
+  <div class="metric-grid">
+    <div class="metric-box"><span class="val">650+</span><span class="lbl">Gesamtpatente</span></div>
+    <div class="metric-box orange"><span class="val">0,857</span><span class="lbl">Patent Impact Score (Ziel: 1,2)</span></div>
+    <div class="metric-box green"><span class="val">30</span><span class="lbl">Neue Patente/Jahr</span></div>
+  </div>
+  <table>
+    <thead><tr><th>Technologiebereich</th><th>Anteil</th><th>Patente</th></tr></thead>
+    <tbody>
+      <tr><td>Temperaturtechnologie</td><td class="td-center">40%</td><td class="td-center">260</td></tr>
+      <tr><td>Flüssigkeitstechnologie</td><td class="td-center">30%</td><td class="td-center">195</td></tr>
+      <tr><td>Drucktechnologie</td><td class="td-center">30%</td><td class="td-center">195</td></tr>
+    </tbody>
+  </table>
+  <p><small>Portfoliowert: 29.100 Einheiten | Jährliche Abschreibung: 4.365 Einheiten | Patent-Formel: PI = (C/A) × (F/S)</small></p>
+
+  <h2 class="section">7.2 F&amp;E Effizienz &amp; Personal</h2>
+  <div class="two-col">
+    <div>
+      <table>
+        <tbody>
+          <tr><td>F&amp;E-Intensität</td><td class="td-right td-green"><strong>7,0%</strong></td></tr>
+          <tr><td>F&amp;E-Jahresbudget</td><td class="td-right"><strong>21,5 M€</strong></td></tr>
+          <tr><td>Innovationsrendite (IRR)</td><td class="td-right td-orange"><strong>84,5%</strong> (Ziel: &gt;120%)</td></tr>
+          <tr><td>Neuproduktanteil</td><td class="td-right">54,5 M€</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <table>
+        <tbody>
+          <tr><td>F&amp;E-Personal</td><td class="td-right"><strong>350</strong></td></tr>
+          <tr><td>Patente/Mitarbeiter</td><td class="td-right td-red"><strong>0,086</strong> (Benchmark: 0,15)</td></tr>
+          <tr><td>Produktivitätsverhältnis</td><td class="td-right td-red"><strong>57,3%</strong> des Sektordurchschnitts</td></tr>
+          <tr><td>Steuerersparnis F&amp;E</td><td class="td-right td-green"><strong>8,06 M€</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <h2 class="section">7.3 Technologie-Roadmap</h2>
+  <table>
+    <thead><tr><th>Technologie</th><th>TRL</th><th>Markteinführung</th><th>Erfolgswahrsch.</th><th>Potenzialumsatz</th></tr></thead>
+    <tbody>
+      <tr style="background:#e8f5e9"><td><strong>SPE / IO-Link</strong></td><td class="td-center">8–9</td><td class="td-center">1–2 Jahre</td><td class="td-center td-green">85%</td><td class="td-center td-green"><strong>75 M€</strong></td></tr>
+      <tr><td>JUMO Cloud</td><td class="td-center">5–6</td><td class="td-center">3–4 Jahre</td><td class="td-center td-orange">60%</td><td class="td-center">30 M€</td></tr>
+      <tr><td>Autonome Systeme</td><td class="td-center">3–4</td><td class="td-center">5+ Jahre</td><td class="td-center td-red">40%</td><td class="td-center">80 M€</td></tr>
+    </tbody>
+  </table>
+  <div class="card card-danger"><strong>Portfolio-Risiko: 43,5% kombinierte Misserfolgswahrscheinlichkeit</strong></div>
+
+  <h2 class="section">7.4 Universitätskooperation</h2>
+  <div class="two-col">
+    <div class="card card-danger"><strong>ROI: -17,5%</strong><br>Kosten: 4,0 M€/Jahr | Nutzen: 3,3 M€/Jahr<br>→ Negative Rendite, Strukturreform erforderlich</div>
+    <div class="card card-info"><strong>Steuervorteile</strong><br>Steuerersparnis: 8,06 M€<br>Effektive F&amp;E-Kosten: 13,44 M€</div>
+  </div>
+
+  <h2 class="section">7.5 Performance Scorecard</h2>
+  <table>
+    <thead><tr><th>Kennzahl</th><th>Aktuell</th><th>Ziel</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr><td>Patent Impact</td><td>0,857</td><td>1,2</td><td class="td-center"><span class="badge badge-red">Schwach</span></td></tr>
+      <tr><td>F&amp;E-Intensität</td><td>7,0%</td><td>8,0%</td><td class="td-center"><span class="badge badge-green">Gut</span></td></tr>
+      <tr><td>Innovationsrendite</td><td>84,5%</td><td>120%</td><td class="td-center"><span class="badge badge-orange">Mittel</span></td></tr>
+      <tr><td>Personal-Produktivität</td><td>57,3%</td><td>85%</td><td class="td-center"><span class="badge badge-red">Schwach</span></td></tr>
+      <tr><td>Portfolio-Risiko</td><td>43,5%</td><td>30%</td><td class="td-center"><span class="badge badge-red">Schwach</span></td></tr>
+      <tr><td>Uni-Kooperations-ROI</td><td>-17,5%</td><td>+10%</td><td class="td-center"><span class="badge badge-red">Schwach</span></td></tr>
+    </tbody>
+  </table>
+
+  <h2 class="section">7.6 Optimale F&amp;E-Portfolioallokation</h2>
+  <table>
+    <thead><tr><th>Projekt</th><th>Allokation (%)</th><th>Budget (M€)</th><th>Erw. Rendite (%)</th><th>Risiko (%)</th></tr></thead>
+    <tbody>
+      <tr style="background:#e8f5e9"><td>IO-Link/SPE</td><td class="td-center">35%</td><td class="td-center">7,5</td><td class="td-center td-green">25</td><td class="td-center td-green">15</td></tr>
+      <tr><td>JUMO Cloud</td><td class="td-center">25%</td><td class="td-center">5,4</td><td class="td-center">40</td><td class="td-center">35</td></tr>
+      <tr><td>Autonome Systeme</td><td class="td-center">15%</td><td class="td-center">3,2</td><td class="td-center">60</td><td class="td-center td-red">50</td></tr>
+      <tr><td>Grundlagenforschung</td><td class="td-center">15%</td><td class="td-center">3,2</td><td class="td-center">15</td><td class="td-center">10</td></tr>
+      <tr><td>Effizienzprogramme</td><td class="td-center">10%</td><td class="td-center">2,2</td><td class="td-center">35</td><td class="td-center">20</td></tr>
+    </tbody>
+  </table>
+  <div class="card card-info">
+    Erwartete Portfolio-Rendite: <strong>32,3%</strong> | Portfolio-Risiko: <strong>21,8%</strong> | Sharpe-Ratio: <strong>1,34</strong>
+  </div>
+</div>
+
+
+<!-- ================================================
+     BÖLÜM 8: TEDARİK ZİNCİRİ
+================================================ -->
+<div class="section-page">
+  <h1 class="chapter">8. Lieferkette und Logistik</h1>
+
+  <div class="card card-info">
+    <strong>Supply-Chain Gesamtbewertung: 72,7 / 100</strong> — Gute Lieferperformance, aber kritische Lager- und Lieferantenrisiken.
+  </div>
+
+  <div class="two-col">
+    <div class="card card-primary"><strong>RCI (Resilienz-Kosten-Index): 0,322</strong><br>RCI &lt; 1 → Effizient: 1€ Investition = 3,1€ Schutz</div>
+    <div class="card card-warning"><strong>SCR (Lieferantenkrisikindex): 1,88</strong><br>Mittleres bis hohes Lieferantenrisiko</div>
+  </div>
+
+  <h2 class="section">8.1 Lagerverwaltungsanalyse</h2>
+  <div class="two-col">
+    <div class="card card-danger">
+      <strong>Jährliche Lagerkosten: 30,875 M€/Jahr</strong><br>
+      Durchschnittlicher Lagerwert: 123,5 M€ | Haltekostensatz: 25%
+    </div>
+    <div class="card card-success">
+      <strong>EOQ-Optimierungspotenzial: 90,9% Reduktion</strong><br>
+      4,94 Mio. → 0,45 Mio. Einheiten optimal
+    </div>
+  </div>
+  <div class="card card-success"><strong>Strategischer Pufferwert (Real Options): 69,3 M€</strong> (Kostenmultiplikator: 2,24x)</div>
+
+  <h2 class="section">8.2 Lieferantenrisikoanalyse (SCR)</h2>
+  <table>
+    <thead><tr><th>Typ</th><th>Anteil (w)</th><th>Alternativquellen</th><th>Kritikalität (G)</th><th>SCR</th></tr></thead>
+    <tbody>
+      <tr><td>Chips / Halbleiter</td><td class="td-center">30%</td><td class="td-center">20%</td><td class="td-center">5</td><td class="td-center td-red"><strong>1,20</strong></td></tr>
+      <tr><td>Metalle</td><td class="td-center">20%</td><td class="td-center">40%</td><td class="td-center">4</td><td class="td-center">0,48</td></tr>
+      <tr><td>Rohstoffe</td><td class="td-center">50%</td><td class="td-center">80%</td><td class="td-center">2</td><td class="td-center td-green">0,20</td></tr>
+      <tr style="background:#fff3e0"><td colspan="4"><strong>Gesamt-SCR</strong></td><td class="td-center td-orange"><strong>1,88</strong></td></tr>
+    </tbody>
+  </table>
+  <div class="card card-success"><strong>Dual-Sourcing-Einsparung: 7,938 M€/Jahr</strong><br>Neue Gesamtkosten: 22,9 M€ (-25,7% Reduktion)</div>
+
+  <h2 class="section">8.3 Logistikoptimierung</h2>
+  <table>
+    <thead><tr><th>Netzwerkmodell</th><th>Kosten (M€)</th><th>Lieferzeit</th></tr></thead>
+    <tbody>
+      <tr style="background:#e8f5e9"><td><strong>Zentrales Verteilzentrum</strong></td><td class="td-center td-green"><strong>40,217</strong></td><td class="td-center">24–48h</td></tr>
+      <tr><td>Dezentrale Lagerhäuser</td><td class="td-center">42,655</td><td class="td-center">12–24h</td></tr>
+    </tbody>
+  </table>
+  <div class="card card-success"><strong>Logistik-ROI: 539%</strong> — Schnellere Lieferung durch optimiertes Netzwerk.</div>
+
+  <h2 class="section">8.4 Strategische Szenarien</h2>
+  <table>
+    <thead><tr><th>Szenario</th><th>Lagerbestand (M€)</th><th>Umschlag</th><th>Kosten (M€)</th><th>Nettowirkung</th></tr></thead>
+    <tbody>
+      <tr><td>Status quo</td><td class="td-center">123,5</td><td class="td-center">1,8x</td><td class="td-center td-red">30,9</td><td class="td-center">Ausgangspunkt</td></tr>
+      <tr style="background:#e8f5e9"><td><strong>Optimiert (Empfohlen)</strong></td><td class="td-center td-green"><strong>61,8</strong></td><td class="td-center td-green"><strong>3,6x</strong></td><td class="td-center td-green"><strong>15,4</strong></td><td class="td-center td-green"><strong>+15,5 M€</strong></td></tr>
+      <tr><td>Aggressiv</td><td class="td-center">24,7</td><td class="td-center">9,0x</td><td class="td-center">6,2</td><td class="td-center td-orange">+24,7 M€ (Hohes Risiko)</td></tr>
+    </tbody>
+  </table>
+
+  <h2 class="section">8.5 Resilienz-Scorecard</h2>
+  <table>
+    <thead><tr><th>Kennzahl</th><th>Aktuell</th><th>Branche</th><th>Score</th><th>Gewichtung</th></tr></thead>
+    <tbody>
+      <tr><td>Lagerumschlag</td><td class="td-center td-red">1,8x</td><td class="td-center">5,0x</td><td class="td-center td-red">36</td><td class="td-center">25%</td></tr>
+      <tr><td>Lieferpünktlichkeit</td><td class="td-center td-green">99,5%</td><td class="td-center">98%</td><td class="td-center td-green">100</td><td class="td-center">20%</td></tr>
+      <tr><td>Lieferantenrisiko (SCR)</td><td class="td-center">1,88</td><td class="td-center">1,50</td><td class="td-center">60</td><td class="td-center">20%</td></tr>
+      <tr><td>Logistikkosten</td><td class="td-center">9%</td><td class="td-center">7%</td><td class="td-center">78</td><td class="td-center">15%</td></tr>
+      <tr><td>RCI</td><td class="td-center">0,322</td><td class="td-center">0,50</td><td class="td-center td-green">100</td><td class="td-center">20%</td></tr>
+      <tr style="background:#e3f2fd"><td colspan="4"><strong>Gesamtbewertung</strong></td><td class="td-center td-green"><strong>72,7/100</strong></td></tr>
+    </tbody>
+  </table>
+</div>
+
+
+<!-- ================================================
+     BÖLÜM 9: KI ÇÖZÜMLERI
+================================================ -->
+<div class="section-page">
+  <h1 class="chapter">9. KI-Anwendungsfälle und potenzielle Lösungen</h1>
+
+  <div class="card card-warning">
+    <strong>KI-Bereitschaftsscore: 5,8 / 10</strong> — Teilweise bereit (Approaching AI-Ready)
+  </div>
+
+  <h2 class="section">9.1 KI-Bereitschaft: Stärken &amp; Schwächen</h2>
+  <div class="swot-grid">
+    <div class="swot-box swot-strength">
+      <h4>✔ KI-Stärken</h4>
+      <ul>
+        <li>Wertvolle historische Sensor-/Prozessdaten</li>
+        <li>Innovationskultur und F&amp;E-Infrastruktur</li>
+        <li>Starke Kundenbindung = Lock-in für AI-Services</li>
+        <li>JUMO Cloud-Plattform vorhanden</li>
+      </ul>
+    </div>
+    <div class="swot-box swot-weakness">
+      <h4>✘ KI-Schwächen</h4>
+      <ul>
+        <li>Datensilos in Produktion, Vertrieb, Logistik</li>
+        <li>Mangel an AI/ML-Talenten intern</li>
+        <li>Legacy-IT-Systeme ohne API-Schnittstellen</li>
+        <li>Unstrukturierte Datenqualität</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 class="section">9.2 Prioritäre KI-Anwendungsfelder (ROI-Ranking)</h2>
+  <table>
+    <thead><tr><th>Anwendungsfeld</th><th>Problem</th><th>KI-Lösung</th><th>Auswirkung</th><th>ROI</th></tr></thead>
+    <tbody>
+      <tr style="background:#e8f5e9"><td><strong>1. Prädiktive Wartung</strong></td><td>OEE 70% → 12% Ausfallzeit</td><td>ML-Anomalieerkennung, Digital Twin</td><td class="td-green">+8,9 M€ Gewinn</td><td class="td-center td-green"><strong>~220%</strong></td></tr>
+      <tr><td><strong>2. KI-Lageroptimierung</strong></td><td>123,5 M€ Überbestand</td><td>Demand Forecasting, Auto-Replenishment</td><td class="td-green">+10 M€ Cash/Jahr</td><td class="td-center td-green"><strong>~300%+</strong></td></tr>
+      <tr><td><strong>3. Autonome Kalibrierung</strong></td><td>Manuelle Kalibrierungsprozesse</td><td>Computer Vision, Self-Calibration</td><td>Effizienz +25%</td><td class="td-center">~180%</td></tr>
+      <tr><td><strong>4. Digitaler Zwilling</strong></td><td>Lange Produktentwicklungszeiten</td><td>Physics-Informed Neural Networks</td><td>Time-to-Market -30%</td><td class="td-center">Hoch</td></tr>
+    </tbody>
+  </table>
+
+  <h2 class="section">9.3 Neue KI-Servicemodelle</h2>
+  <table>
+    <thead><tr><th>Service</th><th>Beschreibung</th><th>Preismodell</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Process Guard</strong></td><td>Echtzeit-Prozessüberwachung mit KI-basierter Anomalieerkennung</td><td>500€/Monat/Sensor</td></tr>
+      <tr><td><strong>Sensor Health Monitor</strong></td><td>Predictive Lifetime-Schätzung, automatische Garantieoptimierung</td><td>Warranty Option</td></tr>
+      <tr><td><strong>AI Configurator</strong></td><td>Self-Service Konfiguration mit NLP-basierter Empfehlung</td><td>Self-Service Plattform</td></tr>
+    </tbody>
+  </table>
+
+  <h2 class="section">9.4 KI-Implementierungs-Roadmap</h2>
+  <table>
+    <thead><tr><th>Phase</th><th>Zeitrahmen</th><th>Budget</th><th>Fokus</th></tr></thead>
+    <tbody>
+      <tr><td><span class="badge badge-red">Phase 1: Foundation</span></td><td>6–12 Monate</td><td>1,5 M€</td><td>Data Pipeline, Cloud-Infrastruktur, Datenqualität</td></tr>
+      <tr><td><span class="badge badge-orange">Phase 2: Deploy</span></td><td>12–24 Monate</td><td>3,0 M€</td><td>Predictive Maintenance, Inventory AI, Pilotprojekte</td></tr>
+      <tr><td><span class="badge badge-green">Phase 3: Scale</span></td><td>24–36 Monate</td><td>2,0 M€</td><td>AI-Services, Digital Twin, Skalierung</td></tr>
+      <tr><td colspan="2"><strong>Gesamtinvestition</strong></td><td class="td-green"><strong>~6,5 M€</strong></td><td>3-Jahres-Implementierungsplan</td></tr>
+    </tbody>
+  </table>
+
+  <h2 class="section">9.5 KI-Risiken &amp; Mitigation</h2>
+  <table>
+    <thead><tr><th>Risiko</th><th>Wahrscheinlichkeit</th><th>Auswirkung</th><th>Gegenmaßnahme</th></tr></thead>
+    <tbody>
+      <tr><td>Datenverfügbarkeit &amp; -qualität</td><td class="td-center"><span class="badge badge-red">Hoch</span></td><td class="td-center"><span class="badge badge-red">Hoch</span></td><td>Data Governance Programm</td></tr>
+      <tr><td>Kultureller Widerstand</td><td class="td-center"><span class="badge badge-orange">Mittel</span></td><td class="td-center"><span class="badge badge-red">Hoch</span></td><td>Change Management, Schulungsprogramme</td></tr>
+      <tr><td>Cybersicherheit</td><td class="td-center"><span class="badge badge-red">Hoch</span></td><td class="td-center"><span class="badge badge-red">Kritisch</span></td><td>Zero-Trust-Architektur, ISO 27001</td></tr>
+    </tbody>
+  </table>
+</div>
+
+
+<!-- ================================================
+     BÖLÜM 10: STRATEJİK SENTEZİ & ÖNERİLER
+================================================ -->
+<div class="section-page">
+  <h1 class="chapter">10. Strategische Synthese &amp; Empfehlungen</h1>
+
+  <h2 class="section">10.1 Kernstärken des Unternehmens</h2>
+  <table>
+    <thead><tr><th>Stärke</th><th>Messindikator</th><th>Strategische Implikation</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Finanzielle Liquidität</strong></td><td>81,7 M€ Cash, Z-Score 2,9</td><td>Fähigkeit zur Finanzierung von Transformationen ohne Fremdkapital</td></tr>
+      <tr><td><strong>Kundentreue</strong></td><td>Churn &lt;3%, LTV 15+ Jahre</td><td>Stabile Umsatzbasis, hoher Customer Lifetime Value</td></tr>
+      <tr><td><strong>Vertikale Integration</strong></td><td>90% Eigenproduktion</td><td>Qualitätskontrolle, aber potenzielle Outsourcing-Einsparung</td></tr>
+      <tr><td><strong>Technologisches Know-how</strong></td><td>650+ Patente, 7% F&amp;E</td><td>Basis für AI-gestützte Differenzierung</td></tr>
+    </tbody>
+  </table>
+
+  <h2 class="section">10.2 Strategische Paradoxe (Diagnose)</h2>
+  <div class="card card-warning">
+    <strong>Paradox 1: Vermögensreicher, aber profitarmer Betrieb</strong><br>
+    Gewinnmarge: 1,61% (Niedrig) | Lagerbestand: 123,5 M€ / 1,8x Umschlag | ELTV: -519k€<br>
+    <em>→ Kapital ist vorhanden, wird aber ineffizient eingesetzt.</em>
+  </div>
+  <div class="card card-warning">
+    <strong>Paradox 2: Hohe Vertikalintegration mit hohen Betriebskosten</strong><br>
+    Outsourcing-Potenzial: +7,8 M€/Jahr | OEE: 70% (Verlust: 17,75 M€/Jahr)<br>
+    <em>→ Kontrolle schlägt Effizienz, auf Kosten der Rentabilität.</em>
+  </div>
+  <div class="card card-warning">
+    <strong>Paradox 3: F&amp;E-intensiv, aber innovationsuneffizient</strong><br>
+    Patent Impact: 0,857 (Niedrige Qualität) | F&amp;E IRR: 84,5% (Ziel &gt;120%) | Tech-Risiko: 43,5%<br>
+    <em>→ Viel investiert, aber unzureichende Rendite generiert.</em>
+  </div>
+
+  <h2 class="section">10.3 Strategischer Aktionsplan</h2>
+
+  <h3 class="subsection">Phase 1: Sofortmaßnahmen (0–12 Monate)</h3>
+  <table>
+    <thead><tr><th>Aktion</th><th>Ziel</th><th>Finanzieller Effekt</th><th>Investition</th></tr></thead>
+    <tbody>
+      <tr><td>Lageroptimierung</td><td>123,5M€ → 61,8M€</td><td class="td-green">+15,5 M€ Cash</td><td>2–3 M€</td></tr>
+      <tr><td>OEE-Verbesserung</td><td>70% → 80%</td><td class="td-green">+8,9 M€ Gewinn</td><td>5 M€</td></tr>
+      <tr><td>Preisoptimierung</td><td>+5–8% Preiserhöhung</td><td class="td-green">+5–8 M€ Gewinn</td><td>Niedrig</td></tr>
+    </tbody>
+  </table>
+  <div class="card card-success"><strong>Gesamtauswirkung Phase 1: +27,5 – 33,4 M€ jährlicher Gewinn</strong></div>
+
+  <h3 class="subsection">Phase 2: Mittelfristig (12–36 Monate)</h3>
+  <ul>
+    <li>Sensilo Smart Factory Pilotprojekt und Rollout</li>
+    <li>KI-gestütztes Demand Forecasting einführen</li>
+    <li>Vertriebseffizienz steigern: 819k€ → 1,2 M€/Mitarbeiter</li>
+  </ul>
+
+  <h3 class="subsection">Phase 3: Langfristig (36+ Monate)</h3>
+  <ul>
+    <li>Asienmarkt-Expansion (+100 M€ NPV Potenzial)</li>
+    <li>Transformation zum "Sensor-as-a-Service" Modell</li>
+    <li>Vollständige KI-Integration in alle Geschäftsbereiche</li>
+  </ul>
+
+  <h2 class="section">10.4 Transformationsszenario</h2>
+  <table>
+    <thead><tr><th>Indikator</th><th>Aktuell</th><th>Ziel (3 Jahre)</th><th>Strategische Auswirkung</th></tr></thead>
+    <tbody>
+      <tr><td>Gewinnmarge</td><td class="td-red">1,61%</td><td class="td-green"><strong>7,0%</strong></td><td>Nachhaltige Rentabilität</td></tr>
+      <tr><td>ROE</td><td class="td-red">2,64%</td><td class="td-green"><strong>10,0%</strong></td><td>Aktionärswertschöpfung</td></tr>
+      <tr><td>Lagerumschlag</td><td class="td-red">1,8x</td><td class="td-green"><strong>3,0x</strong></td><td>61,7 M€ Kapitalfreisetzung</td></tr>
+      <tr><td>Umsatz/Mitarbeiter</td><td class="td-orange">123k€</td><td class="td-green"><strong>140k€</strong></td><td>+14% Effizienzsteigerung</td></tr>
+      <tr><td>Free Cash Flow</td><td class="td-red">5,85 M€</td><td class="td-green"><strong>&gt;30 M€</strong></td><td>Organisches Wachstum möglich</td></tr>
+    </tbody>
+  </table>
+
+  <h2 class="section">10.5 Empfehlungsmatrix (Priorität &amp; Ressourcen)</h2>
+  <table>
+    <thead><tr><th>Code</th><th>Maßnahme</th><th>Nutzen</th><th>Zeitrahmen</th><th>Investition</th><th>Priorität</th></tr></thead>
+    <tbody>
+      <tr style="background:#fff3e0"><td>A1–A3</td><td>Lageroptimierung</td><td class="td-green">15–20 M€ (Cash)</td><td>12 Mo</td><td>0,5 M€</td><td class="td-center"><span class="badge badge-red">Kritisch</span></td></tr>
+      <tr style="background:#fff3e0"><td>D1–D3</td><td>Preisoptimierung</td><td class="td-green">12–20 M€ (Gewinn)</td><td>24 Mo</td><td>0,3 M€</td><td class="td-center"><span class="badge badge-red">Kritisch</span></td></tr>
+      <tr><td>B1–B3</td><td>HR-Effizienz</td><td>3–5 M€ (Einsparung)</td><td>18 Mo</td><td>1,0 M€</td><td class="td-center"><span class="badge badge-orange">Hoch</span></td></tr>
+      <tr><td>C1–C3</td><td>OEE-Verbesserung</td><td>8–10 M€ (Gewinn)</td><td>36 Mo</td><td>2,5 M€</td><td class="td-center"><span class="badge badge-blue">Mittel</span></td></tr>
+      <tr><td>E1–E3</td><td>Geschäftsmodelltransformation</td><td>5–15 M€ (Neu)</td><td>48+ Mo</td><td>5,0 M€</td><td class="td-center"><span class="badge badge-green">Strategisch</span></td></tr>
+    </tbody>
+  </table>
+
+  <h2 class="section">10.6 Implementierungsprinzipien</h2>
+  <div class="two-col">
+    <div class="card card-success"><strong>Win-Win-Ansatz</strong><br>Alle Maßnahmen müssen für Eigentümer, Mitarbeiter und Kunden vorteilhaft sein.</div>
+    <div class="card card-success"><strong>Selbstfinanzierung</strong><br>Erste Phase (Lager + Preise) finanziert alle späteren Investitionen.</div>
+    <div class="card card-success"><strong>Geschwindigkeit</strong><br>Maximal 90 Tage bis zu ersten messbaren Ergebnissen in Phase 1.</div>
+    <div class="card card-success"><strong>Motivation</strong><br>Mitarbeiterbeteiligung an Verbesserungserfolgen als zentrales Element.</div>
+  </div>
+
+  <div class="spacer-lg"></div>
+
+  <!-- SONUÇ KUTUSU -->
+  <div style="background:#0d47a1; color:white; border-radius:6px; padding:6mm 8mm; margin-top:6mm">
+    <h3 style="color:#ffca28; margin-bottom:3mm; font-size:13pt">Fazit &amp; Handlungsaufruf</h3>
+    <p style="color:rgba(255,255,255,0.9); margin-bottom:3mm">
+      JUMO GmbH &amp; Co. KG ist ein finanziell stabiles, technologisch kompetentes Unternehmen mit einer hervorragenden Kundenbasis. Die entscheidende Herausforderung liegt in der Rentabilitätslücke: trotz 311 Mio. € Umsatz nur 5 Mio. € Nettogewinn.
+    </p>
+    <p style="background:rgba(255,255,255,0.1); border-left:4px solid #ffca28; padding:3mm 5mm; border-radius:3px; font-style:italic; color:white">
+      "Die Substanz ist vorhanden — nun muss sie freigesetzt werden. Jedes Jahr Verzögerung kostet 30+ Mio. € potenzieller Gewinn."
+    </p>
+  </div>
+</div>
+
+<!-- ================================================
+     İÇİNDEKİLER (Arka Kapak)
+================================================ -->
+<div class="section-page" style="page-break-before:always">
+  <h1 class="chapter">Anhang: Zusammenfassung der Bewertungen</h1>
+
+  <table>
+    <thead><tr><th>Analysebereich</th><th>Score / Bewertung</th><th>Kritischer Befund</th></tr></thead>
+    <tbody>
+      <tr><td>Finanzielle Gesundheit</td><td class="td-center"><span class="badge badge-orange">6,5 / 10</span></td><td>Hohe Liquidität, aber niedrige Rentabilität (1,61% Marge)</td></tr>
+      <tr><td>Betriebliche Effizienz</td><td class="td-center"><span class="badge badge-orange">62 / 100</span></td><td>OEE 70,4% → 17,75 M€ jährlicher Kapazitätsverlust</td></tr>
+      <tr><td>Marketing &amp; Vertrieb</td><td class="td-center"><span class="badge badge-orange">74 / 100</span></td><td>Hervorragende Bindung, schwache Vertriebseffizienz</td></tr>
+      <tr><td>HR &amp; Organisation</td><td class="td-center"><span class="badge badge-orange">65,2 / 100</span></td><td>ELTV -519k€, Personalkostenquote 46%</td></tr>
+      <tr><td>F&amp;E &amp; Innovation</td><td class="td-center"><span class="badge badge-red">58 / 100</span></td><td>Patent Impact 0,857 (unter Ziel), Uni-ROI negativ</td></tr>
+      <tr><td>Supply Chain</td><td class="td-center"><span class="badge badge-green">72,7 / 100</span></td><td>Überbestand 123,5 M€, SCR 1,88 (mittleres Risiko)</td></tr>
+      <tr><td>Makroumfeld</td><td class="td-center"><span class="badge badge-red">55,9 / 100</span></td><td>MRI 62,4% — Hohes externes Risiko</td></tr>
+      <tr><td>KI-Bereitschaft</td><td class="td-center"><span class="badge badge-orange">5,8 / 10</span></td><td>Datensilos, Legacy-IT, Talentemangel</td></tr>
+    </tbody>
+  </table>
+
+  <div class="spacer-lg"></div>
+
+  <h2 class="section">Größte unmittelbare Wertschöpfungspotenziale</h2>
+  <table>
+    <thead><tr><th>Maßnahme</th><th>Potenzial</th><th>Zeitrahmen</th></tr></thead>
+    <tbody>
+      <tr><td>Lageroptimierung (123,5 → 61,8 M€)</td><td class="td-green"><strong>+15,5 M€ Cash-Freisetzung</strong></td><td>12 Monate</td></tr>
+      <tr><td>Churn-Prävention (ROI 3.747%)</td><td class="td-green"><strong>+76,95 M€ LTV-Schutz</strong></td><td>12 Monate</td></tr>
+      <tr><td>Preisoptimierung (90€ → 107,50€)</td><td class="td-green"><strong>+24,2 M€ Jahresgewinn</strong></td><td>6 Monate</td></tr>
+      <tr><td>OEE-Verbesserung (70% → 85%)</td><td class="td-green"><strong>+8,9 M€ Jahresgewinn</strong></td><td>18 Monate</td></tr>
+      <tr><td>KI Predictive Maintenance</td><td class="td-green"><strong>+8,9 M€ | ROI ~220%</strong></td><td>24 Monate</td></tr>
+      <tr><td>Asienmarkt-Expansion</td><td class="td-green"><strong>+100 M€ NPV</strong></td><td>24–36 Monate</td></tr>
+    </tbody>
+  </table>
+
+  <div class="spacer-lg"></div>
+  <div style="text-align:center; color:#888; font-size:9pt; border-top:1px solid #ddd; padding-top:4mm">
+    JUMO GmbH &amp; Co. KG · JUMO 2030 Strategy Analysis · Erstellt: März 2024 · Vertraulich<br>
+    Datenquellen: www.unternehmensregister.de · www.northdata.de · JUMO Official Website · Gartner · Eurostat<br>
+    <em>Alle Betriebskennzahlen (OEE, Marketing, Supply Chain) sind auf Basis von Branchen-Benchmarks geschätzt, da interne Daten nicht öffentlich verfügbar sind.</em>
+  </div>
+</div>
+
+<div class="no-print" style="position:fixed;bottom:20px;right:20px;background:#1976d2;color:white;padding:10px 20px;border-radius:6px;cursor:pointer;font-size:11pt;box-shadow:0 2px 8px rgba(0,0,0,0.3)" onclick="window.print()">
+  🖨️ PDF olarak Kaydet / Als PDF Drucken
+</div>
+
+</body>
+</html>

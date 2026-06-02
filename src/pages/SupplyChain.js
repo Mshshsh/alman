@@ -142,7 +142,7 @@ function SupplyChain() {
             <LinearProgress
                 variant="determinate"
                 value={overallScore}
-                sx={{ height: 12, borderRadius: 6, mb: 1.5, bgcolor: 'grey.200' }}
+                sx={{ height: 12, borderRadius: 6, mb: 1.5, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.10)' : 'grey.200' }}
                 color={overallScore > 70 ? "success" : "warning"}
             />
             <Typography variant="body2" color="text.secondary">
@@ -151,7 +151,7 @@ function SupplyChain() {
         </Paper>
         
         {/* Quick Stats */}
-        <Paper elevation={3} sx={{ flex: 1, p: 3, borderRadius: 2, display: 'flex', alignItems: 'center', justifyContent: 'space-around', bgcolor: 'primary.50' }}>
+        <Paper elevation={3} sx={{ flex: 1, p: 3, borderRadius: 2, display: 'flex', alignItems: 'center', justifyContent: 'space-around', bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(83,53,255,0.12)' : 'primary.50' }}>
              <Box sx={{ textAlign: 'center' }}>
                  <Typography variant="caption" color="text.secondary">{t('supplyChain.metrics.rci')}</Typography>
                  <Typography variant="h4" fontWeight="bold" color="primary.main">{rciScore}</Typography>
@@ -177,12 +177,12 @@ function SupplyChain() {
 
         {/* Top Cards */}
         <Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: 2, mb: 3 }}>
-            <Paper elevation={0} sx={{ p: 2, bgcolor: 'error.50', borderRadius: 2, border: '1px solid', borderColor: 'error.100' }}>
+            <Paper elevation={0} sx={{ p: 2, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(211,47,47,0.15)' : 'error.50', borderRadius: 2, border: '1px solid', borderColor: (theme) => theme.palette.mode === 'dark' ? 'rgba(211,47,47,0.25)' : 'error.100' }}>
                 <Typography variant="body2" color="text.secondary">{t('supplyChain.annualHoldingCost')}</Typography>
                 <Typography variant="h4" fontWeight="bold" color="error.main">{stockCostData.annualCost} M€</Typography>
                 <Typography variant="caption" display="block" sx={{ mt: 1 }}>{t('supplyChain.inventoryValue')}: {stockCostData.avgStockValue} M€</Typography>
             </Paper>
-            <Paper elevation={0} sx={{ p: 2, bgcolor: 'success.50', borderRadius: 2, border: '1px solid', borderColor: 'success.100' }}>
+            <Paper elevation={0} sx={{ p: 2, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(46,125,50,0.15)' : 'success.50', borderRadius: 2, border: '1px solid', borderColor: (theme) => theme.palette.mode === 'dark' ? 'rgba(46,125,50,0.25)' : 'success.100' }}>
                 <Typography variant="body2" color="text.secondary">{t('supplyChain.eoqPotential')}</Typography>
                 <Typography variant="h4" fontWeight="bold" color="success.main">{eoqReduction}% {t('supplyChain.reduction')}</Typography>
                 <Typography variant="caption" display="block" sx={{ mt: 1 }}>4.94M → 0.45M {t('supplyChain.units')}</Typography>
@@ -248,10 +248,10 @@ function SupplyChain() {
         <Box sx={{ display: 'flex', flexDirection: { xs: 'column', lg: 'row' }, gap: 3 }}>
           {/* Table */}
           <Box sx={{ flex: 1.5 }}>
-            <TableContainer sx={{ border: '1px solid #e0e0e0', borderRadius: 2 }}>
+            <TableContainer sx={{ border: '1px solid', borderColor: 'divider', borderRadius: 2 }}>
               <Table size="small">
                 <TableHead>
-                  <TableRow sx={{ bgcolor: 'grey.100' }}>
+                  <TableRow sx={{ bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.07)' : 'grey.100' }}>
                     <TableCell><strong>{t('supplyChain.type')}</strong></TableCell>
                     <TableCell align="center"><strong>{t('supplyChain.share')} (w)</strong></TableCell>
                     <TableCell align="center"><strong>{t('supplyChain.criticality')} (G)</strong></TableCell>
@@ -267,7 +267,7 @@ function SupplyChain() {
                       <TableCell align="center" sx={{ fontWeight: 'bold' }}>{row.scr}</TableCell>
                     </TableRow>
                   ))}
-                  <TableRow sx={{ bgcolor: 'warning.50' }}>
+                  <TableRow sx={{ bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(237,108,2,0.15)' : 'warning.50' }}>
                     <TableCell colSpan={3} align="right"><strong>{t('supplyChain.totalSCR')}</strong></TableCell>
                     <TableCell align="center"><strong>{totalSCR}</strong></TableCell>
                   </TableRow>
@@ -281,7 +281,7 @@ function SupplyChain() {
              <Alert severity="warning">
                 <Typography variant="subtitle2" fontWeight="bold">JUMO SCR: {totalSCR} → {t('supplyChain.risk.mediumHigh')}</Typography>
              </Alert>
-             <Paper elevation={0} sx={{ p: 2, bgcolor: 'success.50', borderRadius: 2, flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+             <Paper elevation={0} sx={{ p: 2, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(46,125,50,0.15)' : 'success.50', borderRadius: 2, flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                 <Typography variant="subtitle2" color="success.dark" gutterBottom>{t('supplyChain.dualSourcingSavings')}</Typography>
                 <Typography variant="h4" color="success.main" fontWeight="bold">
                 {sourcingSavings} M€/yıl
@@ -325,7 +325,7 @@ function SupplyChain() {
                  <Typography variant="caption" sx={{ opacity: 0.9 }}>{t('supplyChain.fasterDelivery')}</Typography>
                </Paper>
                
-               <Paper elevation={0} sx={{ p: 2, bgcolor: 'grey.100', borderRadius: 2 }}>
+               <Paper elevation={0} sx={{ p: 2, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.07)' : 'grey.100', borderRadius: 2 }}>
                  <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
                     <Map sx={{ fontSize: 20, mr: 1, color: 'text.secondary' }} />
                     <Typography variant="subtitle2" fontWeight="bold">{t('supplyChain.airVsSea')}</Typography>
@@ -346,7 +346,7 @@ function SupplyChain() {
         </Typography>
         <Divider sx={{ mb: 3 }} />
 
-        <Box sx={{ mb: 3, p: 2, bgcolor: 'success.50', borderRadius: 2, borderLeft: '4px solid', borderColor: 'success.main' }}>
+        <Box sx={{ mb: 3, p: 2, bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(46,125,50,0.15)' : 'success.50', borderRadius: 2, borderLeft: '4px solid', borderColor: 'success.main' }}>
            <Typography variant="subtitle1" fontWeight="bold" color="success.dark">
              RCI (Esneklik Maliyet İndeksi): {rciScore}
            </Typography>
@@ -355,10 +355,10 @@ function SupplyChain() {
            </Typography>
         </Box>
 
-        <TableContainer sx={{ border: '1px solid #e0e0e0', borderRadius: 2 }}>
+        <TableContainer sx={{ border: '1px solid', borderColor: 'divider', borderRadius: 2 }}>
           <Table size="small">
             <TableHead>
-              <TableRow sx={{ bgcolor: 'grey.50' }}>
+              <TableRow sx={{ bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.04)' : 'grey.50' }}>
                 <TableCell><strong>{t('supplyChain.metric')}</strong></TableCell>
                 <TableCell align="center"><strong>{t('supplyChain.current')}</strong></TableCell>
                 <TableCell align="center"><strong>{t('supplyChain.sector')}</strong></TableCell>
@@ -398,10 +398,10 @@ function SupplyChain() {
         </Typography>
         <Divider sx={{ mb: 3 }} />
 
-        <TableContainer sx={{ mb: 4, borderRadius: 2, border: '1px solid #e0e0e0' }}>
+        <TableContainer sx={{ mb: 4, borderRadius: 2, border: '1px solid', borderColor: 'divider' }}>
            <Table>
              <TableHead>
-               <TableRow sx={{ bgcolor: 'grey.100' }}>
+               <TableRow sx={{ bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.07)' : 'grey.100' }}>
                  <TableCell><strong>{t('supplyChain.scenario')}</strong></TableCell>
                  <TableCell align="right"><strong>{t('supplyChain.stockLevel')}</strong></TableCell>
                  <TableCell align="right"><strong>{t('supplyChain.turnover')}</strong></TableCell>
@@ -411,7 +411,7 @@ function SupplyChain() {
              </TableHead>
              <TableBody>
                {scenarios.map((row, index) => (
-                 <TableRow key={index} sx={index === 1 ? { bgcolor: 'success.50', '& td': { fontWeight: 'bold' } } : {}}>
+                 <TableRow key={index} sx={index === 1 ? { bgcolor: (theme) => theme.palette.mode === 'dark' ? 'rgba(46,125,50,0.15)' : 'success.50', '& td': { fontWeight: 'bold' } } : {}}>
                    <TableCell>{row.name}</TableCell>
                    <TableCell align="right">{row.stock} M€</TableCell>
                    <TableCell align="right">{row.turn}</TableCell>
